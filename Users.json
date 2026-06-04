@@ -1,0 +1,532 @@
+[
+  {
+    "candidateId":"2609208083",
+    "password":"12345",
+    "name":"Akanksha Srivastava"
+  },
+  {
+    "candidateId":"2609217019",
+    "password":"12345",
+    "name":"Seema"
+  },
+  {
+    "candidateId":"2609229022",
+    "password":"12345",
+    "name":"Mahima Tiwari"
+  },
+  {
+    "candidateId":"2609245971",
+    "password":"12345",
+    "name":"Anshika"
+  },
+  {
+    "candidateId":"2609246741",
+    "password":"12345",
+    "name":"Swati Patel"
+  },
+  {
+    "candidateId":"2609255105",
+    "password":"12345",
+    "name":"Ragni Sonkar"
+  },
+  {
+    "candidateId":"2609274072",
+    "password":"12345",
+    "name":"Roshani"
+  },
+  {
+    "candidateId":"2609283256",
+    "password":"12345",
+    "name":"Khushboo"
+  },
+  {
+    "candidateId":"2609283406",
+    "password":"12345",
+    "name":"Reena Sahani"
+  },
+  {
+    "candidateId":"2609283956",
+    "password":"12345",
+    "name":"Mamta"
+  },
+  {
+    "candidateId":"2609283969",
+    "password":"12345",
+    "name":"Rinka Devi"
+  },
+  {
+    "candidateId":"2609284743",
+    "password":"12345",
+    "name":"Rajkumari"
+  },
+  {
+    "candidateId":"2609284770",
+    "password":"12345",
+    "name":"Vavita Kumari"
+  },
+  {
+    "candidateId":"2609296253",
+    "password":"12345",
+    "name":"Deepanjali"
+  },
+  {
+    "candidateId":"2609301500",
+    "password":"12345",
+    "name":"Neetu"
+  },
+  {
+    "candidateId":"2609301566",
+    "password":"12345",
+    "name":"Shreya Maurya"
+  },
+  {
+    "candidateId":"2609301600",
+    "password":"12345",
+    "name":"Sakshi Maurya"
+  },
+  {
+    "candidateId":"2609301891",
+    "password":"12345",
+    "name":"Rimjhim"
+  },
+  {
+    "candidateId":"2609302006",
+    "password":"12345",
+    "name":"Km Pallavi Gautam"
+  },
+  {
+    "candidateId": "2609302590",
+    "password": "12345",
+    "name": "Mamta Devi"
+  },
+  {
+    "candidateId": "2609305528",
+    "password": "12345",
+    "name": "Priyanka Tiwari"
+  },
+  {
+    "candidateId": "2609305814",
+    "password": "12345",
+    "name": "Disha Nishad"
+  },
+  {
+    "candidateId": "2609306126",
+    "password": "12345",
+    "name": "Riya Soni"
+  },
+  {
+    "candidateId": "2609306134",
+    "password": "12345",
+    "name": "Priya Soni"
+  },
+  {
+    "candidateId": "2609306866",
+    "password": "12345",
+    "name": "Sneha Rajbhar"
+  },
+  {
+    "candidateId": "2609306982",
+    "password": "12345",
+    "name": "Salini Upaddhayai"
+  },
+  {
+    "candidateId": "2609307007",
+    "password": "12345",
+    "name": "Neelam"
+  },
+  {
+    "candidateId": "2609307168",
+    "password": "12345",
+    "name": "Manisha"
+  },
+  {
+    "candidateId": "2609307913",
+    "password": "12345",
+    "name": "Priyanshi"
+  },
+  {
+    "candidateId": "2609307977",
+    "password": "12345",
+    "name": "Pooja Gautam"
+  },
+  {
+    "candidateId": "2609308985",
+    "password": "12345",
+    "name": "Deepa Kumari"
+  },
+  {
+    "candidateId": "2609312398",
+    "password": "12345",
+    "name": "Chanadni"
+  },
+  {
+    "candidateId": "2609313811",
+    "password": "12345",
+    "name": "Neha"
+  },
+  {
+    "candidateId": "2609314110",
+    "password": "12345",
+    "name": "Reshma"
+  },
+  {
+    "candidateId": "2609315545",
+    "password": "12345",
+    "name": "Maneesha"
+  },
+  {
+    "candidateId": "2609208098",
+    "password": "12345",
+    "name": "Shraddha Shrivastava"
+  },
+  {
+    "candidateId": "2609225734",
+    "password": "12345",
+    "name": "Khushboo"
+  },
+  {
+    "candidateId": "2609234300",
+    "password": "12345",
+    "name": "Ragini Pandey"
+  },
+  {
+    "candidateId": "2609234364",
+    "password": "12345",
+    "name": "Shivangi"
+  },
+  {
+    "candidateId": "2609306064",
+    "password": "12345",
+    "name": "Kritika Sharma"
+  },
+  {
+    "candidateId": "2609306731",
+    "password": "12345",
+    "name": "Roshani Yadav"
+  },
+  {
+    "candidateId": "2609306835",
+    "password": "12345",
+    "name": "Anshlata"
+  },
+  {
+    "candidateId": "2609306851",
+    "password": "12345",
+    "name": "Nupur"
+  },
+  {
+    "candidateId": "2609307106",
+    "password": "12345",
+    "name": "Isha"
+  },
+  {
+    "candidateId": "2609308063",
+    "password": "12345",
+    "name": "Khushi"
+  },
+  {
+    "candidateId": "2609308114",
+    "password": "12345",
+    "name": "Kajal Gautam"
+  },
+  {
+    "candidateId": "2609308767",
+    "password": "12345",
+    "name": "Savita"
+  },
+  {
+    "candidateId": "2609309068",
+    "password": "12345",
+    "name": "Nainshi Chauhan"
+  },
+  {
+    "candidateId": "2609309083",
+    "password": "12345",
+    "name": "Pooja Maurya"
+  },
+  {
+    "candidateId": "2609309380",
+    "password": "12345",
+    "name": "Shruti Pandey"
+  },
+  {
+    "candidateId": "2609309381",
+    "password": "12345",
+    "name": "Saumya Pandey"
+  },
+  {
+    "candidateId": "2609310793",
+    "password": "12345",
+    "name": "Akanksha"
+  },
+  {
+    "candidateId": "2609310824",
+    "password": "12345",
+    "name": "ANUPRIYA"
+  },
+  {
+    "candidateId": "2609310830",
+    "password": "12345",
+    "name": "Sanghamitra"
+  },
+  {
+    "candidateId": "2609310872",
+    "password": "12345",
+    "name": "ANJALI"
+  },
+  {
+    "candidateId": "2609310909",
+    "password": "12345",
+    "name": "SUNAINA"
+  },
+  {
+    "candidateId": "2609312198",
+    "password": "12345",
+    "name": "Sonali Chauhan"
+  },
+  {
+    "candidateId": "2609312322",
+    "password": "12345",
+    "name": "Sanju Vishwkarma"
+  },
+  {
+    "candidateId": "2609313862",
+    "password": "12345",
+    "name": "Indrakalamati"
+  },
+  {
+    "candidateId": "2609315123",
+    "password": "12345",
+    "name": "Supriya"
+  },
+  {
+    "candidateId": "2609315855",
+    "password": "12345",
+    "name": "Premlata Gautam"
+  },
+  {
+    "candidateId": "2609315876",
+    "password": "12345",
+    "name": "Shashikala"
+  },
+  {
+    "candidateId": "2609315931",
+    "password": "12345",
+    "name": "Uma"
+  },
+  {
+    "candidateId": "2609317207",
+    "password": "12345",
+    "name": "Rinka Rajbhar"
+  },
+  {
+    "candidateId": "2609318210",
+    "password": "12345",
+    "name": "Ankita"
+  },
+  {
+    "candidateId": "2609318360",
+    "password": "12345",
+    "name": "Priyansi"
+  },
+  {
+    "candidateId": "2609318391",
+    "password": "12345",
+    "name": "Anjali Mishra"
+  },
+  {
+    "candidateId": "2609318432",
+    "password": "12345",
+    "name": "Ruchi"
+  },
+  {
+    "candidateId": "2609318441",
+    "password": "12345",
+    "name": "Chandni Tiwari"
+  },
+  {
+    "candidateId": "2609318463",
+    "password": "12345",
+    "name": "Anshika"
+  },
+  {
+    "candidateId": "2609173187",
+    "password": "12345",
+    "name": "Mamta"
+  },
+  {
+    "candidateId": "2609173617",
+    "password": "12345",
+    "name": "Soni"
+  },
+  {
+    "candidateId": "2609176811",
+    "password": "12345",
+    "name": "Priti Chaurasiya"
+  },
+  {
+    "candidateId": "2609176933",
+    "password": "12345",
+    "name": "Rishu"
+  },
+  {
+    "candidateId": "2609181496",
+    "password": "12345",
+    "name": "Khushbu Sahani"
+  },
+  {
+    "candidateId": "2609181654",
+    "password": "12345",
+    "name": "Roshni Sahani"
+  },
+  {
+    "candidateId": "2609183925",
+    "password": "12345",
+    "name": "Rima"
+  },
+  {
+    "candidateId": "2609194234",
+    "password": "12345",
+    "name": "Priyanka Kumari"
+  },
+  {
+    "candidateId": "2609194357",
+    "password": "12345",
+    "name": "Seema"
+  },
+  {
+    "candidateId": "2609194511",
+    "password": "12345",
+    "name": "Kusum Vishwakarma"
+  },
+  {
+    "candidateId": "2609194722",
+    "password": "12345",
+    "name": "Priti Sharma"
+  },
+  {
+    "candidateId": "2609194789",
+    "password": "12345",
+    "name": "Sunita"
+  },
+  {
+    "candidateId": "2609211812",
+    "password": "12345",
+    "name": "Kusum"
+  },
+  {
+    "candidateId": "2609217469",
+    "password": "12345",
+    "name": "Sadhana"
+  },
+  {
+    "candidateId": "2609217801",
+    "password": "12345",
+    "name": "Sadhana"
+  },
+  {
+    "candidateId": "2609217921",
+    "password": "12345",
+    "name": "Kumari Kajal"
+  },
+  {
+    "candidateId": "2609217988",
+    "password": "12345",
+    "name": "Priya"
+  },
+  {
+    "candidateId": "2609218041",
+    "password": "12345",
+    "name": "Roshni Paswan"
+  },
+  {
+    "candidateId": "2609218181",
+    "password": "12345",
+    "name": "Sanjana"
+  },
+  {
+    "candidateId": "2609218287",
+    "password": "12345",
+    "name": "Chandni Kumari"
+  },
+  {
+    "candidateId": "2609218431",
+    "password": "12345",
+    "name": "Archana"
+  },
+  {
+    "candidateId": "2609218688",
+    "password": "12345",
+    "name": "Anchal Gautam"
+  },
+  {
+    "candidateId": "2609223065",
+    "password": "12345",
+    "name": "Romika Sharma"
+  },
+  {
+    "candidateId": "2609223141",
+    "password": "12345",
+    "name": "Chandani"
+  },
+  {
+    "candidateId": "2609226792",
+    "password": "12345",
+    "name": "Neetu"
+  },
+  {
+    "candidateId": "2609230544",
+    "password": "12345",
+    "name": "Sudha"
+  },
+  {
+    "candidateId": "2609230722",
+    "password": "12345",
+    "name": "Anjali"
+  },
+  {
+    "candidateId": "2609233120",
+    "password": "12345",
+    "name": "Kusum"
+  },
+  {
+    "candidateId": "2609233855",
+    "password": "12345",
+    "name": "Roli Gupta"
+  },
+  {
+    "candidateId": "2609234162",
+    "password": "12345",
+    "name": "Savita"
+  },
+  {
+    "candidateId": "2609234171",
+    "password": "12345",
+    "name": "Maneesha"
+  },
+  {
+    "candidateId": "2609234203",
+    "password": "12345",
+    "name": "Jensi"
+  },
+  {
+    "candidateId": "2609234212",
+    "password": "12345",
+    "name": "Mansi Srivastav"
+  },
+  {
+    "candidateId": "2609235771",
+    "password": "12345",
+    "name": "Preeti Bharti"
+  },
+  {
+    "candidateId": "2609235784",
+    "password": "12345",
+    "name": "Pallavi"
+  }
+]
+
+
+
+
+
