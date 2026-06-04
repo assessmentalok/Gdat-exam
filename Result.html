@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificate Result</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+body{
+font-family:Arial;
+background:#f2f2f2;
+padding:20px;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+max-width:600px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{color:#2c3e50;}
+
+.institute{
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.signature{
+margin-top:30px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.sign{
+width:45%;
+margin-top:20px;
+font-size:14px;
+}
+
+.pass{color:green;font-weight:bold;}
+.fail{color:red;font-weight:bold;}
+
+button{
+padding:10px;
+margin-top:15px;
+cursor:pointer;
+}
+
+#qrcode{
+margin:auto;
+margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="certificate">
+
+<h1>📜 RESULT CERTIFICATE</h1>
+
+<div class="institute">
+Chaudhary Pawan Singh Educational Welfare Cultural & Charitable Society
+</div>
+
+<hr>
+
+<h2 id="name"></h2>
+<h3 id="cid"></h3>
+
+<p id="score"></p>
+<p id="percent"></p>
+<p id="status"></p>
+<p id="rank"></p>
+
+<div id="qrcode"></div>
+
+<div class="signature">
+
+<div class="sign">
+<b>IT & Entrepreneurship</b><br>
+Alok Pal
+</div>
+
+<div class="sign">
+<b>English & Soft Skills</b><br>
+Ankita
+</div>
+
+<div class="sign">
+<b>Domain Trainers</b><br>
+Archana Yadav / Shubham Pandey / Arpita
+</div>
+
+<div class="sign">
+<b>Project Head</b><br>
+Virendra Singh
+</div>
+
+</div>
+
+<button onclick="downloadPDF()">📥 Download PDF</button>
+
+</div>
+
+<script>
+
+let results = JSON.parse(localStorage.getItem("results") || "[]");
+
+let last = results[results.length - 1];
+
+if(!last){
+document.body.innerHTML = "<h2>No Result Found</h2>";
+}
+
+/* RANK SYSTEM */
+results.sort((a,b)=>b.score-a.score);
+
+let rank = results.findIndex(r => r.id === last.id) + 1;
+
+/* DATA */
+let name = last.name;
+let id = last.id;
+let score = last.score;
+let total = last.total * 2;
+let percent = ((score/total)*100).toFixed(2);
+
+/* PASS FAIL */
+let status = percent >= 50 ? "PASS" : "FAIL";
+
+/* DISPLAY */
+document.getElementById("name").innerText = "Name: " + name;
+document.getElementById("cid").innerText = "Candidate ID: " + id;
+
+document.getElementById("score").innerText =
+"Score: " + score + " / " + total;
+
+document.getElementById("percent").innerText =
+"Percentage: " + percent + "%";
+
+document.getElementById("status").innerHTML =
+status === "PASS"
+? "<span class='pass'>STATUS: PASS</span>"
+: "<span class='fail'>STATUS: FAIL</span>";
+
+document.getElementById("rank").innerText =
+"Rank: " + rank + " / " + results.length;
+
+/* QR CODE */
+new QRCode(document.getElementById("qrcode"), {
+text: "Name: "+name+" | ID: "+id+" | Score: "+score,
+width:120,
+height:120
+});
+
+/* PDF DOWNLOAD */
+function downloadPDF(){
+
+const { jsPDF } = window.jspdf;
+let doc = new jsPDF();
+
+doc.setFontSize(14);
+doc.text("Chaudhary Pawan Singh Educational Welfare Cultural & Charitable Society",10,10);
+
+doc.setFontSize(12);
+doc.text("Name: " + name,10,30);
+doc.text("Candidate ID: " + id,10,40);
+doc.text("Score: " + score + "/" + total,10,50);
+doc.text("Percentage: " + percent + "%",10,60);
+doc.text("Status: " + status,10,70);
+doc.text("Rank: " + rank,10,80);
+
+doc.text("IT & Entrepreneurship - Alok Pal",10,100);
+doc.text("English & Soft Skills - Ankita",10,110);
+doc.text("Domain Trainers - Archana / Shubham / Arpita",10,120);
+doc.text("Project Head - Virendra Singh",10,130);
+
+doc.save("certificate.pdf");
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GDAT Exam System</title>
+
+<style>
+body{
+font-family:Arial;
+padding:20px;
+}
+
+#questionBox{
+border:1px solid #ccc;
+padding:15px;
+border-radius:10px;
+margin-top:10px;
+}
+
+button{
+padding:8px;
+margin:3px;
+cursor:pointer;
+}
+
+#palette button{
+min-width:40px;
+margin:2px;
+border-radius:5px;
+}
+
+#timer{
+color:red;
+font-size:20px;
+font-weight:bold;
+}
+
+/* CAMERA DRAG BOX */
+#cameraBox{
+position:fixed;
+right:10px;
+bottom:10px;
+width:180px;
+height:140px;
+border:2px solid red;
+background:black;
+border-radius:10px;
+z-index:9999;
+cursor:move;
+overflow:hidden;
+}
+
+#video{
+width:100%;
+height:100%;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Time Left: <span id="timer">60:00</span></h3>
+
+<h2 id="candidate"></h2>
+
+<button onclick="toggleLang()">Hindi / English</button>
+
+<div id="palette"></div>
+
+<div id="questionBox"></div>
+
+<br>
+
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+<button onclick="submitExam()">Submit Exam</button>
+
+<!-- CAMERA -->
+<div id="cameraBox">
+<video id="video" autoplay muted playsinline></video>
+</div>
+
+<script>
+
+let questions = [];
+let answers = [];
+let visited = [];
+let current = 0;
+let lang = "en";
+
+/* CANDIDATE */
+document.getElementById("candidate").innerText =
+localStorage.getItem("candidateName") || "Candidate";
+
+/* LOAD QUESTIONS */
+fetch("data/questions.json")
+.then(r=>r.json())
+.then(data=>{
+questions = data;
+renderPalette();
+show();
+});
+
+/* SHOW QUESTION */
+function show(){
+
+let q = questions[current];
+if(!q) return;
+
+visited[current] = true;
+
+document.getElementById("questionBox").innerHTML = `
+<h3>Q${current+1}. ${lang=="en"?q.question_en:q.question_hi}</h3>
+
+<label><input type="radio" name="ans" value="0" ${answers[current]==0?"checked":""}>
+${lang=="en"?q.options_en[0]:q.options_hi[0]}</label><br><br>
+
+<label><input type="radio" name="ans" value="1" ${answers[current]==1?"checked":""}>
+${lang=="en"?q.options_en[1]:q.options_hi[1]}</label><br><br>
+
+<label><input type="radio" name="ans" value="2" ${answers[current]==2?"checked":""}>
+${lang=="en"?q.options_en[2]:q.options_hi[2]}</label><br><br>
+
+<label><input type="radio" name="ans" value="3" ${answers[current]==3?"checked":""}>
+${lang=="en"?q.options_en[3]:q.options_hi[3]}</label>
+`;
+
+updatePalette();
+}
+
+/* SAVE ANSWER */
+function save(){
+let sel = document.querySelector('input[name="ans"]:checked');
+if(sel){
+answers[current] = Number(sel.value);
+}
+}
+
+/* NAV */
+function next(){save(); if(current<questions.length-1){current++; show();}}
+function prev(){save(); if(current>0){current--; show();}}
+
+function toggleLang(){
+lang = (lang=="en")?"hi":"en";
+show();
+}
+
+/* PALETTE */
+function renderPalette(){
+let html="";
+for(let i=0;i<questions.length;i++){
+html+=`<button id="q${i}" onclick="go(${i})">${i+1}</button>`;
+}
+document.getElementById("palette").innerHTML=html;
+updatePalette();
+}
+
+function go(i){save();current=i;show();}
+
+/* PALETTE COLOR */
+function updatePalette(){
+
+for(let i=0;i<questions.length;i++){
+
+let b=document.getElementById("q"+i);
+if(!b) continue;
+
+b.style.background="white";
+b.style.color="black";
+
+if(answers[i] !== undefined){
+b.style.background="green";
+b.style.color="white";
+}
+else if(visited[i]){
+b.style.background="red";
+b.style.color="white";
+}
+}
+}
+
+/* SUBMIT + 120 MARKS */
+function submitExam(){
+
+save();
+
+let correct=0;
+
+for(let i=0;i<questions.length;i++){
+
+let user = answers[i];
+let ans = Number(questions[i].answer);
+
+if(user !== undefined && Number(user) === ans){
+correct++;
+}
+
+}
+
+let score = correct * 2;
+
+alert("Score: " + score + " / " + (questions.length*2));
+
+let results = JSON.parse(localStorage.getItem("results")||"[]");
+
+results.push({
+name: localStorage.getItem("candidateName"),
+id: localStorage.getItem("candidateId"),
+score: score,
+correct: correct,
+total: questions.length
+});
+
+localStorage.setItem("results", JSON.stringify(results));
+
+window.location.href="result.html";
+}
+
+/* TIMER */
+let t=3600;
+setInterval(()=>{
+let m=Math.floor(t/60);
+let s=t%60;
+document.getElementById("timer").innerText =
+m+":"+ (s<10?"0":"")+s;
+t--;
+if(t<0) submitExam();
+},1000);
+
+/* CAMERA START */
+navigator.mediaDevices.getUserMedia({video:true})
+.then(stream=>{
+document.getElementById("video").srcObject = stream;
+})
+.catch(err=>{
+console.log(err);
+});
+
+/* DRAG CAMERA */
+let box=document.getElementById("cameraBox");
+let drag=false,ox,oy;
+
+box.addEventListener("mousedown",start);
+box.addEventListener("touchstart",start);
+
+function start(e){
+drag=true;
+let r=box.getBoundingClientRect();
+
+let x=e.touches?e.touches[0].clientX:e.clientX;
+let y=e.touches?e.touches[0].clientY:e.clientY;
+
+ox=x-r.left;
+oy=y-r.top;
+
+document.addEventListener("mousemove",move);
+document.addEventListener("touchmove",move);
+document.addEventListener("mouseup",stop);
+document.addEventListener("touchend",stop);
+}
+
+function move(e){
+if(!drag)return;
+
+let x=e.touches?e.touches[0].clientX:e.clientX;
+let y=e.touches?e.touches[0].clientY:e.clientY;
+
+box.style.left=(x-ox)+"px";
+box.style.top=(y-oy)+"px";
+
+box.style.right="auto";
+box.style.bottom="auto";
+box.style.position="fixed";
+}
+
+function stop(){
+drag=false;
+document.removeEventListener("mousemove",move);
+document.removeEventListener("touchmove",move);
+}
+
+</script>
+
+</body>
+</html>

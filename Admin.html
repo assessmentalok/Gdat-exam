@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Monitoring</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+padding:10px;
+}
+
+h2{
+text-align:center;
+}
+
+.card{
+background:white;
+padding:10px;
+margin:10px 0;
+border-radius:10px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+img{
+width:120px;
+margin:5px;
+border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>📊 GDAT Admin Monitoring Panel</h2>
+
+<h3 id="adminName"></h3>
+
+<!-- LIVE STUDENTS -->
+<h3>📍 Live Students Location</h3>
+<div id="students"></div>
+
+<!-- SCORES -->
+<h3>📈 Scores</h3>
+<div id="scores"></div>
+
+<!-- SNAPSHOTS -->
+<h3>📸 Live Snapshots</h3>
+<div id="photos"></div>
+
+<script>
+document.getElementById("adminName").innerText =
+"Welcome " + (localStorage.getItem("adminName") || "Admin");
+</script>
+
+---
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "XXXX",
+  appId: "XXXX"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+const storage = firebase.storage();
+
+let studentsDiv = document.getElementById("students");
+let scoresDiv = document.getElementById("scores");
+let photosDiv = document.getElementById("photos");
+
+---
+
+/* 📍 LIVE LOCATION */
+db.collection("locations")
+.onSnapshot(snapshot => {
+
+studentsDiv.innerHTML = "";
+
+snapshot.forEach(doc => {
+
+let d = doc.data();
+
+studentsDiv.innerHTML += `
+<div class="card">
+<b>ID:</b> ${doc.id}<br>
+<b>Lat:</b> ${d.lat}<br>
+<b>Lon:</b> ${d.lon}<br>
+<b>Time:</b> ${new Date(d.time).toLocaleTimeString()}
+</div>
+`;
+
+});
+
+});
+
+---
+
+/* 📈 SCORES */
+db.collection("results")
+.onSnapshot(snapshot => {
+
+scoresDiv.innerHTML = "";
+
+snapshot.forEach(doc => {
+
+let d = doc.data();
+
+scoresDiv.innerHTML += `
+<div class="card">
+<b>ID:</b> ${doc.id}<br>
+<b>Score:</b> ${d.score}
+</div>
+`;
+
+});
+
+});
+
+---
+
+/* 📸 SNAPSHOTS */
+storage.ref("snapshots/")
+.listAll()
+.then(res => {
+
+res.items.forEach(item => {
+
+item.getDownloadURL().then(url => {
+
+photosDiv.innerHTML += `
+<img src="${url}">
+`;
+
+});
+
+});
+
+});
+</script>
+
+</body>
+</html>
