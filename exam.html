@@ -451,7 +451,7 @@ let lang = "en";
 document.getElementById("candidate").innerText = "👤 " + (localStorage.getItem("candidateName") || "Candidate");
 
 /* LOAD QUESTIONS FROM NEW OBJECT LAYER */
-fetch("data/questions.json")
+fetch("questions.json")
 .then(res => res.json())
 .then(data => {
     // Check if configuration wrapper contains questions key array
