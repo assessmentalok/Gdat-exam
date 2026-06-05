@@ -439,6 +439,610 @@ header h2 {
 </div>
 
 <script>
+// --- VERIFIED FIXED CORE LOGIC ---
+
+const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/";
+let questions = [];
+let answers = [];
+let visited = [];
+let current = 0;
+let lang = "en";
+let activeExamId = "gdat_test_v2"; // Default backup Exam ID
+
+/* CANDIDATE Name Load */
+document.getElementById("candidate").innerText = "👤 " + (localStorage.getItem("candidateName") || "Candidate");
+
+/* LOAD QUESTIONS FROM JSON OBJECT */
+fetch("data/questions.json")
+.then(res => res.json())
+.then(data => {
+    if (data.questions && Array.isArray(data.questions)) {
+        questions = data.questions; 
+        activeExamId = data.examId || "gdat_test_v2";
+        console.log("Questions loaded successfully. Active Exam ID:", activeExamId);
+    } else {
+        questions = data;
+    }
+    
+    renderPalette();
+    show();
+    initCameraPlacement();
+})
+.catch(err => {
+    console.error("JSON Error:", err);
+    alert("questions.json load nahi ho payi: " + err.message);
+});
+
+/* SHOW QUESTION */
+function show(){
+    let q = questions[current];
+    if(!q) return;
+
+    visited[current] = true;
+
+    document.getElementById("questionBox").innerHTML = `
+        <h3>Q${current+1}. ${lang=="en"?q.question_en:q.question_hi}</h3>
+
+        <label class="option-label">
+            <input type="radio" name="ans" value="0" ${answers[current]==0?"checked":""}>
+            <span>${lang=="en"?q.options_en[0]:q.options_hi[0]}</span>
+        </label>
+
+        <label class="option-label">
+            <input type="radio" name="ans" value="1" ${answers[current]==1?"checked":""}>
+            <span>${lang=="en"?q.options_en[1]:q.options_hi[1]}</span>
+        </label>
+
+        <label class="option-label">
+            <input type="radio" name="ans" value="2" ${answers[current]==2?"checked":""}>
+            <span>${lang=="en"?q.options_en[2]:q.options_hi[2]}</span>
+        </label>
+
+        <label class="option-label">
+            <input type="radio" name="ans" value="3" ${answers[current]==3?"checked":""}>
+            <span>${lang=="en"?q.options_en[3]:q.options_hi[3]}</span>
+        </label>
+    `;
+
+    updatePalette();
+}
+
+/* SAVE ANSWER */
+function save(){
+    let sel = document.querySelector('input[name="ans"]:checked');
+    if(sel){
+        answers[current] = Number(sel.value);
+    }
+}
+
+/* NAV */
+function next(){save(); if(current<questions.length-1){current++; show();}}
+function prev(){save(); if(current>0){current--; show();}}
+
+function toggleLang(){
+    lang = (lang=="en")?"hi":"en";
+    show();
+}
+
+/* PALETTE */
+function renderPalette(){
+    let html="";
+    for(let i=0;i<questions.length;i++){
+        html+=`<button id="q${i}" onclick="go(${i})">${i+1}</button>`;
+    }
+    document.getElementById("palette").innerHTML=html;
+    updatePalette();
+}
+
+function go(i){save();current=i;show();}
+
+/* PALETTE COLOR */
+function updatePalette(){
+    for(let i=0;i<questions.length;i++){
+        let b=document.getElementById("q"+i);
+        if(!b) continue;
+
+        b.style.background="white";
+        b.style.color="#1e293b";
+        b.style.borderColor="#e2e8f0";
+
+        if(answers[i] !== undefined){
+            b.style.background="var(--success)";
+            b.style.color="white";
+            b.style.borderColor="var(--success)";
+        }
+        else if(visited[i]){
+            b.style.background="var(--danger)";
+            b.style.color="white";
+            b.style.borderColor="var(--danger)";
+        }
+    }
+}
+
+/* SUBMIT EXAM WITH LIVE CLOUD FIREBASE SYNC */
+async function submitExam(){
+    save();
+    
+    // Check confirmation from student
+    if(!confirm("Kya aap sach mein apna exam submit karna chahte hain?")) {
+        return;
+    }
+
+    let correct=0;
+    for(let i=0;i<questions.length;i++){
+        let userOpt = answers[i];
+        let ansOpt = Number(questions[i].answer);
+        if(userOpt !== undefined && Number(userOpt) === ansOpt){
+            correct++;
+        }
+    }
+
+    let score = correct * 2;
+    let candidateName = localStorage.getItem("candidateName") || "Unknown";
+    let candidateId = localStorage.getItem("candidateId") || "000";
+    let examIdContext = localStorage.getItem("currentActiveExamId") || activeExamId;
+
+    // A. Payload Object Build Karo (Jise Admin Panel monitor karega)
+    let payload = {
+        name: candidateName,
+        id: candidateId,
+        score: score,
+        correct: correct,
+        total: questions.length,
+        examId: examIdContext,
+        timestamp: new Date().toISOString()
+    };
+
+    // Backup to Local Storage
+    let localResults = JSON.parse(localStorage.getItem("results")||"[]");
+    localResults.push(payload);
+    localStorage.setItem("results", JSON.stringify(localResults));
+
+    // B. Real-Time Cloud Post to Firebase Engine
+    try {
+        const response = await fetch(`${FIREBASE_URL}/results.json`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if(!response.ok) {
+            throw new Error("Database rejection response payload block.");
+        }
+        
+        console.log("Data pushed into Cloud Firebase Monitor Node successfully!");
+        localStorage.setItem("lastSubmittedExamId", examIdContext);
+        window.location.href="result.html";
+
+    } catch (error) {
+        console.error("Firebase Sync Fallback Error:", error);
+        alert("⚠️ Cloud sync error! Data local me save ho gaya hai, par unstable network ki wajah se server pe bheja nahi ja saka. Dubara koshish karein.");
+    }
+}
+
+/* TIMER */
+let t=3600;
+const timerInterval = setInterval(()=>{
+    let m=Math.floor(t/60);
+    let s=t%60;
+    document.getElementById("timer").innerText = m+":"+ (s<10?"0":"")+s;
+    t--;
+    if(t<0) {
+        clearInterval(timerInterval);
+        submitExam();
+    }
+},1000);
+
+/* CAMERA START */
+navigator.mediaDevices.getUserMedia({video:true})
+.then(stream=>{
+    document.getElementById("video").srcObject = stream;
+})
+.catch(err=>{
+    console.log("Camera access error:", err);
+});
+
+/* RESPONSIVE CAMERA INITIAL POSITION HANDLER */
+function initCameraPlacement() {
+    const cameraBox = document.getElementById("cameraBox");
+    if(!cameraBox) return;
+    if(window.innerWidth <= 850) {
+        document.getElementById("mobileCameraContainer").appendChild(cameraBox);
+    } else {
+        document.getElementById("desktopCameraContainer").appendChild(cameraBox);
+    }
+}
+window.addEventListener('resize', initCameraPlacement);
+
+/* DRAG CAMERA */
+let box=document.getElementById("cameraBox");
+let drag=false,ox,oy;
+
+box.addEventListener("mousedown",start);
+box.addEventListener("touchstart",start);
+
+function start(e){
+    drag=true;
+    if(window.innerWidth > 850) {
+        box.style.width = "275px"; 
+        box.style.height = "160px";
+    } else {
+        box.style.width = "120px";
+        box.style.height = "90px";
+    }
+    
+    box.style.position="fixed";
+    box.style.borderRadius="10px";
+    box.style.border="3px solid var(--danger)";
+    
+    let r=box.getBoundingClientRect();
+    let x=e.touches?e.touches[0].clientX:e.clientX;
+    let y=e.touches?e.touches[0].clientY:e.clientY;
+    ox=x-r.left;
+    oy=y-r.top;
+    document.addEventListener("mousemove",move);
+    document.addEventListener("touchmove",move);
+    document.addEventListener("mouseup",stop);
+    document.addEventListener("touchend",stop);
+}
+
+function move(e){
+    if(!drag)return;
+    let x=e.touches?e.touches[0].clientX:e.clientX;
+    let y=e.touches?e.touches[0].clientY:e.clientY;
+    box.style.left=(x-ox)+"px";
+    box.style.top=(y-oy)+"px";
+    box.style.right="auto";
+    box.style.bottom="auto";
+}
+
+function stop(){
+    drag=false;
+    document.removeEventListener("mousemove",move);
+    document.removeEventListener("touchmove",move);
+}
+</script>
+
+</body>
+</html>
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-actions {
+    margin-bottom: 15px;
+}
+
+.lang-btn {
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.lang-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+#questionBox {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    min-height: 200px;
+}
+
+#questionBox h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8fafc;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.option-label:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.option-label input[type="radio"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    flex-shrink: 0;
+}
+
+/* Bottom Navigation Controls */
+.bottom-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    flex: 1;
+    text-align: center;
+    min-width: 100px;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.btn-secondary:hover { background: #cbd5e1; }
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover { background: var(--primary-light); }
+
+.btn-submit {
+    background: var(--success);
+    color: white;
+    flex-grow: 1.5;
+}
+
+.btn-submit:hover { opacity: 0.9; }
+
+/* Right Side: Sidebar Palette */
+.sidebar-section {
+    flex: 1;
+    max-width: 320px;
+    background: white;
+    border-left: 2px solid var(--border);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-section h4 {
+    font-size: 14px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+#palette {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+#palette button {
+    height: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid var(--border);
+    background: white;
+    color: #1e293b;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Legend Info Box */
+.legend-box {
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* CAMERA BOX PROFESSIONAL CONTAINER DEFAULT VIEW */
+.desktop-camera-slot {
+    width: 100%;
+    margin-top: auto;
+}
+
+#cameraBox{
+    width: 100%;
+    height: 160px;
+    border: 3px solid var(--danger);
+    background: black;
+    border-radius: 12px;
+    cursor: move;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 9999;
+}
+
+#video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media(max-width: 850px){
+    .main-container { 
+        flex-direction: column;
+    }
+    
+    .sidebar-section { 
+        max-width: 100%; 
+        border-left: none; 
+        border-top: 2px solid var(--border); 
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+
+    #palette {
+        grid-template-columns: repeat(10, 1fr);
+    }
+    
+    .desktop-camera-slot {
+        display: none;
+    }
+    
+    #mobileCameraContainer {
+        display: block;
+    }
+
+    #cameraBox {
+        width: 100% !important;
+        height: 100% !important;
+        border: none;
+        border-radius: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 15px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .question-section {
+        padding: 12px;
+    }
+
+    #questionBox {
+        padding: 15px;
+    }
+
+    #questionBox h3 {
+        font-size: 16px;
+    }
+
+    .option-label {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #palette {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .bottom-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .btn-submit {
+        grid-column: span 2;
+        margin-top: 4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Alok's GDAT Assessment Portal</h2>
+    <div class="header-right">
+        <span id="candidate">Candidate</span>
+        <div class="timer-box">
+            ⏱️ <span id="timer">60:00</span>
+        </div>
+        <div id="mobileCameraContainer"></div>
+    </div>
+</header>
+
+<div class="main-container">
+    
+    <div class="question-section">
+        <div class="top-actions">
+            <button class="lang-btn" onclick="toggleLang()">🌐 View in: English/Hindi</button>
+        </div>
+
+        <div id="questionBox"></div>
+
+        <div class="bottom-actions">
+            <button class="btn btn-secondary" onclick="prev()">⬅️ Previous</button>
+            <button class="btn btn-primary" onclick="next()">Next ➡️</button>
+            <button class="btn btn-submit" onclick="submitExam()">🔒 Submit Exam</button>
+        </div>
+    </div>
+
+    <div class="sidebar-section">
+        <div>
+            <h4>Question Palette</h4>
+            <div id="palette"></div>
+        </div>
+
+        <div class="legend-box">
+            <div class="legend-item">
+                <div class="legend-color" style="background: white; border: 2px solid var(--border);"></div> Not Visited
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: var(--danger);"></div> Visited & Unanswered
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: var(--success);"></div> Answered
+            </div>
+        </div>
+
+        <div class="desktop-camera-slot" id="desktopCameraContainer">
+            <div id="cameraBox">
+                <video id="video" autoplay muted playsinline></video>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
 // --- CLEANED & FIX FUNCTIONAL LOGIC ---
 
 let questions = [];
