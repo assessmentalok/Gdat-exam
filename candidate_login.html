@@ -169,7 +169,7 @@ const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/";
 let users = [];
 
 // 1. Load JSON Data (Aapka original user loader)
-fetch("data/users.json")
+fetch("users.json")
 .then(res => res.json())
 .then(data => {
     users = data;
