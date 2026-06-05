@@ -1,154 +1,450 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Monitoring</title>
+<title>Admin Real-Time Proctoring Dashboard</title>
 
 <style>
-body{
-font-family: Arial;
-background:#f4f4f4;
-padding:10px;
+/* Modern Design Variables */
+:root {
+    --primary-dark: #0f172a;  /* Charcoal slate */
+    --accent-blue: #2563eb;   /* Premium links & score badges */
+    --accent-orange: #ea580c; /* Attempt indicators */
+    --danger: #dc2626;        /* Deletion / Logout */
+    --success: #16a34a;       /* Live online user green */
+    --bg-main: #f8fafc;
+    --text-main: #334155;
+    --border-color: #e2e8f0;
 }
 
-h2{
-text-align:center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.card{
-background:white;
-padding:10px;
-margin:10px 0;
-border-radius:10px;
-box-shadow:0 0 5px rgba(0,0,0,0.2);
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
 }
 
-img{
-width:120px;
-margin:5px;
-border-radius:5px;
+/* =======================================================
+   1. PREMIUM LOGIN VIEW
+   ======================================================= */
+#loginBox {
+    background: white;
+    max-width: 400px;
+    margin: 120px auto padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    text-align: center;
+}
+
+#loginBox h2 {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+    background: transparent;
+    padding: 0;
+}
+
+#loginBox input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+#loginBox input:focus {
+    border-color: var(--accent-blue);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(37, 99, 215, 0.15);
+}
+
+#loginBox button {
+    background: var(--primary-dark);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+#loginBox button:hover {
+    background: #1e293b;
+}
+
+/* =======================================================
+   2. MAIN CONTROL PANEL LAYOUT
+   ======================================================= */
+#dashboard {
+    display: none;
+}
+
+/* Header Navbar */
+.navbar {
+    background: var(--primary-dark);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.navbar h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Reusable Control Buttons */
+.btn-control {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clear-all-btn {
+    background: #fff7ed;
+    color: var(--accent-orange);
+    border: 1px solid #ffedd5;
+}
+
+.clear-all-btn:hover {
+    background: var(--accent-orange);
+    color: white;
+}
+
+.logout-btn {
+    background: var(--danger);
+    color: white;
+}
+
+.logout-btn:hover {
+    opacity: 0.9;
+}
+
+/* Split Column Framework Grid */
+.dashboard-grid {
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+
+.panel-column h2 {
+    font-size: 18px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+/* Dynamic Item Render Cards */
+.card {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    line-height: 1.7;
+    font-size: 14.5px;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.04);
+}
+
+.field-title {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.field-data {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Status Labels */
+.status {
+    color: var(--success);
+    font-weight: 700;
+    background: #f0fdf4;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    border: 1px solid #bbf7d0;
+    display: inline-block;
+}
+
+.empty-state-fallback {
+    color: #94a3b8;
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+    font-weight: 500;
+}
+
+/* Contextual Card Deletion Component */
+.delete-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #fef2f2;
+    color: var(--danger);
+    border: 1px solid #fee2e2;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    background: var(--danger);
+    color: white;
+}
+
+/* =======================================================
+   3. RESPONSIVE CONTROLLER (GRID TO COLUMN FLEX)
+   ======================================================= */
+@media(max-width: 900px){
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media(max-width: 550px){
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .btn-control {
+        flex: 1;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    #loginBox {
+        margin: 40px 15px;
+        padding: 30px 20px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<h2>📊 GDAT Admin Monitoring Panel</h2>
+<div id="loginBox">
+    <h2>🔑 Admin Control Gateway</h2>
+    <input type="password" id="password" placeholder="Enter Secure Password">
+    <button onclick="adminLogin()">Authenticate Account</button>
+</div>
 
-<h3 id="adminName"></h3>
+<div id="dashboard">
+    
+    <div class="navbar">
+        <h1>📊 GDAT Cloud Dashboard</h1>
+        <div class="nav-buttons">
+            <button class="btn-control clear-all-btn" onclick="clearAllResults()">⚠️ Clear All Results</button>
+            <button class="btn-control logout-btn" onclick="logout()">🔒 Close Session</button>
+        </div>
+    </div>
 
-<!-- LIVE STUDENTS -->
-<h3>📍 Live Students Location</h3>
-<div id="students"></div>
+    <div class="dashboard-grid">
+        
+        <div class="panel-column">
+            <h2>📡 Live Monitoring</h2>
+            <div id="liveBox"></div>
+        </div>
 
-<!-- SCORES -->
-<h3>📈 Scores</h3>
-<div id="scores"></div>
+        <div class="panel-column">
+            <h2>📊 Results & Attempts Tracker</h2>
+            <div id="resultBox"></div>
+        </div>
 
-<!-- SNAPSHOTS -->
-<h3>📸 Live Snapshots</h3>
-<div id="photos"></div>
+    </div>
+</div>
 
 <script>
-document.getElementById("adminName").innerText =
-"Welcome " + (localStorage.getItem("adminName") || "Admin");
-</script>
+// --- FIREBASE ASSIGNED CLOUD URL ROUTING SYSTEM ---
+const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/"; 
 
----
+window.onload = function() {
+    if(localStorage.getItem("role") === "admin") {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+        startDashboard();
+    }
+}
 
-<!-- FIREBASE -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
+function adminLogin(){
+    let pass = document.getElementById("password").value;
+    if(pass === "admin123"){
+        localStorage.setItem("role", "admin");
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+        startDashboard();
+    } else {
+        alert("Invalid Operational Password Token!");
+    }
+}
 
-<script>
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "XXXX"
-};
+function logout() {
+    localStorage.removeItem("role");
+    window.location.reload();
+}
 
-firebase.initializeApp(firebaseConfig);
+/* REALTIME SYNC ENGINE: ACTIVE LIVE WORKFLOWS */
+function loadLive(){
+    fetch(`${FIREBASE_URL}/liveUsers.json`)
+    .then(response => response.json())
+    .then(data => {
+        let html = "";
+        if(!data || Object.keys(data).length === 0){
+            html = `<div class="empty-state-fallback">🔇 No active students right now.</div>`;
+            document.getElementById("liveBox").innerHTML = html;
+            return;
+        }
 
-const db = firebase.firestore();
-const storage = firebase.storage();
+        Object.keys(data).forEach(key => {
+            let u = data[key];
+            html += `
+            <div class="card">
+                <div><span class="field-title">👤 Name:</span> <span class="field-data">${u.name}</span></div>
+                <div><span class="field-title">🆔 ID:</span> <span class="field-data">${u.id || "N/A"}</span></div>
+                <div style="margin-top:6px;">
+                    <span class="field-title">📊 Status:</span> <span class="status">${u.status || "Examining"}</span>
+                </div>
+                <div style="font-size:12px; color:#94a3b8; margin-top:10px;">⏱️ Last Active Ping: ${u.time || "Just now"}</div>
+            </div>`;
+        });
+        document.getElementById("liveBox").innerHTML = html;
+    })
+    .catch(error => console.error("Live Stream Request Fail:", error));
+}
 
-let studentsDiv = document.getElementById("students");
-let scoresDiv = document.getElementById("scores");
-let photosDiv = document.getElementById("photos");
+/* DATA PIPELINE PARSER: RESULTS ARRAY MANAGEMENT */
+function loadResults(){
+    fetch(`${FIREBASE_URL}/results.json`)
+    .then(response => response.json())
+    .then(data => {
+        let html = "";
+        if(!data || Object.keys(data).length === 0){
+            html = `<div class="empty-state-fallback">📦 No results submitted yet.</div>`;
+            document.getElementById("resultBox").innerHTML = html;
+            return;
+        }
 
----
+        // Object format mapping structure parsing into an iterable array element
+        let resultsArray = [];
+        Object.keys(data).forEach(key => {
+            let record = data[key];
+            record.firebaseKeyId = key; // Keep record key tracking for single node target deletions
+            resultsArray.push(record);
+        });
 
-/* 📍 LIVE LOCATION */
-db.collection("locations")
-.onSnapshot(snapshot => {
+        // Compute localized attempt tracking iterations maps
+        let attemptTracker = {};
+        resultsArray.forEach(r => {
+            let key = r.id || r.name;
+            attemptTracker[key] = (attemptTracker[key] || 0) + 1;
+            r.currentAttempt = attemptTracker[key];
+        });
 
-studentsDiv.innerHTML = "";
+        // Inverse rendering layout loop arrays for tracking fresh metrics at index zero 
+        resultsArray.reverse().forEach(r => {
+            html += `
+            <div class="card">
+                <button class="delete-btn" onclick="deleteResult('${r.firebaseKeyId}')">🗑️ Delete</button>
+                <div><span class="field-title">👤 Name:</span> <span class="field-data">${r.name}</span></div>
+                <div><span class="field-title">🆔 ID:</span> <span class="field-data">${r.id || "N/A"}</span></div>
+                <div>
+                    <span class="field-title">🔄 Attempt Counter:</span> 
+                    <span style="color:var(--accent-orange); font-weight:700;">#${r.currentAttempt}</span>
+                </div>
+                <div style="margin-top:8px; background:#f1f5f9; padding:8px 14px; border-radius:8px;">
+                    <span class="field-title">🏆 Verified Score:</span> 
+                    <span style="color:var(--accent-blue); font-weight:700;">${r.score} Marks</span> 
+                    <span style="font-size:12px; color:#64748b; margin-left:6px;">(Correct Answers: ${r.correct}/${r.total})</span>
+                </div>
+                <div style="font-size:11px; color:#94a3b8; margin-top:8px;">📅 Entry Date-Timestamp: ${r.timestamp || "N/A"}</div>
+            </div>`;
+        });
+        document.getElementById("resultBox").innerHTML = html;
+    })
+    .catch(error => console.error("Result Feed Synchronization Interrupted:", error));
+}
 
-snapshot.forEach(doc => {
+/* DATA MUTATION: SHUT DOWN SINGLE RECORD NODE */
+function deleteResult(firebaseKeyId) {
+    if(confirm("क्या आप वाकई इस छात्र का यह रिजल्ट क्लाउड डेटाबेस से डिलीट करना चाहते हैं?")) {
+        fetch(`${FIREBASE_URL}/results/${firebaseKeyId}.json`, { 
+            method: "DELETE" 
+        })
+        .then(() => loadResults());
+    }
+}
 
-let d = doc.data();
+/* WIPE ACTION: CLEAR ROOT ARRAY ENDPOINT STORAGE */
+function clearAllResults() {
+    if(confirm("🚨 सावधान! क्या आप क्लाउड से सारे छात्रों के सभी पुराने रिजल्ट्स डिलीट करना चाहते हैं? यह डेटा वापस नहीं आएगा।")) {
+        fetch(`${FIREBASE_URL}/results.json`, { 
+            method: "DELETE" 
+        })
+        .then(() => loadResults());
+    }
+}
 
-studentsDiv.innerHTML += `
-<div class="card">
-<b>ID:</b> ${doc.id}<br>
-<b>Lat:</b> ${d.lat}<br>
-<b>Lon:</b> ${d.lon}<br>
-<b>Time:</b> ${new Date(d.time).toLocaleTimeString()}
-</div>
-`;
-
-});
-
-});
-
----
-
-/* 📈 SCORES */
-db.collection("results")
-.onSnapshot(snapshot => {
-
-scoresDiv.innerHTML = "";
-
-snapshot.forEach(doc => {
-
-let d = doc.data();
-
-scoresDiv.innerHTML += `
-<div class="card">
-<b>ID:</b> ${doc.id}<br>
-<b>Score:</b> ${d.score}
-</div>
-`;
-
-});
-
-});
-
----
-
-/* 📸 SNAPSHOTS */
-storage.ref("snapshots/")
-.listAll()
-.then(res => {
-
-res.items.forEach(item => {
-
-item.getDownloadURL().then(url => {
-
-photosDiv.innerHTML += `
-<img src="${url}">
-`;
-
-});
-
-});
-
-});
+/* DAEMON START ENGINE */
+function startDashboard() {
+    loadLive();
+    loadResults();
+    
+    // Auto sync fetching system daemon cycle pool loop
+    setInterval(() => {
+        loadLive();
+        loadResults();
+    }, 2500);
+}
 </script>
 
 </body>
