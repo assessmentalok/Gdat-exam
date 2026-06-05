@@ -207,7 +207,7 @@ async function login(){
 
     try {
         // Step A: Active Exam ID configuration ko fetch karein
-        const qRes = await fetch("data/questions.json");
+        const qRes = await fetch("questions.json");
         const config = await qRes.json();
         const activeExamId = config.examId || "default_exam";
 
