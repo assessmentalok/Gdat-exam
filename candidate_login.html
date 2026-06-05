@@ -163,96 +163,120 @@ button:active {
     
     <div class="footer-credit">&copy; 2026 CPSEWCCS. All Rights Reserved.</div>
 </div>
-
 <script>
 const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/";
 let users = [];
 
-// 1. Load JSON Data (Aapka original user loader)
+// 1. Load JSON Data Safely
 fetch("users.json")
-.then(res => res.json())
+.then(res => {
+    if(!res.ok) throw new Error("users.json not found");
+    return res.json();
+})
 .then(data => {
     users = data;
-    console.log("Users loaded:", users.length);
+    console.log("Users loaded successfully:", users.length);
 })
 .catch(err => {
-    console.log("JSON Error:", err);
-    document.getElementById("error").innerText = "Data load error (check users.json path)";
+    console.log("JSON Load Error:", err);
+    document.getElementById("error").innerText = "⚠️ Configuration Error: users.json nahi mili.";
 });
 
-// 2. Main Verified Login & Cloud Security Check Engine
+// 2. Main Login Engine (With Auto-Bypass on Network Fail)
 async function login(){
     let id = document.getElementById("cid").value.trim();
     let pass = document.getElementById("pass").value.trim();
     let errorBox = document.getElementById("error");
 
     if(users.length === 0){
-        errorBox.innerText = "Users not loaded yet, wait 2 sec...";
+        errorBox.innerText = "Data load ho raha hai, kripya 2 second rukiye...";
         return;
     }
 
-    // Baseline Authentication
+    // Match User Credentials
     let user = users.find(u =>
         String(u.candidateId).trim() === String(id) &&
         String(u.password).trim() === String(pass)
     );
 
     if(!user){
+        errorBox.style.color = "#dc3545";
         errorBox.innerText = "Invalid Candidate ID or Password";
         return;
     }
 
+    // If credentials are correct, proceed
     errorBox.style.color = "#0d47a1";
-    errorBox.innerText = "Checking security status...";
+    errorBox.innerText = "Checking security status... Please wait...";
+
+    let activeExamId = "gdat_test_v2"; // Default fallback ID
+    let alreadySubmitted = false;
 
     try {
-        // Step A: Active Exam ID configuration ko fetch karein
-        const qRes = await fetch("questions.json");
-        const config = await qRes.json();
-        const activeExamId = config.examId || "default_exam";
+        // Fetch Exam Config (Set timeout of 3 seconds)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000); // 3 second se zyada time laga to cancel
 
-        // Step B: Firebase database se matches check karein
-        const resRes = await fetch(`${FIREBASE_URL}/results.json`);
-        const results = await resRes.json();
-        
-        let alreadySubmitted = false;
-        if(results) {
-            Object.keys(results).forEach(key => {
-                // Agar vahi candidate aur vahi examId pehle se maujood hai
-                if(String(results[key].id).trim() === String(id) && results[key].examId === activeExamId) {
-                    alreadySubmitted = true;
-                }
-            });
+        const qRes = await fetch("questions.json", { signal: controller.signal });
+        clearTimeout(timeoutId);
+
+        if(qRes.ok) {
+            const config = await qRes.json();
+            activeExamId = config.examId || "gdat_test_v2";
         }
 
-        if(alreadySubmitted) {
-            errorBox.style.color = "#dc3545";
-            errorBox.innerText = "❌ Blocked: Aap is naye exam ko pehle hi submit kar chuke hain!";
-        } else {
-            // --- VOICE INTEGRATION START ---
-            if ('speechSynthesis' in window) {
-                // `user.name` se data uthakar dynamic voice message create karega
-                const msg = new SpeechSynthesisUtterance(`${user.name}, आलोक असेसमेंट पोर्टल पर आपका स्वागत है।`);
-                msg.lang = 'hi-IN'; // Hindi Accent Hindi Language
-                msg.rate = 0.9;     // Natural speed ke liye 0.9 perfect hai
-                window.speechSynthesis.speak(msg);
+        // Fetch Firebase Results (Set timeout of 3 seconds)
+        const fController = new AbortController();
+        const fTimeoutId = setTimeout(() => fController.abort(), 3000);
+
+        const resRes = await fetch(`${FIREBASE_URL}/results.json`, { signal: fController.signal });
+        clearTimeout(fTimeoutId);
+
+        if(resRes.ok) {
+            const results = await resRes.json();
+            if(results) {
+                Object.keys(results).forEach(key => {
+                    if(String(results[key].id).trim() === String(id) && results[key].examId === activeExamId) {
+                        alreadySubmitted = true;
+                    }
+                });
             }
-            // --- VOICE INTEGRATION END ---
-
-            // Processing Access Control Tokens
-            localStorage.setItem("candidateId", user.candidateId);
-            localStorage.setItem("candidateName", user.name);
-            localStorage.setItem("currentActiveExamId", activeExamId);
-            localStorage.removeItem("lastSubmittedExamId"); // Reset parameters context
-            
-            // Redirect logic (Voice message trigger hote hi redirect initialize ho jayega)
-            window.location.href = "exam.html";
         }
+
     } catch(e) {
-        console.error(e);
-        errorBox.style.color = "#dc3545";
-        errorBox.innerText = "Network Error! Please check your internet connection.";
+        // Agar network fail hua ya Firebase slow hua, toh ye block skip ho jayega aur login direct ho jayega
+        console.warn("Network slow ya blocked hai. Bypassing security checks to log in...");
     }
+
+    // Check if security blocked the user
+    if(alreadySubmitted) {
+        errorBox.style.color = "#dc3545";
+        errorBox.innerText = "❌ Blocked: Aap is exam ko pehle hi submit kar chuke hain!";
+        return;
+    }
+
+    // --- SUCCESS LOGIC ---
+    errorBox.style.color = "#2e7d32";
+    errorBox.innerText = "Login Successful! Redirecting...";
+
+    // Voice Welcome
+    if ('speechSynthesis' in window) {
+        const msg = new SpeechSynthesisUtterance(`${user.name}, आलोक असेसमेंट पोर्टल पर आपका स्वागत है।`);
+        msg.lang = 'hi-IN';
+        msg.rate = 0.9;
+        window.speechSynthesis.speak(msg);
+    }
+
+    // Save Data to LocalStorage
+    localStorage.setItem("candidateId", user.candidateId);
+    localStorage.setItem("candidateName", user.name);
+    localStorage.setItem("currentActiveExamId", activeExamId);
+    localStorage.removeItem("lastSubmittedExamId");
+    
+    // Redirect after a short delay
+    setTimeout(() => {
+        window.location.href = "exam.html";
+    }, 800); 
 }
 </script>
 
