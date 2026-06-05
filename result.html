@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Result Certificate</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<style>
+
+body{
+margin:0;
+padding:20px;
+font-family:Arial,sans-serif;
+background:#f1f5f9;
+}
+
+#certificate{
+max-width:900px;
+margin:auto;
+background:white;
+padding:30px;
+border:10px solid #0d47a1;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+box-sizing: border-box; /* PDF layout fix karne ke liye */
+}
+
+/* Logo Styling */
+.logo-container {
+text-align: center;
+margin-bottom: 10px;
+}
+
+.logo-container img {
+max-width: 120px; /* Logo ka size aap yahan se chhota-bada kar sakte hain */
+height: auto;
+}
+
+.title{
+font-size:40px;
+font-weight:bold;
+color:#0d47a1;
+text-align:center;
+}
+
+.institute{
+text-align:center;
+font-size:18px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.line{
+height:3px;
+background:#0d47a1;
+margin:15px 0;
+}
+
+.info{
+font-size:22px;
+margin:12px 0;
+}
+
+.pass{
+color:green;
+font-weight:bold;
+font-size:28px;
+}
+
+.fail{
+color:red;
+font-weight:bold;
+font-size:28px;
+}
+
+#qrcode{
+margin-top:20px;
+display:flex;
+justify-content:center;
+}
+
+.signature{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+margin-top:50px;
+}
+
+.sign{
+width:45%;
+text-align:center;
+margin-top:20px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.download{
+text-align:center;
+}
+
+@media(max-width:700px){
+
+.title{
+font-size:28px;
+}
+
+.info{
+font-size:18px;
+}
+
+.sign{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="certificate">
+
+<div class="logo-container">
+    <img src="CPSEWCCS.png" alt="CPSEWCCS Logo">
+</div>
+
+<div class="title">
+📜 RESULT CERTIFICATE
+</div>
+
+<div class="institute">
+CHAUDHARY PAWAN SINGH EDUCATIONAL WELFARE CULTURAL & CHARITABLE SOCIETY
+</div>
+
+<div class="line"></div>
+
+<div class="info" id="name"></div>
+<div class="info" id="cid"></div>
+<div class="info" id="score"></div>
+<div class="info" id="percent"></div>
+<div class="info" id="status"></div>
+<div class="info" id="rank"></div>
+
+<div id="qrcode"></div>
+
+<div class="signature">
+
+<div class="sign">
+_____________________<br>
+<b>IT & Entrepreneurship</b><br>
+Alok Pal
+</div>
+
+<div class="sign">
+_____________________<br>
+<b>English & Soft Skills</b><br>
+Ankita
+</div>
+
+<div class="sign">
+_____________________<br>
+<b>Domain Trainers</b><br>
+Archana Yadav<br>
+Shubham Pandey<br>
+Arpita
+</div>
+
+<div class="sign">
+_____________________<br>
+<b>Project Head</b><br>
+Virendra Singh
+</div>
+
+</div>
+
+</div>
+
+<div class="download">
+<button onclick="downloadPDF()">
+📥 Download Certificate PDF
+</button>
+</div>
+
+<script>
+
+let results =
+JSON.parse(localStorage.getItem("results") || "[]");
+
+let last = results[results.length-1];
+
+if(!last){
+document.body.innerHTML="<h2>No Result Found</h2>";
+throw new Error();
+}
+
+results.sort((a,b)=>b.score-a.score);
+
+let rank =
+results.findIndex(r=>r.id===last.id)+1;
+
+let name=last.name;
+let id=last.id;
+let score=last.score;
+let total=last.total*2;
+
+let percent=
+((score/total)*100).toFixed(2);
+
+let status=
+percent>=50?"PASS":"FAIL";
+
+document.getElementById("name").innerHTML=
+"<b>Name:</b> "+name;
+
+document.getElementById("cid").innerHTML=
+"<b>Candidate ID:</b> "+id;
+
+document.getElementById("score").innerHTML=
+"<b>Score:</b> "+score+" / "+total;
+
+document.getElementById("percent").innerHTML=
+"<b>Percentage:</b> "+percent+"%";
+
+document.getElementById("rank").innerHTML=
+"<b>Rank:</b> "+rank+" / "+results.length;
+
+document.getElementById("status").innerHTML=
+status==="PASS"
+? "<span class='pass'>STATUS : PASS ✅</span>"
+: "<span class='fail'>STATUS : FAIL ❌</span>";
+
+new QRCode(
+document.getElementById("qrcode"),
+{
+text:
+"Name:"+name+
+"| ID:"+id+
+"| Score:"+score+
+"| Percentage:"+percent,
+width:130,
+height:130
+}
+);
+
+async function downloadPDF(){
+    const certificate = document.getElementById("certificate");
+
+    // html2canvas options badle hain taaki quality achhi aaye aur cut na ho
+    const canvas = await html2canvas(certificate, {
+        scale: 2, 
+        useCORS: true,
+        logging: false,
+        windowWidth: 950 // Canvas width lock ki taaki responsive breaks na ho download ke waqt
+    });
+
+    const imgData = canvas.toDataURL("image/png");
+    const { jsPDF } = window.jspdf;
+
+    // Canvas ka aspect ratio nikalne ke liye
+    const imgWidth = canvas.width;
+    const imgHeight = canvas.height;
+    
+    // A4 size dimensions mm mein (Portrait)
+    const pdfWidth = 210;
+    const pdfHeight = (imgHeight * pdfWidth) / imgWidth;
+
+    // Naya jsPDF instance jo dynamic height accept karega taaki certificate katne ki jagah page size adjust ho jaye
+    const pdf = new jsPDF("p", "mm", [pdfWidth, pdfHeight]);
+
+    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save(name + "_Certificate.pdf");
+}
+
+</script>
+
+</body>
+</html>
