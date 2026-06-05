@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidate Login | CPSEWCCS</title>
+
+<style>
+/* CSS Reset & General Styling - UNTOUCHED */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Professional Background Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.box{
+    background: white;
+    padding: 35px 25px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px; /* Thoda wide kiya taaki naam achha dikhe */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Logo container style */
+.logo-box {
+    margin-bottom: 15px;
+}
+
+.logo-box img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Institute Title Style */
+.institute-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0d47a1;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    letter-spacing: 0.3px;
+}
+
+.heading-tag {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Fields Style */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+input{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+input:focus{
+    border-color: #0d47a1;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(13, 71, 161, 0.15);
+}
+
+/* Button Style */
+button{
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.2);
+}
+
+button:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(13, 71, 161, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#error{
+    color: #dc3545;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 15px;
+    min-height: 20px;
+}
+
+.footer-credit {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <div class="logo-box">
+        <img src="CPSEWCCS.png" alt="CPSEWCCS Logo">
+    </div>
+
+    <div class="institute-title">
+        Chaudhary Pawan Singh Educational Welfare Cultural & Charitable Society
+    </div>
+    <div class="heading-tag">Alok's Assesment Portal Login</div>
+
+    <div class="input-group">
+        <label for="cid">Candidate ID</label>
+        <input type="text" id="cid" placeholder="Enter Candidate ID">
+    </div>
+
+    <div class="input-group">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="Enter Password">
+    </div>
+
+    <button onclick="login()">Login</button>
+
+    <p id="error"></p>
+    
+    <div class="footer-credit">&copy; 2026 CPSEWCCS. All Rights Reserved.</div>
+</div>
+
+<script>
+const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/";
+let users = [];
+
+// 1. Load JSON Data (Aapka original user loader)
+fetch("data/Users.json")
+.then(res => res.json())
+.then(data => {
+    users = data;
+    console.log("Users loaded:", users.length);
+})
+.catch(err => {
+    console.log("JSON Error:", err);
+    document.getElementById("error").innerText = "Data load error (check users.json path)";
+});
+
+// 2. Main Verified Login & Cloud Security Check Engine
+async function login(){
+    let id = document.getElementById("cid").value.trim();
+    let pass = document.getElementById("pass").value.trim();
+    let errorBox = document.getElementById("error");
+
+    if(users.length === 0){
+        errorBox.innerText = "Users not loaded yet, wait 2 sec...";
+        return;
+    }
+
+    // Baseline Authentication
+    let user = users.find(u =>
+        String(u.candidateId).trim() === String(id) &&
+        String(u.password).trim() === String(pass)
+    );
+
+    if(!user){
+        errorBox.innerText = "Invalid Candidate ID or Password";
+        return;
+    }
+
+    errorBox.style.color = "#0d47a1";
+    errorBox.innerText = "Checking security status...";
+
+    try {
+        // Step A: Active Exam ID configuration ko fetch karein
+        const qRes = await fetch("data/questions.json");
+        const config = await qRes.json();
+        const activeExamId = config.examId || "default_exam";
+
+        // Step B: Firebase database se matches check karein
+        const resRes = await fetch(`${FIREBASE_URL}/results.json`);
+        const results = await resRes.json();
+        
+        let alreadySubmitted = false;
+        if(results) {
+            Object.keys(results).forEach(key => {
+                // Agar vahi candidate aur vahi examId pehle se maujood hai
+                if(String(results[key].id).trim() === String(id) && results[key].examId === activeExamId) {
+                    alreadySubmitted = true;
+                }
+            });
+        }
+
+        if(alreadySubmitted) {
+            errorBox.style.color = "#dc3545";
+            errorBox.innerText = "❌ Blocked: Aap is naye exam ko pehle hi submit kar chuke hain!";
+        } else {
+            // --- VOICE INTEGRATION START ---
+            if ('speechSynthesis' in window) {
+                // `user.name` se data uthakar dynamic voice message create karega
+                const msg = new SpeechSynthesisUtterance(`${user.name}, आलोक असेसमेंट पोर्टल पर आपका स्वागत है।`);
+                msg.lang = 'hi-IN'; // Hindi Accent Hindi Language
+                msg.rate = 0.9;     // Natural speed ke liye 0.9 perfect hai
+                window.speechSynthesis.speak(msg);
+            }
+            // --- VOICE INTEGRATION END ---
+
+            // Processing Access Control Tokens
+            localStorage.setItem("candidateId", user.candidateId);
+            localStorage.setItem("candidateName", user.name);
+            localStorage.setItem("currentActiveExamId", activeExamId);
+            localStorage.removeItem("lastSubmittedExamId"); // Reset parameters context
+            
+            // Redirect logic (Voice message trigger hote hi redirect initialize ho jayega)
+            window.location.href = "exam.html";
+        }
+    } catch(e) {
+        console.error(e);
+        errorBox.style.color = "#dc3545";
+        errorBox.innerText = "Network Error! Please check your internet connection.";
+    }
+}
+</script>
+
+</body>
+</html>
