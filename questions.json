@@ -1,1025 +1,425 @@
 {
-  "examId": "gdat_test_v2", 
-  "questions":[
+  "examId": "gdat_nursing_60_v2",
+  "questions": [
     {
-      "question_en": "What is the primary function of white blood cells (WBCs)?",
-      "question_hi": "श्वेत रक्त कोशिकाओं (WBCs) का मुख्य कार्य क्या है?",
-      "options_en": [
-        "Transport oxygen",
-        "Clot blood",
-        "Fight infections",
-        "Produce hormones"
-      ],
-      "options_hi": [
-        "ऑक्सीजन का परिवहन",
-        "रक्त का थक्का जमाना",
-        "संक्रमण से लड़ना",
-        "हॉर्मोन का उत्पादन"
-      ],
+      "question_en": "Which position is most appropriate for a patient experiencing severe respiratory distress or orthopnea?",
+      "question_hi": "गंभीर सांस की तकलीफ या ऑर्थोपनिया (orthopnea) से पीड़ित मरीज के लिए कौन सी पोजीशन सबसे उपयुक्त है?",
+      "options_en": ["Supine position", "Prone position", "High-Fowler's position", "Trendelenburg position"],
+      "options_hi": ["सुपाइन पोजीशन", "प्रोन पोजीशन", "हाई-फाउलर पोजीशन", "ट्रेन्डेलनबर्ग पोजीशन"],
       "answer": 2
     },
     {
-      "question_en": "Which device is used to measure human body temperature?",
-      "question_hi": "मानव शरीर का तापमान मापने के लिए किस उपकरण का उपयोग किया जाता है?",
-      "options_en": [
-        "Sphygmomanometer",
-        "Thermometer",
-        "Stethoscope",
-        "Glucometer"
-      ],
-      "options_hi": [
-        "स्फिग्मोमैनोमीटर",
-        "थर्मामीटर",
-        "स्टेथोस्कोप",
-        "ग्लूकोमीटर"
-      ],
+      "question_en": "In Bio-Medical Waste management, under which color-coded category should human anatomical waste and placenta be disposed of?",
+      "question_hi": "बायो-मेडिकल वेस्ट प्रबंधन में, मानव शारीरिक अपशिष्ट (human anatomical waste) और प्लेसेंटा को किस रंग के कचरे के डिब्बे में डाला जाना चाहिए?",
+      "options_en": ["Red bag", "Yellow bag", "Blue container", "Black box"],
+      "options_hi": ["लाल बैग", "पीला बैग", "नीला कंटेनर", "काली पेटी"],
       "answer": 1
     },
     {
-      "question_en": "What is the normal temperature of a healthy human body in Celsius?",
-      "question_hi": "सेल्सियस में एक स्वस्थ मानव शरीर का सामान्य तापमान कितना होता है?",
-      "options_en": [
-        "32°C",
-        "37°C",
-        "40°C",
-        "98.6°C"
-      ],
-      "options_hi": [
-        "32°C",
-        "37°C",
-        "40°C",
-        "98.6°C"
-      ],
+      "question_en": "What is considered a normal respiratory rate for a healthy adult at rest?",
+      "question_hi": "आराम की स्थिति में एक स्वस्थ वयस्क के लिए सामान्य श्वसन दर (respiratory rate) क्या मानी जाती है?",
+      "options_en": ["8-10 breaths per minute", "12-20 breaths per minute", "24-30 breaths per minute", "32-40 breaths per minute"],
+      "options_hi": ["8-10 सांस प्रति मिनट", "12-20 सांस प्रति मिनट", "24-30 सांस प्रति मिनट", "32-40 सांस प्रति मिनट"],
       "answer": 1
     },
     {
-      "question_en": "What is the expansion of the abbreviation 'NPO' in medical terms?",
-      "question_hi": "चिकित्सा के क्षेत्र में 'NPO' का क्या अर्थ होता है?",
-      "options_en": [
-        "New Patient Only",
-        "Nothing by Mouth",
-        "Nursing Procedure Only",
-        "No Pain Observed"
-      ],
-      "options_hi": [
-        "केवल नया मरीज",
-        "मुंह से कुछ नहीं लेना",
-        "केवल नर्सिंग प्रक्रिया",
-        "कोई दर्द नहीं"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which of the following is considered an objective vital sign?",
-      "question_hi": "निम्नलिखित में से किसे वस्तुनिष्ठ (objective) वाइटल साइन माना जाता है?",
-      "options_en": [
-        "Pain",
-        "Nausea",
-        "Blood Pressure",
-        "Dizziness"
-      ],
-      "options_hi": [
-        "दर्द",
-        "जी मिचलाना",
-        "रक्तचाप (BP)",
-        "चक्कर आना"
-      ],
+      "question_en": "Which of the following is the most effective nursing intervention to prevent a high-risk patient from falling out of bed?",
+      "question_hi": "मरीज को बिस्तर से गिरने से रोकने के लिए निम्नलिखित में से कौन सा नर्सिंग हस्तक्षेप सबसे प्रभावी है?",
+      "options_en": ["Keep all four side rails up at all times", "Apply physical restraints tightly", "Keep the bed in the lowest position with wheels locked", "Leave the room lights completely turned off"],
+      "options_hi": ["हर समय सभी चारों साइड रेल्स को ऊपर रखें", "शारीरिक बंधनों (restraints) का कड़ा प्रयोग करें", "बिस्तर को सबसे निचली स्थिति में रखें और पहियों को लॉक करें", "कमरे की लाइटें पूरी तरह से बंद रखें"],
       "answer": 2
     },
     {
-      "question_en": "What is the correct way to identify a patient before giving care?",
-      "question_hi": "मरीज की देखभाल शुरू करने से पहले उसकी पहचान करने का सही तरीका क्या है?",
-      "options_en": [
-        "Ask the bed number",
-        "Check the nameplate on the door",
-        "Check the patient ID band and ask full name",
-        "Guess by looking at the patient"
-      ],
-      "options_hi": [
-        "बिस्तर संख्या पूछें",
-        "दरवाजे पर लगी नेमप्लेट देखें",
-        "मरीज का ID बैंड जांचें और पूरा नाम पूछें",
-        "मरीज को देखकर अंदाजा लगाएं"
-      ],
+      "question_en": "What is the medical abbreviation for a medication that needs to be administered 'four times a day'?",
+      "question_hi": "दिन में चार बार (four times a day) दी जाने वाली दवा के लिए किस मेडिकल संक्षिप्त रूप (abbreviation) का उपयोग किया जाता है?",
+      "options_en": ["BID", "TID", "QID", "PRN"],
+      "options_hi": ["BID", "TID", "QID", "PRN"],
       "answer": 2
     },
     {
-      "question_en": "Which position is commonly used for a patient receiving an enema?",
-      "question_hi": "एनिमा दिए जाने वाले मरीज के लिए आमतौर पर कौन सी पोजीशन इस्तेमाल की जाती है?",
-      "options_en": [
-        "Sims' position",
-        "Prone position",
-        "Fowler's position",
-        "Supine position"
-      ],
-      "options_hi": [
-        "सिम्स पोजीशन (बाईं करवट)",
-        "प्रोन पोजीशन (उल्टा झुकाव)",
-        "फाउलर पोजीशन",
-        "सुपाइन पोजीशन (सीधे लेटना)"
-      ],
+      "question_en": "What is the primary clinical indication and use for the medication Metformin?",
+      "question_hi": "मेटफॉर्मिन (Metformin) दवा का मुख्य क्लीनिकल उपयोग क्या है?",
+      "options_en": ["To treat hypertension", "To manage Type 2 Diabetes Mellitus", "To relieve severe pain", "To cure bacterial infections"],
+      "options_hi": ["उच्च रक्तचाप का इलाज करने के लिए", "टाइप 2 डायबिटीज मेलिटस को नियंत्रित करने के लिए", "गंभीर दर्द से राहत देने के लिए", "बैक्टीरियल संक्रमण को ठीक करने के लिए"],
+      "answer": 1
+    },
+    {
+      "question_en": "Which position is preferred for a patient undergoing a pelvic or vaginal examination?",
+      "question_hi": "पेल्विक या वेजाइनल परीक्षण से गुजरने वाली मरीज के लिए कौन सी पोजीशन सबसे सही मानी जाती है?",
+      "options_en": ["Lithotomy position", "Sims' position", "Lateral position", "Prone position"],
+      "options_hi": ["लिथोटॉमी पोजीशन", "सिम्स पोजीशन", "लेटरल पोजीशन", "प्रोन पोजीशन"],
       "answer": 0
     },
     {
-      "question_en": "What is the clinical term for difficulty in breathing?",
-      "question_hi": "सांस लेने में होने वाली कठिनाई को तकनीकी भाषा में क्या कहते हैं?",
-      "options_en": [
-        "Apnea",
-        "Dyspnea",
-        "Bradypnea",
-        "Tachypnea"
-      ],
-      "options_hi": [
-        "एपनिया",
-        "डिस्प्रिया",
-        "ब्रैडीपनिया",
-        "टैकीपनिया"
-      ],
+      "question_en": "Where should contaminated plastic items like IV tubes, catheters, and urine bags be disposed of according to BMW guidelines?",
+      "question_hi": "BMW दिशानिर्देशों के अनुसार, दूषित प्लास्टिक की वस्तुएं जैसे IV ट्यूब, कैथेटर और यूरिन बैग किस रंग के डिब्बे में डाले जाने चाहिए?",
+      "options_en": ["Yellow bag", "Red bag", "White translucent box", "Blue box"],
+      "options_hi": ["पीला बैग", "लाल बैग", "सफेद पारभासी (translucent) बॉक्स", "नीला बॉक्स"],
       "answer": 1
     },
     {
-      "question_en": "Which body system is directly affected by Asthma?",
-      "question_hi": "अस्थमा से शरीर का कौन सा तंत्र सीधे तौर पर प्रभावित होता है?",
-      "options_en": [
-        "Digestive system",
-        "Nervous system",
-        "Respiratory system",
-        "Circulatory system"
-      ],
-      "options_hi": [
-        "पाचन तंत्र",
-        "तंत्रिका तंत्र",
-        "श्वसन तंत्र",
-        "परिसंचरण तंत्र"
-      ],
+      "question_en": "Which vital sign assessment site is contraindicated in a patient who has just undergone oral or nasal surgery?",
+      "question_hi": "जिस मरीज की अभी-अभी ओरल (मुंह) या नेजल (नाक) सर्जरी हुई है, उसमें कौन सा वाइटल साइन असेसमेंट साइट वर्जित है?",
+      "options_en": ["Axillary temperature", "Oral temperature", "Tympanic temperature", "Radial pulse"],
+      "options_hi": ["बगल (Axillary) का तापमान", "मौखिक (Oral) तापमान", "टैम्पैनिक (कान) का तापमान", "रेडियल पल्स"],
+      "answer": 1
+    },
+    {
+      "question_en": "When assessing a patient's risk for falls, which standardized scale is most widely used by nurses?",
+      "question_hi": "मरीज के गिरने के जोखिम का आकलन करते समय, नर्सों द्वारा व्यापक रूप से किस मानकीकृत स्केल का उपयोग किया जाता है?",
+      "options_en": ["Braden Scale", "Glasgow Coma Scale", "Morse Fall Scale", "Norton Scale"],
+      "options_hi": ["ब्रेडेन स्केल", "ग्लासगो कोमा स्केल", "मोर्ट फॉल स्केल (Morse Fall Scale)", "नॉर्टन स्केल"],
       "answer": 2
     },
     {
-      "question_en": "How often should a bedridden patient's position be changed to prevent bedsores?",
-      "question_hi": "बेडसोर से बचाने के लिए बिस्तर पर पड़े मरीज की स्थिति को कितनी बार बदला जाना चाहिए?",
-      "options_en": [
-        "Every 2 hours",
-        "Once a day",
-        "Every 8 hours",
-        "Every 12 hours"
-      ],
-      "options_hi": [
-        "हर 2 घंटे में",
-        "दिन में एक बार",
-        "हर 8 घंटे में",
-        "हर 12 घंटे में"
-      ],
+      "question_en": "The abbreviation 'AC' written on a medical prescription stands for which timing?",
+      "question_hi": "मेडिकल पर्चे पर लिखे गए संक्षिप्त रूप 'AC' का क्या अर्थ होता है?",
+      "options_en": ["After meals", "Before meals", "At bedtime", "As needed"],
+      "options_hi": ["भोजन के बाद", "भोजन से पहले", "सोते समय", "आवश्यकतानुसार"],
+      "answer": 1
+    },
+    {
+      "question_en": "Furosemide (Lasix) is classified as a diuretic. What is its main therapeutic action?",
+      "question_hi": "फ्यूरोसेमाइड (Lasix) को एक ड्यूरेटिक के रूप में वर्गीकृत किया गया है। इसका मुख्य कार्य क्या है?",
+      "options_en": ["To decrease urine output", "To remove excess fluid from the body and lower blood pressure", "To increase blood glucose levels", "To stop bleeding from a wound"],
+      "options_hi": ["यूरिन आउटपुट को कम करना", "शरीर से अतिरिक्त फ्लूइड को बाहर निकालना और बीपी कम करना", "ब्लड ग्लूकोज के स्तर को बढ़ाना", "घाव से खून बहना रोकना"],
+      "answer": 1
+    },
+    {
+      "question_en": "To prevent aspiration while administering a tube feeding via nasogastric (NG) tube, how should the patient be positioned?",
+      "question_hi": "नासोगैस्ट्रिक (NG) ट्यूब से भोजन देते समय एस्पिरेशन (फेफड़ों में भोजन जाना) से बचाने के लिए मरीज को किस पोजीशन में रखना चाहिए?",
+      "options_en": ["Flat supine", "Semi-Fowler's or High-Fowler's position", "Trendelenburg position", "Left lateral sims position"],
+      "options_hi": ["फ्लैट सुपाइन", "सेमी-फाउलर या हाई-फाउलर पोजीशन", "ट्रेन्डेलनबर्ग पोजीशन", "लेफ्ट लेटरल सिम्स पोजीशन"],
+      "answer": 1
+    },
+    {
+      "question_en": "Into which Bio-Medical Waste container should discarded sharps, needles, and scalpels be placed?",
+      "question_hi": "बायो-मेडिकल वेस्ट के किस कंटेनर में छोड़ी गई नुकीली वस्तुएं, सुइयां (needles) और स्कैल्पल रखे जाने चाहिए?",
+      "options_en": ["Yellow cardboard box", "Red plastic bag", "White translucent, puncture-proof container", "Blue cardboard box with blue marking"],
+      "options_hi": ["पीला कार्डबोर्ड बॉक्स", "लाल प्लास्टिक बैग", "सफेद पारभासी, पंचर-प्रूफ कंटेनर", "नीले निशान वाला नीला कार्डबोर्ड बॉक्स"],
+      "answer": 2
+    },
+    {
+      "question_en": "What is the technical clinical term used when an adult patient's heart rate exceeds 100 beats per minute?",
+      "question_hi": "जब एक वयस्क मरीज की हृदय गति 100 धड़कन प्रति मिनट से अधिक हो जाती है, तो किस तकनीकी शब्द का उपयोग किया जाता है?",
+      "options_en": ["Bradycardia", "Arrhythmia", "Tachycardia", "Bradypnea"],
+      "options_hi": ["ब्रैडीकार्डिया", "अतालता (Arrhythmia)", "टैकीकार्डिया", "ब्रैडीपनिया"],
+      "answer": 2
+    },
+    {
+      "question_en": "What is a mandatory fall prevention protocol to follow before helping a patient stand up from a bed or wheelchair?",
+      "question_hi": "मरीज को बिस्तर या व्हीलचेयर से उठने में मदद करने से पहले किस फॉल प्रिवेंशन प्रोटोकॉल का पालन करना अनिवार्य है?",
+      "options_en": ["Ensure the wheels of the bed or wheelchair are locked", "Ask the patient to jump quickly", "Keep the floor wet for smoothness", "Do not use footwear"],
+      "options_hi": ["सुनिश्चित करें कि बिस्तर या व्हीलचेयर के पहिये लॉक हों", "मरीज को तेजी से कूदने के लिए कहें", "चिकनाई के लिए फर्श को गीला रखें", "जूते/चप्पल का उपयोग न करें"],
       "answer": 0
     },
     {
-      "question_en": "What color is a standard oxygen cylinder body and shoulder in hospitals?",
-      "question_hi": "अस्पतालों में मानक ऑक्सीजन सिलेंडर की बॉडी और शोल्डर का रंग कैसा होता है?",
-      "options_en": [
-        "Full blue",
-        "Black body with white shoulder",
-        "Full green",
-        "Red body with white shoulder"
-      ],
-      "options_hi": [
-        "पूरा नीला",
-        "काली बॉडी और सफेद शोल्डर",
-        "पूरा हरा",
-        "लाल बॉडी और सफेद शोल्डर"
-      ],
+      "question_en": "What is the exact medical meaning of the prescription abbreviation 'gtt'?",
+      "question_hi": "प्रिस्क्रिप्शन पर लिखे संक्षिप्त रूप 'gtt' का सटीक मेडिकल अर्थ क्या है?",
+      "options_en": ["Gram", "Drops", "Ounce", "Capsule"],
+      "options_hi": ["ग्राम", "बूंदें (Drops)", "औंस", "कैप्सूल"],
       "answer": 1
     },
     {
-      "question_en": "What should a GDA do if they notice a red area on a patient's heel?",
-      "question_hi": "यदि GDA मरीज की एड़ी पर लाल निशान देखता है, तो उसे क्या करना चाहिए?",
-      "options_en": [
-        "Massage it hard",
-        "Apply hot water bag",
-        "Report to the nurse immediately",
-        "Ignore it as it is common"
-      ],
-      "options_hi": [
-        "वहां तेजी से मालिश करें",
-        "गर्म पानी की थैली लगाएं",
-        "तुरंत नर्स को सूचित करें",
-        "सामान्य मानकर अनदेखा करें"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "Which vitamin is synthesized when human skin is exposed to sunlight?",
-      "question_hi": "सूरज की रोशनी के संपर्क में आने पर मानव त्वचा में किस विटामिन का संश्लेषण होता है?",
-      "options_en": [
-        "Vitamin A",
-        "Vitamin B",
-        "Vitamin C",
-        "Vitamin D"
-      ],
-      "options_hi": [
-        "विटामिन A",
-        "विटामिन B",
-        "विटामिन C",
-        "विटामिन D"
-      ],
-      "answer": 3
-    },
-    {
-      "question_en": "What is the proper method to clean a thermometer after use?",
-      "question_hi": "उपयोग के बाद थर्मामीटर को साफ करने का सही तरीका क्या है?",
-      "options_en": [
-        "Wipe from bulb to stem",
-        "Wipe from stem to bulb",
-        "Wash with boiling water",
-        "Do not clean"
-      ],
-      "options_hi": [
-        "बल्ब से स्टेम की ओर पोंछें",
-        "स्टेम से बल्ब की ओर पोंछें",
-        "उबलते पानी से धोएं",
-        "साफ न करें"
-      ],
+      "question_en": "Amlodipine is a very common medication prescribed in hospitals. What is its use?",
+      "question_hi": "अम्लोडिपाइन (Amlodipine) अस्पतालों में लिखी जाने वाली एक आम दवा है। इसका उपयोग क्या है?",
+      "options_en": ["To increase blood sugar", "To lower blood pressure (Antihypertensive)", "To act as an antibiotic", "To suppress a severe cough"],
+      "options_hi": ["ब्लड शुगर बढ़ाने के लिए", "ब्लड प्रेशर कम करने के लिए (एंटीहाइपरटेंसिव)", "एंटीबायोटिक के रूप में", "गंभीर खांसी को दबाने के लिए"],
       "answer": 1
     },
     {
-      "question_en": "What does 'PRN' mean on a medical prescription?",
-      "question_hi": "मेडिकल पर्चे (Prescription) पर 'PRN' का क्या अर्थ होता है?",
-      "options_en": [
-        "Give immediately",
-        "Give as needed / when required",
-        "Give every morning",
-        "Give after meals"
-      ],
-      "options_hi": [
-        "तुरंत दें",
-        "आवश्यकता होने पर दें",
-        "हर सुबह दें",
-        "भोजन के बाद दें"
-      ],
+      "question_en": "Which position involves lying flat on the back with the head of the bed tilted downward by 15-30 degrees?",
+      "question_hi": "किस पोजीशन में पीठ के बल सीधा लेटाया जाता है और बिस्तर के सिरहाने को 15-30 डिग्री नीचे झुका दिया जाता है?",
+      "options_en": ["Reverse Trendelenburg", "Trendelenburg position", "Fowler's position", "Prone position"],
+      "options_hi": ["रिवर्स ट्रेन्डेलनबर्ग", "ट्रेन्डेलनबर्ग पोजीशन", "फाउलर पोजीशन", "प्रोन पोजीशन"],
       "answer": 1
     },
     {
-      "question_en": "Which of the following waste goes into the Blue BMW dustbin?",
-      "question_hi": "नीले बायोमेडिकल वेस्ट (BMW) डस्टबिन में निम्नलिखित में से कौन सा कचरा जाता है?",
-      "options_en": [
-        "Human tissues",
-        "Plastic syringes",
-        "Glass vials and ampoules",
-        "Leftover food"
-      ],
-      "options_hi": [
-        "मानव ऊतक (tissues)",
-        "प्लास्टिक सिरिंज",
-        "कांच की शीशियां (vials) और एम्प्यूल्स",
-        "बचा हुआ खाना"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the standard ratio of chest compressions to breaths in adult CPR?",
-      "question_hi": "वयस्क CPR में छाती दबाने (compressions) और सांस देने (breaths) का मानक अनुपात क्या है?",
-      "options_en": [
-        "15:2",
-        "30:2",
-        "5:1",
-        "50:2"
-      ],
-      "options_hi": [
-        "15:2",
-        "30:2",
-        "5:1",
-        "50:2"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which organ is majorly affected by Hepatitis disease?",
-      "question_hi": "हेपेटाइटिस रोग से मुख्य रूप से कौन सा अंग प्रभावित होता है?",
-      "options_en": [
-        "Lungs",
-        "Heart",
-        "Kidney",
-        "Liver"
-      ],
-      "options_hi": [
-        "फेफेड़े",
-        "हृदय",
-        "गुर्दा",
-        "यकृत (लीवर)"
-      ],
-      "answer": 3
-    },
-    {
-      "question_en": "What is the best way to prevent the cross-contamination of germs between patients?",
-      "question_hi": "मरीजों के बीच कीटाणुओं के आपसी फैलाव (cross-contamination) को रोकने का सबसे अच्छा तरीका क्या है?",
-      "options_en": [
-        "Changing bedsheets weekly",
-        "Proper hand washing between patients",
-        "Keeping windows closed",
-        "Using air fresheners"
-      ],
-      "options_hi": [
-        "बिस्तर की चादरें साप्ताहिक बदलना",
-        "मरीजों के बीच सही तरीके से हाथ धोना",
-        "खिड़कियां बंद रखना",
-        "एयर फ्रेशनर का उपयोग करना"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What instrument is used to check blood pressure?",
-      "question_hi": "रक्तचाप (Blood Pressure) मापने के लिए किस उपकरण का उपयोग किया जाता है?",
-      "options_en": [
-        "Stethoscope",
-        "Thermometer",
-        "Sphygmomanometer",
-        "Otoscope"
-      ],
-      "options_hi": [
-        "स्टेथोस्कोप",
-        "थर्मामीटर",
-        "स्फिग्मोमैनोमीटर",
-        "ऑटोस्कोप"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the term used for a collection of pus in a tissue or cavity?",
-      "question_hi": "ऊतक या शरीर के किसी हिस्से में मवाद (pus) जमा होने को क्या कहा जाता है?",
-      "options_en": [
-        "Tumor",
-        "Abscess",
-        "Edema",
-        "Cyst"
-      ],
-      "options_hi": [
-        "ट्यूमर",
-        "एब्सेस (फोड़ा)",
-        "एडिमा",
-        "सिस्ट"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which nutrient is highly required for tissue repair and wound healing?",
-      "question_hi": "ऊतकों की मरम्मत और घाव भरने के लिए किस पोषक तत्व की सबसे अधिक आवश्यकता होती है?",
-      "options_en": [
-        "Carbohydrates",
-        "Fats",
-        "Proteins",
-        "Vitamins only"
-      ],
-      "options_hi": [
-        "कार्बोहाइड्रेट",
-        "वसा (Fats)",
-        "प्रोटीन",
-        "केवल विटामिन"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the full form of ICU in a hospital set-up?",
-      "question_hi": "अस्पताल में 'ICU' का पूरा नाम क्या होता है?",
-      "options_en": [
-        "Internal Care Unit",
-        "Intensive Care Unit",
-        "Immediate Care Unit",
-        "Intensive Comfort Unit"
-      ],
-      "options_hi": [
-        "इन्टरनल केयर यूनिट",
-        "इन्टेन्सिव केयर यूनिट",
-        "इमीडिएट केयर यूनिट",
-        "इन्टेन्सिव कम्फर्ट यूनिट"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the term used when a patient has a fever?",
-      "question_hi": "जब मरीज को बुखार होता है, तो मेडिकल भाषा में किस शब्द का प्रयोग किया जाता है?",
-      "options_en": [
-        "Hypothermia",
-        "Pyrexia",
-        "Hypertension",
-        "Bradycardia"
-      ],
-      "options_hi": [
-        "हाइपोथर्मिया",
-        "पायरेक्सिया",
-        "हाइपरटेंशन",
-        "ब्रैडीकार्डिया"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which of the following is an example of personal protective equipment (PPE)?",
-      "question_hi": "निम्नलिखित में से कौन सा पर्सनल प्रोटेक्टिव इक्विपमेंट (PPE) का उदाहरण है?",
-      "options_en": [
-        "Stethoscope",
-        "Surgical Gloves",
-        "Bed pan",
-        "Wheelchair"
-      ],
-      "options_hi": [
-        "स्टेथोस्कोप",
-        "सर्जिकल ग्लव्स (दस्ताने)",
-        "बेड पैन",
-        "व्हीलचेयर"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the main reason for applying a cold compress to an injury?",
-      "question_hi": "चोट पर ठंडी सिकाई (Cold compress) करने का मुख्य कारण क्या है?",
-      "options_en": [
-        "To increase bleeding",
-        "To reduce swelling and pain",
-        "To warm the area",
-        "To dry the wound"
-      ],
-      "options_hi": [
-        "रक्तस्राव बढ़ाने के लिए",
-        "सूजन और दर्द को कम करने के लिए",
-        "क्षेत्र को गर्म करने के लिए",
-        "घाव सुखाने के लिए"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the medical term for high blood pressure?",
-      "question_hi": "उच्च रक्तचाप को चिकित्सा की भाषा में क्या कहा जाता है?",
-      "options_en": [
-        "Hypotension",
-        "Hypertension",
-        "Hyperglycemia",
-        "Hypoglycemia"
-      ],
-      "options_hi": [
-        "हाइपोटेंशन",
-        "हाइपरटेंशन",
-        "हाइपरग्लाइसीमिया",
-        "हाइपोग्लाइसीमिया"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "How should a patient's soiled linen with blood be handled?",
-      "question_hi": "रक्त से सने हुए मरीज के गंदे कपड़ों/चादरों को कैसे संभालना चाहिए?",
-      "options_en": [
-        "Wash with regular clothes",
-        "Handle with bare hands",
-        "Wear gloves and place in a leak-proof yellow bag",
-        "Shake vigorously to clean dust"
-      ],
-      "options_hi": [
-        "नियमित कपड़ों के साथ धोएं",
-        "नंगे हाथों से संभालें",
-        "दस्ताने पहनें और लीक-प्रूफ पीले बैग में रखें",
-        "धूल साफ करने के लिए उसे जोर से झाड़ें"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the normal pulse rate for an adult at rest?",
-      "question_hi": "आराम की स्थिति में एक वयस्क की सामान्य नाड़ी दर (Pulse rate) क्या होती है?",
-      "options_en": [
-        "30-50 beats/min",
-        "60-100 beats/min",
-        "120-160 beats/min",
-        "10-20 beats/min"
-      ],
-      "options_hi": [
-        "30-50 धड़कन/मिनट",
-        "60-100 धड़कन/मिनट",
-        "120-160 धड़कन/मिनट",
-        "10-20 धड़कन/मिनट"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the primary usage of a bed cradle?",
-      "question_hi": "बेड क्रेडल (Bed cradle) का मुख्य उपयोग क्या होता है?",
-      "options_en": [
-        "To wash patient's hair",
-        "To keep heavy blankets off a patient's feet/legs",
-        "To carry a patient",
-        "To feed a patient"
-      ],
-      "options_hi": [
-        "मरीज के बाल धोने के लिए",
-        "मरीज के पैरों से भारी कंबलों का वजन दूर रखने के लिए",
-        "मरीज को ले जाने के लिए",
-        "मरीज को खाना खिलाने के लिए"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which scale is widely used to assess a patient's neurological consciousness?",
-      "question_hi": "मरीज की तंत्रिका संबंधी चेतना (consciousness) का आकलन करने के लिए किस स्केल का उपयोग किया जाता है?",
-      "options_en": [
-        "Braden Scale",
-        "Glasgow Coma Scale (GCS)",
-        "Visual Analog Scale",
-        "Apgar Score"
-      ],
-      "options_hi": [
-        "ब्रेडेन स्केल",
-        "ग्लासगो कोमा स्केल (GCS)",
-        "विजुअल एनालॉग स्केल",
-        "अपगार स्कोर"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the condition called when a person lacks enough red blood cells?",
-      "question_hi": "उस स्थिति को क्या कहते हैं जब व्यक्ति में लाल रक्त कोशिकाओं की कमी हो जाती है?",
-      "options_en": [
-        "Leukemia",
-        "Anemia",
-        "Thrombocytopenia",
-        "Hemophilia"
-      ],
-      "options_hi": [
-        "ल्यूकेमिया",
-        "एनीमिया (रक्तहीनता)",
-        "थ्रोम्बोसाइटोपेनिया",
-        "हीमोफिलिया"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What does an autogenous infection mean?",
-      "question_hi": "ऑटोजेनस (Autogenous) संक्रमण का क्या अर्थ होता है?",
-      "options_en": [
-        "Infection from another patient",
-        "Infection from hospital food",
-        "Infection caused by patient's own normal flora",
-        "Infection from insects"
-      ],
-      "options_hi": [
-        "दूसरे मरीज से होने वाला संक्रमण",
-        "अस्पताल के खाने से होने वाला संक्रमण",
-        "मरीज के अपने खुद के बैक्टीरिया (flora) से होने वाला संक्रमण",
-        "कीड़े-मकोड़ों से होने वाला संक्रमण"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the chemical name of common salt used in IV fluids?",
-      "question_hi": "IV फ्लूइड में उपयोग होने वाले साधारण नमक का रासायनिक नाम क्या है?",
-      "options_en": [
-        "Potassium Chloride",
-        "Sodium Chloride",
-        "Calcium Carbonate",
-        "Magnesium Sulfate"
-      ],
-      "options_hi": [
-        "पोटेशियम क्लोराइड",
-        "सोडियम क्लोराइड (NaCl)",
-        "कैल्शियम कार्बोनेट",
-        "मैग्नीशियम सल्फेट"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which abbreviation stands for 'immediately' or 'at once' in medical orders?",
-      "question_hi": "मेडिकल निर्देशों में कौन सा संक्षिप्त रूप 'तुरंत' (at once) के लिए उपयोग किया जाता है?",
-      "options_en": [
-        "STAT",
-        "QID",
-        "PRN",
-        "TID"
-      ],
-      "options_hi": [
-        "STAT",
-        "QID",
-        "PRN",
-        "TID"
-      ],
+      "question_en": "Glass ampoules, broken diagnostic glassware, and metallic body implants must be discarded in which container?",
+      "question_hi": "कांच के एम्प्यूल्स, टूटे हुए डायग्नोस्टिक कांच के सामान और मैटेलिक बॉडी इंप्लांट को किस कंटेनर में फेंका जाना चाहिए?",
+      "options_en": ["Blue marked cardboard box / container", "Yellow plastic bag", "Red puncture proof bag", "Black general waste bin"],
+      "options_hi": ["नीले निशान वाला कार्डबोर्ड बॉक्स / कंटेनर", "पीला प्लास्टिक बैग", "लाल पंचर प्रूफ बैग", "काला सामान्य कचरा बिन"],
       "answer": 0
     },
     {
-      "question_en": "What is the primary target organ of the virus that causes COVID-19?",
-      "question_hi": "COVID-19 का कारण बनने वाले वायरस का प्राथमिक प्रभावित अंग कौन सा है?",
-      "options_en": [
-        "Stomach",
-        "Lungs",
-        "Kidney",
-        "Brain"
-      ],
-      "options_hi": [
-        "पेट",
-        "फेफड़े",
-        "गुर्दा",
-        "मस्तिष्क"
-      ],
+      "question_en": "What does a sudden drop in systolic blood pressure of 20 mmHg or more upon standing up indicate?",
+      "question_hi": "अचानक खड़े होने पर सिस्टोलिक ब्लड प्रेशर में 20 mmHg या उससे अधिक की गिरावट क्या दर्शाती है?",
+      "options_en": ["Hypertensive crisis", "Orthostatic (Postural) Hypotension", "Malignant hyperthermia", "Normal compensatory mechanism"],
+      "options_hi": ["हाइपरटेंसिव क्राइसिस", "ऑर्थोस्टैटिक (पोस्चुरल) हाइपोटेंशन", "मैलिग्नेंट हाइपरथर्मिया", "सामान्य प्रतिपूरक तंत्र"],
       "answer": 1
     },
     {
-      "question_en": "What is the normal color of healthy human urine?",
-      "question_hi": "स्वस्थ मानव मूत्र का सामान्य रंग कैसा होता है?",
-      "options_en": [
-        "Dark red",
-        "Pale yellow / Straw colored",
-        "Cloudy white",
-        "Greenish"
-      ],
-      "options_hi": [
-        "गहरा लाल",
-        "हल्का पीला / पुआल जैसा रंग",
-        "धुंधला सफेद",
-        "हरापन लिए हुए"
-      ],
+      "question_en": "Why are non-slip socks or skid-proof footwear provided to patients in a hospital setup?",
+      "question_hi": "अस्पताल में मरीजों को एंटी-स्लिप मोज़े या स्किड-प्रूफ (फिसलन रोकने वाले) जूते क्यों दिए जाते हैं?",
+      "options_en": ["To maintain body temperature only", "To prevent accidental slips and falls during ambulation", "To keep the bed sheets clean", "To improve blood circulation in legs"],
+      "options_hi": ["केवल शरीर का तापमान बनाए रखने के लिए", "चलने-फिरने (ambulation) के दौरान अचानक फिसलने और गिरने से रोकने के लिए", "बिस्तर की चादरें साफ रखने के लिए", "पैरों में रक्त परिसंचरण में सुधार करने के लिए"],
       "answer": 1
     },
     {
-      "question_en": "Which of the following is a symptom of hypoglycemia (low blood sugar)?",
-      "question_hi": "हाइपोग्लाइसीमिया (लो ब्लड शुगर) का लक्षण निम्नलिखित में से कौन सा है?",
-      "options_en": [
-        "Extreme thirst",
-        "Dry mouth",
-        "Sweating and shakiness",
-        "Frequent urination"
-      ],
-      "options_hi": [
-        "अत्यधिक प्यास",
-        "मुंह सूखना",
-        "पसीना आना और घबराहट/कंपकंपी",
-        "बार-बार पेशाब आना"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What should be used to clean a minor cut or wound first?",
-      "question_hi": "एक छोटे कट या घाव को सबसे पहले किससे साफ किया जाना चाहिए?",
-      "options_en": [
-        "Hot water",
-        "Normal saline or clean running water",
-        "Any oil",
-        "Ink"
-      ],
-      "options_hi": [
-        "गर्म पानी",
-        "नॉर्मल सलाइन या साफ बहता पानी",
-        "कोई भी तेल",
-        "स्याही"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What does a pulse oximeter measure along with oxygen saturation?",
-      "question_hi": "पल्स ऑक्सीमीटर ऑक्सीजन सैचुरेशन के साथ और क्या मापता है?",
-      "options_en": [
-        "Blood pressure",
-        "Pulse rate / Heart rate",
-        "Body temperature",
-        "Respiration depth"
-      ],
-      "options_hi": [
-        "रक्तचाप (BP)",
-        "नाड़ी की दर / हृदय गति",
-        "शरीर का तापमान",
-        "श्वसन की गहराई"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which type of bed is prepared for a patient who is returning from surgery?",
-      "question_hi": "सर्जरी से लौटने वाले मरीज के लिए किस प्रकार का बिस्तर तैयार किया जाता है?",
-      "options_en": [
-        "Closed bed",
-        "Occupied bed",
-        "Post-operative / Surgical bed",
-        "Admission bed"
-      ],
-      "options_hi": [
-        "बंद बिस्त(Closed bed)",
-        "भरा हुआ बिस्तर (Occupied bed)",
-        "पोस्ट-ऑपरेटिव / सर्जिकल बेड",
-        "प्रवेश बिस्तर (Admission bed)"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the clinical term for blood in the urine?",
-      "question_hi": "पेशाब में खून आने की स्थिति को क्या कहा जाता है?",
-      "options_en": [
-        "Hematuria",
-        "Anuria",
-        "Polyuria",
-        "Dysuria"
-      ],
-      "options_hi": [
-        "हेमटुरिया",
-        "एनुरिया",
-        "पॉल्यूरिया",
-        "डिसुरिया"
-      ],
+      "question_en": "What is the medical meaning of the abbreviation 'PO' on a physician's order?",
+      "question_hi": "चिकित्सक के आदेश पर लिखे संक्षिप्त रूप 'PO' का मेडिकल अर्थ क्या होता है?",
+      "options_en": ["By mouth (Oral administration)", "Post-operative", "Pulse Oximetry", "Patient Objective"],
+      "options_hi": ["मुंह द्वारा (Oral administration)", "पोस्ट-ऑपरेटिव", "पल्स ऑक्सीमेट्री", "पेशेंट ऑब्जेक्टिव"],
       "answer": 0
     },
     {
-      "question_en": "What should a GDA check before serving a food tray to a patient?",
-      "question_hi": "मरीज को खाने की ट्रे परोसने से पहले GDA को क्या जांचना चाहिए?",
-      "options_en": [
-        "The price of food",
-        "The patient's name and diet chart designation",
-        "The color of the plate",
-        "Nothing"
-      ],
-      "options_hi": [
-        "भोजन की कीमत",
-        "मरीज का नाम और डाइट चार्ट का निर्देश",
-        "प्लेट का रंग",
-        "कुछ भी नहीं"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which gland in the human body secretes Insulin?",
-      "question_hi": "मानव शरीर में कौन सी ग्रंथि इंसुलिन का स्राव करती है?",
-      "options_en": [
-        "Thyroid",
-        "Liver",
-        "Pancreas",
-        "Pituitary"
-      ],
-      "options_hi": [
-        "थायराइड",
-        "यकृत (लीवर)",
-        "अग्न्याशय (पैन्क्रियाज)",
-        "पिट्यूटरी"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What does 'QID' mean in a doctor's prescription card?",
-      "question_hi": "डॉक्टर के पर्चे में 'QID' का क्या मतलब होता है?",
-      "options_en": [
-        "Once a day",
-        "Twice a day",
-        "Three times a day",
-        "Four times a day"
-      ],
-      "options_hi": [
-        "दिन में एक बार",
-        "दिन में दो बार",
-        "दिन में तीन बार",
-        "दिन में चार बार"
-      ],
-      "answer": 3
-    },
-    {
-      "question_en": "What is the purpose of using a footboard in a patient's bed?",
-      "question_hi": "मरीज के बिस्तर में फुटबोर्ड (footboard) का उपयोग करने का क्या उद्देश्य है?",
-      "options_en": [
-        "To elevate the head",
-        "To prevent foot drop",
-        "To attach IV stands",
-        "To cover the legs"
-      ],
-      "options_hi": [
-        "सिर को ऊपर उठाने के लिए",
-        "फुट ड्रॉप (पैर लटकने) को रोकने के लिए",
-        "IV स्टैंड लगाने के लिए",
-        "पैरों को ढकने के लिए"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which type of waste is disposed of in the Red bag in BMW?",
-      "question_hi": "BMW में लाल रंग के बैग में किस प्रकार का कचरा डाला जाता है?",
-      "options_en": [
-        "Anatomical waste",
-        "Contaminated recyclable waste like plastic tubing and catheters",
-        "Expired medicines",
-        "General paper waste"
-      ],
-      "options_hi": [
-        "शारीरिक अंग अपशिष्ट",
-        "दूषित रिसाइकिल होने वाला प्लास्टिक जैसे कैथेटर और ट्यूब",
-        "समय सीमा समाप्त दवाएं",
-        "सामान्य कागज का कचरा"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the medical term for the master gland of the endocrine system?",
-      "question_hi": "अंतःस्रावी तंत्र की मास्टर ग्रंथि किसे कहा जाता है?",
-      "options_en": [
-        "Adrenal gland",
-        "Pancreas",
-        "Pituitary gland",
-        "Thymus"
-      ],
-      "options_hi": [
-        "एड्रिनल ग्रंथि",
-        "अग्न्याशय",
-        "पिट्यूटरी ग्रंथि",
-        "थाइमस"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the first action to take when a chemical splashes into an eye?",
-      "question_hi": "आंख में कोई रसायन (chemical) गिर जाने पर सबसे पहला कदम क्या उठाना चाहिए?",
-      "options_en": [
-        "Rub the eye hard",
-        "Flush with large amounts of water immediately",
-        "Close the eye and sleep",
-        "Apply eye ointment without asking"
-      ],
-      "options_hi": [
-        "आँख को ज़ोर से रगड़ें",
-        "तुरंत प्रचुर मात्रा में पानी से धोएं",
-        "आंख बंद करके सो जाएं",
-        "बिना पूछे कोई आई ऑइंटमेंट लगाएं"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "Which organ extracts moisture from food residue and forms feces?",
-      "question_hi": "कौन सा अंग भोजन के बचे हुए हिस्से से नमी सोखता है और मल का निर्माण करता है?",
-      "options_en": [
-        "Stomach",
-        "Small Intestine",
-        "Large Intestine",
-        "Esophagus"
-      ],
-      "options_hi": [
-        "पेट",
-        "छोटी आंत",
-        "बड़ी आंत",
-        "ग्रासनली"
-      ],
-      "answer": 2
-    },
-    {
-      "question_en": "What is the average lifespan of red blood cells (RBCs)?",
-      "question_hi": "लाल रक्त कोशिकाओं (RBCs) का औसत जीवनकाल कितना होता है?",
-      "options_en": [
-        "10 days",
-        "120 days",
-        "1 year",
-        "50 days"
-      ],
-      "options_hi": [
-        "10 दिन",
-        "120 दिन",
-        "1 वर्ष",
-        "50 दिन"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the name of the bone located in the upper arm?",
-      "question_hi": "ऊपरी बांह (Arm) में स्थित हड्डी का नाम क्या है?",
-      "options_en": [
-        "Femur",
-        "Humours",
-        "Radius",
-        "Ulna"
-      ],
-      "options_hi": [
-        "फीमर",
-        "ह्यूमरस",
-        "रेडियस",
-        "उल्ना"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What does 'AC' mean on a drug administration schedule?",
-      "question_hi": "दवा देने की समय सारिणी में 'AC' का क्या अर्थ है?",
-      "options_en": [
-        "After meals",
-        "Before meals",
-        "At bedtime",
-        "In the afternoon"
-      ],
-      "options_hi": [
-        "भोजन के बाद",
-        "भोजन से पहले",
-        "सोते समय",
-        "दोपहर में"
-      ],
-      "answer": 1
-    },
-    {
-      "question_en": "What is the medical term for a fungal infection of the foot?",
-      "question_hi": "पैर में होने वाले फंगल इन्फेक्शन को क्या कहा जाता है?",
-      "options_en": [
-        "Athlete's foot",
-        "Eczema",
-        "Scabies",
-        "Psoriasis"
-      ],
-      "options_hi": [
-        "एथलीट फुट",
-        "एक्जिमा",
-        "स्कैबीज",
-        "सोरायसिस"
-      ],
+      "question_en": "What is the primary medication class and use of Pantoprazole?",
+      "question_hi": "पेंटाप्राजोल (Pantoprazole) का मुख्य दवा वर्ग और इसका उपयोग क्या है?",
+      "options_en": ["Proton Pump Inhibitor used to reduce stomach acid and treat GERD", "NSAID used to lower high fever", "Beta-blocker used to regulate heart rhythm", "Anticoagulant used to dissolve blood clots"],
+      "options_hi": ["प्रोटॉन पंप इनहिबिटर जिसका उपयोग पेट के एसिड को कम करने और GERD के इलाज के लिए किया जाता है", "NSAID जिसका उपयोग तेज बुखार को कम करने के लिए किया जाता है", "बीटा-ब्लॉकर जिसका उपयोग हृदय की गति को नियंत्रित करने के लिए किया जाता है", "एंटीकोआगुलंट जिसका उपयोग रक्त के थक्कों को घोलने के लिए किया जाता है"],
       "answer": 0
     },
     {
-      "question_en": "Which node is known as the natural pacemaker of the heart?",
-      "question_hi": "हृदय का प्राकृतिक पेसमेकर (Pacemaker) किसे कहा जाता है?",
-      "options_en": [
-        "AV Node",
-        "SA Node",
-        "Purkinje fibers",
-        "Bundle of His"
-      ],
-      "options_hi": [
-        "AV नोड",
-        "SA नोड",
-        "पुरकिंजे फाइबर्स",
-        "बंडल ऑफ हिज"
-      ],
+      "question_en": "Which position is characterized by the patient lying flat on their abdomen with their face turned to one side?",
+      "question_hi": "कौन सी पोजीशन इस बात से पहचानी जाती है कि मरीज अपने पेट के बल सीधा लेटता है और उसका चेहरा एक तरफ मुड़ा होता है?",
+      "options_en": ["Supine position", "Prone position", "Lateral position", "Sims' position"],
+      "options_hi": ["सुपाइन पोजीशन", "प्रोन पोजीशन", "लेटरल पोजीशन", "सिम्स पोजीशन"],
       "answer": 1
     },
     {
-      "question_en": "What is the correct procedure for lifting heavy objects safely?",
-      "question_hi": "भारी वस्तुओं को सुरक्षित रूप से उठाने की सही प्रक्रिया क्या है?",
-      "options_en": [
-        "Bend at the waist",
-        "Bend at the knees and keep back straight",
-        "Keep legs fully straight",
-        "Twist while lifting"
-      ],
-      "options_hi": [
-        "कमर से झुकें",
-        "घुटनों को मोड़ें और पीठ सीधी रखें",
-        "पैरों को बिल्कुल सीधा रखें",
-        "उठाते समय शरीर को मरोड़ें"
-      ],
+      "question_en": "An expired or discarded cytotoxic medication must be discarded into which color container?",
+      "question_hi": "एक एक्सपायर हो चुकी या फेंकी जाने वाली साइटोटॉक्सिक (कैंसर रोधी) दवा को किस रंग के कंटेनर में डाला जाना चाहिए?",
+      "options_en": ["Red plastic bag", "Yellow bag with cytotoxic label", "Blue container", "White Puncture proof container"],
+      "options_hi": ["लाल प्लास्टिक बैग", "साइटोटॉक्सिक लेबल वाला पीला बैग", "नीला कंटेनर", "सफेद पंचर प्रूफ कंटेनर"],
       "answer": 1
     },
     {
-      "question_en": "What is the expansion of 'PPE' in clinical settings?",
-      "question_hi": "क्लिनिकल परिवेश में 'PPE' का पूरा रूप क्या है?",
-      "options_en": [
-        "Patient Protection Equipment",
-        "Personal Protective Equipment",
-        "Private Patient Entry",
-        "Proper Physical Examination"
-      ],
-      "options_hi": [
-        "पेशेंट प्रोटेक्शन इक्विपमेंट",
-        "पर्सनल प्रोटेक्टिव इक्विपमेंट",
-        "प्राइवेट पेशेंट एंट्री",
-        "प्रॉपर फिजिकल एग्जामिनेशन"
-      ],
+      "question_en": "What condition is defined as a core body temperature falling below 35°C (95°F)?",
+      "question_hi": "शरीर का मुख्य तापमान 35°C (95°F) से नीचे गिर जाने को किस स्थिति के रूप में परिभाषित किया जाता है?",
+      "options_en": ["Hyperpyrexia", "Hypothermia", "Heat stroke", "Normal baseline fluctuation"],
+      "options_hi": ["हाइपरपायरेक्सिया", "हाइपोथर्मिया", "हीट स्ट्रोक", "सामान्य बेसलाइन उतार-चढ़ाव"],
       "answer": 1
     },
     {
-      "question_en": "Which vitamin helps majorly in blood clotting?",
-      "question_hi": "रक्त का थक्का जमने में मुख्य रूप से कौन सा विटामिन मदद करता है?",
-      "options_en": [
-        "Vitamin A",
-        "Vitamin C",
-        "Vitamin E",
-        "Vitamin K"
-      ],
-      "options_hi": [
-        "विटामिन A",
-        "विटामिन C",
-        "विटामिन E",
-        "विटामिन K"
-      ],
-      "answer": 3
-    },
-    {
-      "question_en": "What is the instrument used to listen to internal body sounds like heartbeat?",
-      "question_hi": "शरीर की आंतरिक ध्वनियों (जैसे दिल की धड़कन) को सुनने के लिए किस उपकरण का उपयोग किया जाता है?",
-      "options_en": [
-        "Thermometer",
-        "Stethoscope",
-        "Otoscope",
-        "Endoscope"
-      ],
-      "options_hi": [
-        "थर्मामीटर",
-        "स्टेथोस्कोप",
-        "ऑटोस्कोप",
-        "एंडोस्कोप"
-      ],
+      "question_en": "If a patient states they feel dizzy while transferring them to a chair, what should the nurse do immediately to prevent a fall?",
+      "question_hi": "यदि मरीज कुर्सी पर ट्रांसफर करते समय चक्कर आने की बात कहता है, तो गिरने से बचाने के लिए नर्स को तुरंत क्या करना चाहिए?",
+      "options_en": ["Force the patient to walk faster", "Ease the patient gently back onto the bed or safely down to the floor", "Leave the patient alone to fetch a glass of water", "Tell the patient to close their eyes and keep standing"],
+      "options_hi": ["मरीज को तेजी से चलने के लिए मजबूर करें", "मरीज को धीरे से वापस बिस्तर पर लिटाएं या सुरक्षित रूप से फर्श पर बैठाएं", "एक गिलास पानी लेने के लिए मरीज को अकेला छोड़ दें", "मरीज से कहें कि आंखें बंद कर ले और खड़ा रहे"],
       "answer": 1
     },
     {
-      "question_en": "What does a green colored dustbin signify in a general ward?",
-      "question_hi": "एक जनरल वार्ड में हरे रंग के डस्टबिन का क्या महत्व होता है?",
-      "options_en": [
-        "Infectious waste",
-        "Biodegradable wet/general waste",
-        "Sharp metals",
-        "Glass items"
-      ],
-      "options_hi": [
-        "संक्रामक कचरा",
-        "बायोडिग्रेडेबल गीला / सामान्य कचरा",
-        "नुकीली धातुएं",
-        "कांच की वस्तुएं"
-      ],
+      "question_en": "What does the abbreviation 'PC' denote on a patient's treatment chart?",
+      "question_hi": "मरीज के ट्रीटमेंट चार्ट पर संक्षिप्त रूप 'PC' क्या दर्शाता है?",
+      "options_en": ["Before meals", "After meals", "At bedtime", "Continuous infusion"],
+      "options_hi": ["भोजन से पहले", "भोजन के बाद", "सोते समय", "लगातार इन्फ्यूजन"],
       "answer": 1
+    },
+    {
+      "question_en": "What is the primary action and clinical indication for the drug Atorvastatin?",
+      "question_hi": "अटोर्वास्टैटिन (Atorvastatin) दवा का प्राथमिक कार्य और नैदानिक संकेत क्या है?",
+      "options_en": ["To dissolve kidney stones", "To lower blood cholesterol levels and prevent cardiovascular events", "To increase heart contractility", "To relieve acute bronchospasm"],
+      "options_hi": ["गुर्दे की पथरी को घोलना", "ब्लड कोलेस्ट्रॉल के स्तर को कम करना और हृदय रोगों से बचाना", "हृदय की संकुचन क्षमता को बढ़ाना", "तीव्र ब्रोंकोस्पास्म (सांस की नली का सिकुड़ना) से राहत देना"],
+      "answer": 1
+    },
+    {
+      "question_en": "Which position is created by raising the head of the bed to an angle of 30 to 45 degrees?",
+      "question_hi": "बिस्तर के सिरहाने को 30 से 45 डिग्री के कोण (Angle) तक ऊपर उठाने से कौन सी पोजीशन बनती है?",
+      "options_en": ["High-Fowler's position", "Semi-Fowler's position", "Low-Fowler's position", "Supine position"],
+      "options_hi": ["हाई-फाउलर पोजीशन", "सेमी-फाउलर पोजीशन", "लो-फाउलर पोजीशन", "सुपाइन पोजीशन"],
+      "answer": 1
+    },
+    {
+      "question_en": "According to BMW rules, solid waste items contaminated with blood and body fluids (like cotton, dressings, and plaster casts) go into which bag?",
+      "question_hi": "BMW नियमों के अनुसार, रक्त और शरीर के तरल पदार्थों से दूषित ठोस अपशिष्ट वस्तुएं (जैसे कपास, ड्रेसिंग और प्लास्टर कास्ट) किस बैग में जाती हैं?",
+      "options_en": ["Red bag", "Yellow bag", "Blue container", "White bag"],
+      "options_hi": ["लाल बैग", "पीला बैग", "नीला कंटेनर", "सफेद बैग"],
+      "answer": 1
+    },
+    {
+      "question_en": "When measuring blood pressure, what does the first distinct tapping sound heard (Phase I of Korotkoff sounds) represent?",
+      "question_hi": "ब्लड प्रेशर मापते समय, सुनाई देने वाली पहली स्पष्ट टैपिंग ध्वनि (कोरोटकॉफ ध्वनियों का चरण I) क्या दर्शाती है?",
+      "options_en": ["Diastolic pressure", "Mean arterial pressure", "Systolic pressure", "Pulse pressure"],
+      "options_hi": ["डायस्टोलिक दबाव", "मीन आर्टेरियल प्रेशर", "सिस्टोलिक दबाव", "पल्स प्रेशर"],
+      "answer": 2
+    },
+    {
+      "question_en": "How does keeping a call bell within the immediate reach of a bedridden patient act as a fall prevention strategy?",
+      "question_hi": "बिस्तर पर पड़े मरीज की सीधी पहुंच के भीतर कॉल बेल रखना फॉल प्रिवेंशन रणनीति के रूप में कैसे काम करता है?",
+      "options_en": ["It allows the patient to exercise their fingers", "It prevents the patient from getting up unattended to seek assistance", "It reduces hospital noise levels", "It automatically alarms the emergency exits"],
+      "options_hi": ["यह मरीज को अपनी उंगलियों का व्यायाम करने की अनुमति देता है", "यह मरीज को सहायता मांगने के लिए बिना किसी की देखरेख के अकेले उठने से रोकता है", "यह अस्पताल के शोर के स्तर को कम करता है", "यह आपातकालीन निकास को स्वचालित रूप से अलार्म करता है"],
+      "answer": 1
+    },
+    {
+      "question_en": "The medical abbreviation 'HS' indicates that a medicine should be administered at what time?",
+      "question_hi": "मेडिकल संक्षिप्त रूप 'HS' यह दर्शाता है कि दवा किस समय दी जानी चाहिए?",
+      "options_en": ["In the morning", "Before meals", "At bedtime", "Immediately"],
+      "options_hi": ["सुबह के समय", "भोजन से पहले", "सोते समय (At bedtime)", "तुरंत"],
+      "answer": 2
+    },
+    {
+      "question_en": "What type of medication is Tramadol, and what is its primary clinical purpose?",
+      "question_hi": "ट्रामाडोल (Tramadol) किस प्रकार की दवा है और इसका प्राथमिक नैदानिक उद्देश्य क्या है?",
+      "options_en": ["An antibiotic used for skin infections", "An opioid analgesic used to treat moderate to severe pain", "A diuretic used for kidney failure", "An anticoagulant used to prevent strokes"],
+      "options_hi": ["त्वचा के संक्रमण के लिए इस्तेमाल किया जाने वाला एंटीबायोटिक", "मध्यम से गंभीर दर्द के इलाज के लिए इस्तेमाल किया जाने वाला ओपिओइड एनाल्जेसिक (दर्द निवारक)", "गुर्दे की विफलता के लिए इस्तेमाल किया जाने वाला ड्यूरेटिक", "स्ट्रोक को रोकने के लिए इस्तेमाल किया जाने वाला एंटीकोआगुलंट"],
+      "answer": 1
+    },
+    {
+      "question_en": "Which position is also widely known as the 'lateral recumbent' position?",
+      "question_hi": "किस पोजीशन को व्यापक रूप से 'लेटरल रिकम्बेंट' (lateral recumbent) पोजीशन के नाम से भी जाना जाता है?",
+      "options_en": ["Prone position", "Side-lying position", "Supine position", "Fowler's position"],
+      "options_hi": ["प्रोन पोजीशन", "करवट लेकर लेटना (Side-lying position)", "सुपाइन पोजीशन", "फाउलर पोजीशन"],
+      "answer": 1
+    },
+    {
+      "question_en": "Which of the following items should be put into the Black or Green waste bin in an Indian hospital setup?",
+      "question_hi": "भारतीय अस्पताल के सेटअप में निम्नलिखित में से कौन सी वस्तु काले या हरे रंग के कचरे के डिब्बे में डाली जानी चाहिए?",
+      "options_en": ["Used blood bags", "General non-infected domestic waste and food scraps", "Discarded medicine vials", "Soiled gauze pieces"],
+      "options_hi": ["इस्तेमाल किए गए ब्लड बैग", "सामान्य असंक्रमित घरेलू कचरा और भोजन के टुकड़े", "फेंकी गई दवा की शीशियां", "गंदे धुंध (gauze) के टुकड़े"],
+      "answer": 1
+    },
+    {
+      "question_en": "Which pulse site is universally used by clinicians to assess circulation during adult cardiopulmonary resuscitation (CPR)?",
+      "question_hi": "वयस्क कार्डियोपल्मोनरी पुनर्जीवन (CPR) के दौरान परिसंचरण का आकलन करने के लिए चिकित्सकों द्वारा सार्वभौमिक रूप से किस पल्स साइट का उपयोग किया जाता है?",
+      "options_en": ["Radial pulse", "Brachial pulse", "Carotid pulse", "Popliteal pulse"],
+      "options_hi": ["रेडियल पल्स", "ब्रेकियल पल्स", "कैरोटिड पल्स (Carotid pulse)", "पॉप्लिटियल पल्स"],
+      "answer": 2
+    },
+    {
+      "question_en": "Why is adequate lighting in patient corridors and bathrooms crucial for fall prevention?",
+      "question_hi": "मरीजों के गलियारों और बाथरूम में पर्याप्त रोशनी होना फॉल प्रिवेंशन के लिए क्यों महत्वपूर्ण है?",
+      "options_en": ["To help the hospital save electrical energy costs", "To enable patients to clearly see potential hazards or wet floors", "To kill bacteria on surfaces using light waves", "To make the hospital look decorative"],
+      "options_hi": ["अस्पताल को बिजली ऊर्जा लागत बचाने में मदद करने के लिए", "ताकि मरीज संभावित खतरों या गीले फर्श को स्पष्ट रूप से देख सकें", "प्रकाश तरंगों का उपयोग करके सतहों पर बैक्टीरिया को मारने के लिए", "अस्पताल को सजावटी दिखाने के लिए"],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the medical meaning of the acronym 'STAT' on a drug prescription?",
+      "question_hi": "दवा के पर्चे पर लिखे संक्षिप्त शब्द 'STAT' का मेडिकल अर्थ क्या होता है?",
+      "options_en": ["Give whenever needed", "Give immediately and only once", "Give after conducting a lab test", "Give every alternate day"],
+      "options_hi": ["जब भी जरूरत हो तब दें", "तुरंत और केवल एक बार दें", "लैब टेस्ट करने के बाद दें", "हर एक दिन छोड़कर दें"],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the clinical use and class of the medication Piperacillin-Tazobactam (Pipzo)?",
+      "question_hi": "पिप्रासिलिन-टैजोबैक्टम (Pipzo) दवा का नैदानिक उपयोग और वर्ग क्या है?",
+      "options_en": ["A broad-spectrum antibiotic used to treat severe bacterial infections", "An antiviral used for seasonal influenza", "An antifungal cream for local rashes", "A mild sedative used for insomnia"],
+      "options_hi": ["गंभीर बैक्टीरियल संक्रमणों के इलाज के लिए इस्तेमाल किया जाने वाला एक ब्रॉड-स्पेक्ट्रम एंटीबायोटिक", "मौसमी इन्फ्लूएंजा के लिए इस्तेमाल किया जाने वाला एंटीवायरल", "स्थानीय चकत्ते के लिए एक एंटीफंगल क्रीम", "अनिद्रा के लिए इस्तेमाल किया जाने वाला एक हल्का शामक (sedative)"],
+      "answer": 0
+    },
+    {
+      "question_en": "The Trendelenburg position is primarily used to manage which clinical emergency?",
+      "question_hi": "ट्रेन्डेलनबर्ग पोजीशन का मुख्य रूप से किस आपातकालीन नैदानिक स्थिति को संभालने के लिए उपयोग किया जाता है?",
+      "options_en": ["Severe hypertension crisis", "Severe hypotension or shock", "Acute asthma attack", "Increased intracranial pressure"],
+      "options_hi": ["गंभीर हाइपरटेंशन क्राइसिस", "गंभीर हाइपोटेंशन (लो बीपी) या शॉक", "तीव्र अस्थमा का दौरा", "बढ़ा हुआ इंट्राक्रैनियल दबाव"],
+      "answer": 1
+    },
+    {
+      "question_en": "Under the Bio-Medical Waste rules, where should microbiology and biotechnology laboratory waste be segregated?",
+      "question_hi": "बायो-मेडिकल वेस्ट नियमों के तहत, माइक्रोबायोलॉजी और बायोटेक्नोलॉजी प्रयोगशाला के कचरे को कहाँ अलग किया जाना चाहिए?",
+      "options_en": ["Red plastic bag", "Yellow plastic bag", "Blue cardboard container", "White puncture proof box"],
+      "options_hi": ["लाल प्लास्टिक बैग", "पीला प्लास्टिक बैग", "नीला कार्डबोर्ड कंटेनर", "सफेद पंचर प्रूफ बॉक्स"],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the clinical term used to describe a respiratory rate that is lower than 12 breaths per minute in an adult?",
+      "question_hi": "एक वयस्क में 12 सांस प्रति मिनट से कम की श्वसन दर को दर्शाने के लिए किस नैदानिक शब्द का उपयोग किया जाता है?",
+      "options_en": ["Tachypnea", "Apnea", "Bradypnea", "Dyspnea"],
+      "options_hi": ["टैकीपनिया", "एपनिया", "ब्रैडीपनिया (Bradypnea)", "डिस्प्रिया"],
+      "answer": 2
+    },
+    {
+      "question_en": "What physical assessment tool or alert is commonly placed on a patient's wrist to signify they are at high risk for falls?",
+      "question_hi": "मरीज के गिरने के उच्च जोखिम को दर्शाने के लिए आमतौर पर उसकी कलाई पर कौन सा शारीरिक पहचान उपकरण या अलर्ट लगाया जाता है?",
+      "options_en": ["A yellow-colored identification band", "A red allergy wristband", "A digital smart watch", "A temporary ink tattoo"],
+      "options_hi": ["पीले रंग का पहचान बैंड (Yellow ID band)", "एक लाल एलर्जी रिस्टबैंड", "एक डिजिटल स्मार्ट वॉच", "एक अस्थायी स्याही का टैटू"],
+      "answer": 0
+    },
+    {
+      "question_en": "What does the clinical abbreviation 'NPO' stand for?",
+      "question_hi": "नैदानिक संक्षिप्त रूप 'NPO' का पूरा अर्थ क्या होता है?",
+      "options_en": ["New Patient Only", "Nothing by mouth", "Nursing Procedure Optional", "Night Protocol Ordered"],
+      "options_hi": ["केवल नया मरीज", "मुंह से कुछ नहीं लेना (Nothing by mouth)", "नर्सिंग प्रक्रिया वैकल्पिक", "नाइट प्रोटोकॉल ऑर्डर किया गया"],
+      "answer": 1
+    },
+    {
+      "question_en": "Insulin Glargine (Lantus) is classified as which type of insulin?",
+      "question_hi": "इंसुलिन ग्लार्गिन (Lantus) को किस प्रकार के इंसुलिन के रूप में वर्गीकृत किया गया है?",
+      "options_en": ["Rapid-acting insulin", "Short-acting regular insulin", "Long-acting insulin providing 24-hour basal coverage", "Intermediate-acting NPH insulin"],
+      "options_hi": ["रैपिड-एक्टिंग (तेजी से काम करने वाला) इंसुलिन", "शॉर्ट-एक्टिंग रेगुलर इंसुलिन", "लॉन्ग-एक्टिंग इंसुलिन जो 24 घंटे बेसल कवरेज प्रदान करता है", "इंटरमीडिएट-एक्टिंग NPH इंसुलिन"],
+      "answer": 2
+    },
+    {
+      "question_en": "When a patient is placed in a semi-prone position lying on the left side with the right knee flexed, which position is this?",
+      "question_hi": "जब एक मरीज को बाईं करवट लेकर दाहिने घुटने को मोड़कर सेमी-प्रोन स्थिति में लिटाया जाता है, तो यह कौन सी पोजीशन होती है?",
+      "options_en": ["Sims' position", "Fowler's position", "Supine position", "Lithotomy position"],
+      "options_hi": ["सिम्स पोजीशन (Sims' position)", "फाउलर पोजीशन", "सुपाइन पोजीशन", "लिथोटॉमी पोजीशन"],
+      "answer": 0
+    },
+    {
+      "question_en": "According to BMW rules, which technique must be applied to highly infectious laboratory waste before its final disposal?",
+      "question_hi": "BMW नियमों के अनुसार, अत्यधिक संक्रामक प्रयोगशाला अपशिष्ट के अंतिम निपटान से पहले कौन सी तकनीक लागू की जानी चाहिए?",
+      "options_en": ["Deep burial directly", "Pre-treatment by autoclaving or microwaving", "Shredding without disinfection", "Open dumping in the backyard"],
+      "options_hi": ["सीधे गहरा दफनाना", "ऑटोक्लेविंग या माइक्रोवेविंग द्वारा प्री-ट्रीटमेंट करना", "बिना कीटाणुशोधन के कतरना (Shredding)", "पिछवाड़े में खुला डंपिंग करना"],
+      "answer": 1
+    },
+    {
+      "question_en": "Which of the following values indicates a state of severe hypertension (Stage 2) in an adult?",
+      "question_hi": "निम्नलिखित में से कौन सा मान एक वयस्क में गंभीर उच्च रक्तचाप (स्टेज 2) की स्थिति को दर्शाता है?",
+      "options_en": ["120/80 mmHg", "130/85 mmHg", "160/100 mmHg or higher", "110/70 mmHg"],
+      "options_hi": ["120/80 mmHg", "130/85 mmHg", "160/100 mmHg या उच्चतर", "110/70 mmHg"],
+      "answer": 2
+    },
+    {
+      "question_en": "How does ensuring a clutter-free and dry floor around a patient's room directly contribute to safety?",
+      "question_hi": "मरीज के कमरे के आसपास अव्यवस्था-मुक्त (clutter-free) और सूखे फर्श को सुनिश्चित करना सुरक्षा में कैसे योगदान देता है?",
+      "options_en": ["It eliminates environmental tripping and slipping hazards to prevent falls", "It increases room ventilation", "It reduces the amount of cleaning chemical used", "It encourages the patient to exercise more"],
+      "options_hi": ["यह गिरने से रोकने के लिए पर्यावरणीय ट्रिपिंग और फिसलने के खतरों को समाप्त करता है", "यह कमरे के वेंटिलेशन को बढ़ाता है", "यह इस्तेमाल होने वाले सफाई रसायनों की मात्रा को कम करता है", "यह मरीज को अधिक व्यायाम करने के लिए प्रोत्साहित करता charms"],
+      "answer": 0
+    },
+    {
+      "question_en": "The clinical abbreviation 'q.d.' or 'QD' was historically used for 'once daily'. Why is its usage discouraged now?",
+      "question_hi": "क्लिनिकल संक्षिप्त रूप 'q.d.' या 'QD' का उपयोग ऐतिहासिक रूप से 'दिन में एक बार' के लिए किया जाता था। अब इसके उपयोग को हतोत्साहित क्यों किया जाता है?",
+      "options_en": ["Because it means the drug is expired", "Because it can be easily misread as 'QID' (four times daily), causing medication errors", "Because daily administration is no longer done", "Because it is an outdated Latin term that has no meaning"],
+      "options_hi": ["क्योंकि इसका मतलब है कि दवा की समय सीमा समाप्त हो गई है", "क्योंकि इसे आसानी से 'QID' (दिन में चार बार) के रूप में गलत पढ़ा जा सकता है, जिससे दवा की गंभीर गलती हो सकती है", "क्योंकि दैनिक प्रशासन अब नहीं किया जाता है", "क्योंकि यह एक पुराना लैटिन शब्द है जिसका कोई अर्थ नहीं है"],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the primary usage and action of the common medication Ondansetron (Emeset)?",
+      "question_hi": "सामान्य दवा ओन्डांशेट्रॉन (Ondansetron/Emeset) का मुख्य उपयोग और कार्य क्या है?",
+      "options_en": ["To treat bacterial pneumonia", "An antiemetic used to prevent and treat nausea and vomiting", "A laxative used to cure chronic constipation", "An antipyretic used to reduce body temperature"],
+      "options_hi": ["बैक्टीरियल निमोनिया का इलाज करना", "एक एंटीइमेटिक जिसका उपयोग मतली और उल्टी को रोकने और इलाज के लिए किया जाता है", "क्रोनिक कब्ज को ठीक करने के लिए इस्तेमाल किया जाने वाला एक जुलाब (laxative)", "शरीर के तापमान को कम करने के लिए इस्तेमाल किया जाने वाला एक एंटीपायरेटिक"],
+      "answer": 1
+    },
+    {
+      "question_en": "Which position is utilized to relieve pressure on the sacrum and heels of a completely bedridden patient?",
+      "question_hi": "पूरी तरह से बिस्तर पर पड़े मरीज के त्रिक (sacrum) और एड़ी पर दबाव को दूर करने के लिए किस पोजीशन का उपयोग किया जाता है?",
+      "options_en": ["Strict Supine position", "30-degree lateral turn position", "Lithotomy position", "Orthopneic position"],
+      "options_hi": ["सख्त सुपाइन पोजीशन", "30-डिग्री लेटरल टर्न पोजीशन", "लिथोटॉमी पोजीशन", "ऑर्थोपनेइक पोजीशन"],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the color code of the container used for disposing of un-infected general hospital municipal waste?",
+      "question_hi": "असंक्रमित सामान्य अस्पताल के नगरपालिका कचरे (general municipal waste) को फेंकने के लिए इस्तेमाल होने वाले कंटेनर का रंग कोड क्या है?",
+      "options_en": ["Red", "Yellow", "Black or Green", "White Translucent"],
+      "options_hi": ["लाल", "पीला", "काला या हरा", "सफेद पारभासी"],
+      "answer": 2
+    },
+    {
+      "question_en": "Which of the following oxygen saturation (SpO2) ranges indicates normal healthy lung function in an adult breathing room air?",
+      "question_hi": "निम्नलिखित में से कौन सी ऑक्सीजन सैचुरेशन (SpO2) रेंज कमरे की हवा में सांस लेने वाले वयस्क में सामान्य स्वस्थ फेफड़ों के कार्य को दर्शाती है?",
+      "options_en": ["85-89%", "90-94%", "95-100%", "70-80%"],
+      "options_hi": ["85-89%", "90-94%", "95-100%", "70-80%"],
+      "answer": 2
+    },
+    {
+      "question_en": "When a nurse checks a patient's room at night, what is a crucial safety step regarding fall prevention?",
+      "question_hi": "जब एक नर्स रात में मरीज के कमरे की जाँच करती है, तो फॉल प्रिवेंशन के संबंध में एक महत्वपूर्ण सुरक्षा कदम क्या है?",
+      "options_en": ["Turn on all bright overhead lights", "Ensure the nightlight is on and the pathway to the bathroom is clear", "Lock the door from outside", "Remove the patient's blanket"],
+      "options_hi": ["ऊपर की सभी चमकीली लाइटें चालू करें", "सुनिश्चित करें कि नाइटलाइट चालू है और बाथरूम का रास्ता साफ है", "दरवाजे को बाहर से लॉक करें", "मरीज का कंबल हटा दें"],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the medical abbreviation for a drug that should be given 'twice a day'?",
+      "question_hi": "दिन में दो बार दी जाने वाली दवा के लिए किस मेडिकल संक्षिप्त रूप का उपयोग किया जाता है?",
+      "options_en": ["QD", "BID", "TID", "QID"],
+      "options_hi": ["QD", "BID", "TID", "QID"],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the primary action and common use of Heparin injection in a clinical setup?",
+      "question_hi": "क्लीनिकल सेटअप में हेपरिन (Heparin) इंजेक्शन का प्राथमिक कार्य और सामान्य उपयोग क्या है?",
+      "options_en": ["An anticoagulant used to prevent and treat blood clots", "An antibiotic used to treat MRSA infections", "An anesthetic used to cause local numbness", "A hormone used to increase uterine contractions"],
+      "options_hi": ["रक्त के थक्कों को रोकने और उनका इलाज करने के लिए इस्तेमाल किया जाने वाला एक एंटीकोआगुलंट", "MRSA संक्रमण के इलाज के लिए इस्तेमाल किया जाने वाला एंटीबायोटिक", "स्थानीय सुन्नता पैदा करने के लिए इस्तेमाल किया जाने वाला एक एनेस्थेटिक", "गर्भाशय के संकुचन को बढ़ाने के लिए इस्तेमाल किया जाने वाला एक हॉर्मोन"],
+      "answer": 0
     }
   ]
 }
