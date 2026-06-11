@@ -240,7 +240,7 @@
     "options_hindi": [
       "कार्डियोपल्मोनरी रिससिटेशन",
       "सेंट्रल पेशेंट रिकवरी",
-      "कार्डिएक प्रेशर रिपोर्ट",
+      "कार्डिएक Pressure रिपोर्ट",
       "क्रिटिकल पल्स रिस्टोरेशन"
     ],
     "correct_answer_english": "Cardiopulmonary Resuscitation",
@@ -304,6 +304,7 @@
     "correct_answer_hindi": "सीधी बैठी हुई स्थिति में (फाउलर्स पोजीशन)"
   },
   {
+    "question_number": 17,
     "question_english": "What is the standard purpose of using a bed cradle for a patient?",
     "question_hindi": "मरीज के लिए 'बेड क्रैडल' (Bed Cradle) का उपयोग करने का मानक उद्देश्य क्या है?",
     "options_english": [
@@ -319,8 +320,7 @@
       "मरीज का सटीक वजन मापने के लिए"
     ],
     "correct_answer_english": "To prevent top bedsheets from touching sensitive legs or feet",
-    "correct_answer_hindi": "ऊपरी चादरों को संवेदनशील पैरों या पंजों को छूने से रोकने के लिए",
-    "question_number": 17
+    "correct_answer_hindi": "ऊपरी चादरों को संवेदनशील पैरों या पंजों को छूने से रोकने के लिए"
   },
   {
     "question_number": 18,
@@ -507,7 +507,7 @@
       "बिस्तर तैयार करना जबकि मरीज उसी के अंदर लेटा हो",
       "मरीज के डिस्चार्ज होने के बाद बिस्तर बनाना",
       "केवल प्लास्टिक शीट का उपयोग करके बिस्तर बनाना",
-      "ऑपरेटिंग थिएटर में बिस्तर बनाना"
+      "ऑपरेशन थिएटर में बिस्तर बनाना"
     ],
     "correct_answer_english": "Making a bed while the patient remains inside it",
     "correct_answer_hindi": "बिस्तर तैयार करना जबकि मरीज उसी के अंदर लेटा हो"
@@ -799,8 +799,8 @@
   },
   {
     "question_number": 43,
-    "question_english": "Which term describes infections acquired by a patient during their stay in a hospital?",
-    "question_hindi": "कौन सा शब्द अस्पताल में रहने के दौरान मरीज द्वारा प्राप्त संक्रमणों का वर्णन करता है?",
+    "question_english": "Which type of infection is acquired by a patient during their stay in a hospital?",
+    "question_hindi": "कौन सा संक्रमण अस्पताल में रहने के दौरान मरीज द्वारा प्राप्त किया जाता है?",
     "options_english": [
       "Chronic Infection",
       "Nosocomial/Hospital-acquired Infection",
@@ -990,7 +990,7 @@
   {
     "question_number": 53,
     "question_english": "Which instrument is used to check the core body temperature of a patient?",
-    "question_hindi": "मरीज के शरीर का मुख्य तापमान जांचने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "question_hindi": "मरीज का तापमान जांचने के लिए किस उपकरण का उपयोग किया जाता है?",
     "options_english": [
       "Stethoscope",
       "Thermometer",
@@ -1036,13 +1036,13 @@
       "Irregular high heart beats"
     ],
     "options_hindi": [
-      "असामान्य रूप से तेज सांस लेने की दर",
+      "अअसामान्य रूप से तेज सांस लेने की दर",
       "असामान्य रूप से धीमी सांस लेने की दर",
       "पूरी तरह से सांस न आना",
       "अनियमित उच्च दिल की धड़कन"
     ],
     "correct_answer_english": "Abnormally slow breathing rate",
-    "correct_answer_hindi": "असामान्य रूप से धीमी सांस लेने की दर"
+    "correct_answer_hindi": "अअसामान्य रूप से धीमी सांस लेने की दर"
   },
   {
     "question_number": 56,
@@ -1066,7 +1066,7 @@
   {
     "question_number": 57,
     "question_english": "Which hospital zone requires the absolute highest level of sterility and restricted entry?",
-    "question_hindi": "अस्पताल के किस क्षेत्र में पूर्ण रूप से उच्चतम स्तर की स्टेरिलिटी (बांझपन) और प्रतिबंधित प्रवेश की आवश्यकता होती है?",
+    "question_hindi": "अअस्पताल के किस क्षेत्र में पूर्ण रूप से उच्चतम स्तर की स्टेरिलिटी (बांझपन) और प्रतिबंधित प्रवेश की आवश्यकता होती है?",
     "options_english": [
       "Outpatient Waiting Lounge",
       "Operation Theater (OT)",
