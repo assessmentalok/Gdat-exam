@@ -1,1142 +1,1025 @@
-[
-  {
-    "question_number": 1,
-    "question_english": "What is the primary responsibility of a General Duty Assistant (GDA)?",
-    "question_hindi": "एक जनरल ड्यूटी असिस्टेंट (GDA) की प्राथमिक जिम्मेदारी क्या होती है?",
-    "options_english": [
-      "Performing major surgical procedures",
-      "Providing basic patient care and daily living assistance",
-      "Prescribing medications to patients",
-      "Diagnosing complex medical conditions"
-    ],
-    "options_hindi": [
-      "बड़ी सर्जिकल प्रक्रियाएं करना",
-      "मरीज की बुनियादी देखभाल और दैनिक जीवन में सहायता प्रदान करना",
-      "मरीजों को दवाएं लिखना",
-      "जटिल चिकित्सा स्थितियों का निदान करना"
-    ],
-    "correct_answer_english": "Providing basic patient care and daily living assistance",
-    "correct_answer_hindi": "मरीज की बुनियादी देखभाल और दैनिक जीवन में सहायता प्रदान करना"
-  },
-  {
-    "question_number": 2,
-    "question_english": "Which of the following is an essential quality of a professional GDA?",
-    "question_hindi": "निम्नलिखित में से कौन सा एक पेशेवर GDA का एक आवश्यक गुण है?",
-    "options_english": [
-      "Empathy and effective communication",
-      "Ignoring patient privacy for speed",
-      "Making independent treatment plans",
-      "Operating complex ICU ventilators alone"
-    ],
-    "options_hindi": [
-      "सहानुभूति और प्रभावी संचार",
-      "गति के लिए मरीज की गोपनीयता की अनदेखी करना",
-      "स्वतंत्र उपचार योजनाएं बनाना",
-      "अकेले जटिल आईसीयू वेंटिलेटर संचालित करना"
-    ],
-    "correct_answer_english": "Empathy and effective communication",
-    "correct_answer_hindi": "सहानुभूति और प्रभावी संचार"
-  },
-  {
-    "question_number": 3,
-    "question_english": "What is the full form of GDA in the healthcare sector?",
-    "question_hindi": "स्वास्थ्य सेवा क्षेत्र में GDA का पूर्ण रूप (Full Form) क्या है?",
-    "options_english": [
-      "General Doctor Assistant",
-      "General Duty Assistant",
-      "Global Disease Association",
-      "Geriatric Dietary Assistant"
-    ],
-    "options_hindi": [
-      "जनरल डॉक्टर असिस्टेंट",
-      "जनरल ड्यूटी असिस्टेंट",
-      "ग्लोबल डिजीज एसोसिएशन",
-      "जेरिएट्रिक डायट्री असिस्टेंट"
-    ],
-    "correct_answer_english": "General Duty Assistant",
-    "correct_answer_hindi": "जनरल ड्यूटी असिस्टेंट"
-  },
-  {
-    "question_number": 4,
-    "question_english": "When handling a patient, why is maintaining personal hygiene crucial for a GDA?",
-    "question_hindi": "मरीज को संभालते समय, एक GDA के लिए व्यक्तिगत स्वच्छता बनाए रखना क्यों महत्वपूर्ण है?",
-    "options_english": [
-      "To prevent the spread of infections",
-      "To look fashionable in the hospital",
-      "To finish the shift early",
-      "To reduce hospital electricity bills"
-    ],
-    "options_hindi": [
-      "संक्रमण के प्रसार को रोकने के लिए",
-      "अस्पताल में फैशनेबल दिखने के लिए",
-      "शिफ्ट जल्दी खत्म करने के लिए",
-      "अस्पताल के बिजली बिल को कम करने के लिए"
-    ],
-    "correct_answer_english": "To prevent the spread of infections",
-    "correct_answer_hindi": "संक्रमण के प्रसार को रोकने के लिए"
-  },
-  {
-    "question_number": 5,
-    "question_english": "What is the first step a GDA should take before touching a patient?",
-    "question_hindi": "मरीज को छूने से पहले एक GDA को पहला कदम क्या उठाना चाहिए?",
-    "options_english": [
-      "Check the patient's phone",
-      "Wash or sanitize hands thoroughly",
-      "Administer an injection",
-      "Fill out the discharge summary"
-    ],
-    "options_hindi": [
-      "मरीज का फोन चेक करना",
-      "हाथों को अच्छी तरह धोना या सैनिटाइज करना",
-      "इंजेक्शन लगाना",
-      "डिस्चार्ज समरी भरना"
-    ],
-    "correct_answer_english": "Wash or sanitize hands thoroughly",
-    "correct_answer_hindi": "हाथों को अच्छी तरह धोना या सैनिटाइज करना"
-  },
-  {
-    "question_number": 6,
-    "question_english": "Which of the following is considered a vital sign that a GDA might assist in monitoring?",
-    "question_hindi": "निम्नलिखित में से किसे एक महत्वपूर्ण संकेत (Vital Sign) माना जाता है जिसकी निगरानी में एक GDA सहायता कर सकता है?",
-    "options_english": [
-      "Body Temperature",
-      "Hair length",
-      "Eye color",
-      "Shoe size"
-    ],
-    "options_hindi": [
-      "शरीर का तापमान",
-      "बालों की लंबाई",
-      "आंखों का रंग",
-      "जूते का आकार"
-    ],
-    "correct_answer_english": "Body Temperature",
-    "correct_answer_hindi": "शरीर का तापमान"
-  },
-  {
-    "question_number": 7,
-    "question_english": "What instrument is primarily used to measure a patient's blood pressure?",
-    "question_hindi": "मरीज का रक्तचाप (Blood Pressure) मापने के लिए मुख्य रूप से किस उपकरण का उपयोग किया जाता है?",
-    "options_english": [
-      "Thermometer",
-      "Sphygmomanometer",
-      "Stethoscope",
-      "Glucometer"
-    ],
-    "options_hindi": [
-      "थर्मामीटर",
-      "स्फिग्मोमैनोमीटर",
-      "स्टेथॉसकोप",
-      "ग्लूकोमीटर"
-    ],
-    "correct_answer_english": "Sphygmomanometer",
-    "correct_answer_hindi": "स्फिग्मोमैनोमीटर"
-  },
-  {
-    "question_number": 8,
-    "question_english": "What is the normal body temperature of a healthy adult human in Fahrenheit?",
-    "question_hindi": "एक स्वस्थ वयस्क मानव के शरीर का सामान्य तापमान फारेनहाइट में कितना होता है?",
-    "options_english": [
-      "94.6°F",
-      "98.6°F",
-      "102.4°F",
-      "105.0°F"
-    ],
-    "options_hindi": [
-      "94.6°F",
-      "98.6°F",
-      "102.4°F",
-      "105.0°F"
-    ],
-    "correct_answer_english": "98.6°F",
-    "correct_answer_hindi": "98.6°F"
-  },
-  {
-    "question_number": 9,
-    "question_english": "What is the best way for a GDA to prevent pressure ulcers (bedsores) in bedridden patients?",
-    "question_hindi": "बिस्तर पर पड़े मरीजों में प्रेशर अल्सर (बेडसोर) को रोकने के लिए एक GDA के लिए सबसे अच्छा तरीका क्या है?",
-    "options_english": [
-      "Changing the patient's position every 2 hours",
-      "Giving the patient more hot liquids",
-      "Keeping the room completely dark",
-      "Applying tight bandages over the skin"
-    ],
-    "options_hindi": [
-      "हर 2 घंटे में मरीज की स्थिति (पोजीशन) बदलना",
-      "मरीज को अधिक गर्म तरल पदार्थ देना",
-      "कमरे को पूरी तरह से अंधेरा रखना",
-      "त्वचा पर सख्त पट्टियां बांधना"
-    ],
-    "correct_answer_english": "Changing the patient's position every 2 hours",
-    "correct_answer_hindi": "हर 2 घंटे में मरीज की स्थिति (पोजीशन) बदलना"
-  },
-  {
-    "question_number": 10,
-    "question_english": "When a patient is being transferred from a bed to a wheelchair, the GDA should:",
-    "question_hindi": "जब किसी मरीज को बिस्तर से व्हीलचेयर पर स्थानांतरित किया जा रहा हो, तो GDA को क्या करना चाहिए?",
-    "options_english": [
-      "Leave the wheelchair wheels unlocked",
-      "Lock the wheelchair wheels securely",
-      "Pull the patient by their arms forcefully",
-      "Ask the patient to jump onto the chair"
-    ],
-    "options_hindi": [
-      "व्हीलचेयर के पहियों को अनलॉक छोड़ दें",
-      "व्हीलचेयर के पहियों को सुरक्षित रूप से लॉक करें",
-      "मरीज को उसकी बाहों से जबरदस्ती खींचें",
-      "मरीज को कुर्सी पर कूदने के लिए कहें"
-    ],
-    "correct_answer_english": "Lock the wheelchair wheels securely",
-    "correct_answer_hindi": "व्हीलचेयर के पहियों को सुरक्षित रूप से लॉक करें"
-  },
-  {
-    "question_number": 11,
-    "question_english": "What color bag is used for disposing of highly infectious anatomical human waste in medical waste management?",
-    "question_hindi": "चिकित्सा अपशिष्ट प्रबंधन में अत्यधिक संक्रामक मानव शारीरिक अपशिष्ट के निपटान के लिए किस रंग के बैग का उपयोग किया जाता है?",
-    "options_english": [
-      "Yellow Bag",
-      "Red Bag",
-      "Blue Bag",
-      "Black Bag"
-    ],
-    "options_hindi": [
-      "पीला बैग",
-      "लाल बैग",
-      "नीला बैग",
-      "काला बैग"
-    ],
-    "correct_answer_english": "Yellow Bag",
-    "correct_answer_hindi": "पीला बैग"
-  },
-  {
-    "question_number": 12,
-    "question_english": "Where should used sharp objects like needles and syringes be safely disposed of?",
-    "question_hindi": "सुई और सिरिंज जैसी उपयोग की गई नुकीली वस्तुओं का सुरक्षित निपटान कहाँ किया जाना चाहिए?",
-    "options_english": [
-      "Yellow plastic bag",
-      "Puncture-proof translucent or white container",
-      "General dustbin",
-      "Red plastic bag"
-    ],
-    "options_hindi": [
-      "पीले प्लास्टिक बैग में",
-      "पंक्चर-प्रूफ पारभासी या सफेद कंटेनर में",
-      "सामान्य कूड़ेदान में",
-      "लाल प्लास्टिक बैग में"
-    ],
-    "correct_answer_english": "Puncture-proof translucent or white container",
-    "correct_answer_hindi": "पंक्चर-प्रूफ पारभासी या सफेद कंटेनर में"
-  },
-  {
-    "question_number": 13,
-    "question_english": "What is the full form of CPR in emergency medical care?",
-    "question_hindi": "आपातकालीन चिकित्सा देखभाल में CPR का पूर्ण रूप क्या है?",
-    "options_english": [
-      "Cardiopulmonary Resuscitation",
-      "Central Patient Recovery",
-      "Cardiac Pressure Report",
-      "Critical Pulse Restoration"
-    ],
-    "options_hindi": [
-      "कार्डियोपल्मोनरी रिससिटेशन",
-      "सेंट्रल पेशेंट रिकवरी",
-      "कार्डिएक Pressure रिपोर्ट",
-      "क्रिटिकल पल्स रिस्टोरेशन"
-    ],
-    "correct_answer_english": "Cardiopulmonary Resuscitation",
-    "correct_answer_hindi": "कार्डियोपल्मोनरी रिससिटेशन"
-  },
-  {
-    "question_number": 14,
-    "question_english": "If a GDA notices a patient has sudden severe chest pain and breathing difficulty, they should:",
-    "question_hindi": "यदि एक GDA देखता है कि मरीज को अचानक गंभीर छाती में दर्द और सांस लेने में कठिनाई हो रही है, तो उन्हें क्या करना चाहिए?",
-    "options_english": [
-      "Tell the patient to wait until tomorrow",
-      "Immediately inform the duty nurse or doctor",
-      "Give the patient a glass of cold water and leave",
-      "Try to perform a surgical procedure themselves"
-    ],
-    "options_hindi": [
-      "मरीज को कल तक इंतजार करने के लिए कहें",
-      "तुरंत ड्यूटी नर्स या डॉक्टर को सूचित करें",
-      "मरीज को एक गिलास ठंडा पानी दें और चले जाएं",
-      "स्वयं सर्जिकल प्रक्रिया करने का प्रयास करें"
-    ],
-    "correct_answer_english": "Immediately inform the duty nurse or doctor",
-    "correct_answer_hindi": "तुरंत ड्यूटी नर्स या डॉक्टर को सूचित करें"
-  },
-  {
-    "question_number": 15,
-    "question_english": "What does the abbreviation 'NPO' written on a patient's chart mean?",
-    "question_hindi": "मरीज के चार्ट पर लिखे संक्षिप्त नाम 'NPO' का क्या अर्थ है?",
-    "options_english": [
-      "New Patient Only",
-      "Nothing by Mouth",
-      "Next Pharmacy Order",
-      "No Pain Observed"
-    ],
-    "options_hindi": [
-      "न्यू पेशेंट ओनली",
-      "मुंह से कुछ नहीं देना (Nothing by Mouth)",
-      "नेक्स्ट फार्मेसी ऑर्डर",
-      "नो पेन ऑब्जर्व्ड"
-    ],
-    "correct_answer_english": "Nothing by Mouth",
-    "correct_answer_hindi": "मुंह से कुछ नहीं देना (Nothing by Mouth)"
-  },
-  {
-    "question_number": 16,
-    "question_english": "While feeding a patient who has difficulty swallowing, the GDA should position the patient:",
-    "question_hindi": "निकलने में कठिनाई वाले मरीज को खाना खिलाते समय, GDA को मरीज को किस स्थिति में रखना चाहिए?",
-    "options_english": [
-      "Flat on their back",
-      "In an upright sitting position (Fowler's position)",
-      "With head tilted downwards",
-      "Lying face down"
-    ],
-    "options_hindi": [
-      "पीठ के बल सीधा लेटाकर",
-      "सीधी बैठी हुई स्थिति में (फाउलर्स पोजीशन)",
-      "सिर नीचे की ओर झुकाकर",
-      "पेट के बल लेटाकर"
-    ],
-    "correct_answer_english": "In an upright sitting position (Fowler's position)",
-    "correct_answer_hindi": "सीधी बैठी हुई स्थिति में (फाउलर्स पोजीशन)"
-  },
-  {
-    "question_number": 17,
-    "question_english": "What is the standard purpose of using a bed cradle for a patient?",
-    "question_hindi": "मरीज के लिए 'बेड क्रैडल' (Bed Cradle) का उपयोग करने का मानक उद्देश्य क्या है?",
-    "options_english": [
-      "To prevent top bedsheets from touching sensitive legs or feet",
-      "To keep the patient locked to the bed",
-      "To elevate the patient's head for feeding",
-      "To measure the exact weight of the patient"
-    ],
-    "options_hindi": [
-      "ऊपरी चादरों को संवेदनशील पैरों या पंजों को छूने से रोकने के लिए",
-      "मरीज को बिस्तर पर बंद रखने के लिए",
-      "खाना खिलाने के लिए मरीज का सिर ऊंचा करने के लिए",
-      "मरीज का सटीक वजन मापने के लिए"
-    ],
-    "correct_answer_english": "To prevent top bedsheets from touching sensitive legs or feet",
-    "correct_answer_hindi": "ऊपरी चादरों को संवेदनशील पैरों या पंजों को छूने से रोकने के लिए"
-  },
-  {
-    "question_number": 18,
-    "question_english": "Which department of the hospital deals directly with critical life-threatening situations and accidents?",
-    "question_hindi": "अस्पताल का कौन सा विभाग सीधे जीवन के लिए खतरनाक स्थितियों और दुर्घटनाओं से निपटता है?",
-    "options_english": [
-      "Dermatology Department",
-      "Emergency/Casualty Department",
-      "Ophthalmology Department",
-      "Billing Department"
-    ],
-    "options_hindi": [
-      "त्वचा रोग विभाग",
-      "आपातकालीन/कैजुअल्टी विभाग",
-      "नेत्र रोग विभाग",
-      "बिलिंग विभाग"
-    ],
-    "correct_answer_english": "Emergency/Casualty Department",
-    "correct_answer_hindi": "आपातकालीन/कैजुअल्टी विभाग"
-  },
-  {
-    "question_number": 19,
-    "question_english": "To protect themselves from airborne diseases like Tuberculosis, a GDA should wear:",
-    "question_hindi": "तपेदिक (Tuberculosis) जैसी हवाई बीमारियों से खुद को बचाने के लिए, एक GDA को क्या पहनना चाहिए?",
-    "options_english": [
-      "Surgical cloth cap",
-      "N95 Respirator Mask",
-      "Normal cloth gloves",
-      "Plastic shoe covers only"
-    ],
-    "options_hindi": [
-      "सर्जिकल कपड़े की टोपी",
-      "N95 रेस्पिरेटर मास्क",
-      "सामान्य कपड़े के दस्ताने",
-      "केवल प्लास्टिक के जूते के कवर"
-    ],
-    "correct_answer_english": "N95 Respirator Mask",
-    "correct_answer_hindi": "N95 रेस्पिरेटर मास्क"
-  },
-  {
-    "question_number": 20,
-    "question_english": "What is the primary usage of a bedpan in patient care?",
-    "question_hindi": "मरीज की देखभाल में 'बेडपैन' (Bedpan) का प्राथमिक उपयोग क्या है?",
-    "options_english": [
-      "For serving breakfast to patients",
-      "For toileting bedridden patients who cannot walk",
-      "For washing the patient's hair",
-      "For collecting soiled bed linens"
-    ],
-    "options_hindi": [
-      "मरीजों को नाश्ता परोसने के लिए",
-      "बिस्तर पर पड़े मरीजों के शौच के लिए जो चल नहीं सकते",
-      "मरीज के बाल धोने के लिए",
-      "गंदे बेड लिनेन एकत्र करने के लिए"
-    ],
-    "correct_answer_english": "For toileting bedridden patients who cannot walk",
-    "correct_answer_hindi": "बिस्तर पर पड़े मरीजों के शौच के लिए जो चल नहीं सकते"
-  },
-  {
-    "question_number": 21,
-    "question_english": "What is 'urinary catheter care' primarily aimed at preventing?",
-    "question_hindi": "'यूरिनरी कैथेटर केयर' (Urinary Catheter Care) का मुख्य उद्देश्य किसे रोकना है?",
-    "options_english": [
-      "Urinary Tract Infections (UTI)",
-      "High Blood Pressure",
-      "Dehydration",
-      "Headache"
-    ],
-    "options_hindi": [
-      "मूत्र पथ के संक्रमण (UTI)",
-      "उच्च रक्तचाप",
-      "निर्जलीकरण (डीहाइड्रेशन)",
-      "सिरदर्द"
-    ],
-    "correct_answer_english": "Urinary Tract Infections (UTI)",
-    "correct_answer_hindi": "मूत्र पथ के संक्रमण (UTI)"
-  },
-  {
-    "question_number": 22,
-    "question_english": "How should a GDA talk to an elderly patient who is hard of hearing?",
-    "question_hindi": "कम सुनने वाले वृद्ध मरीज से एक GDA को कैसे बात करनी चाहिए?",
-    "options_english": [
-      "Shout directly into their ear at maximum volume",
-      "Speak clearly, slowly, and face the patient directly",
-      "Stop talking to the patient completely",
-      "Use complex medical jargon very fast"
-    ],
-    "options_hindi": [
-      "अधिकतम आवाज में सीधे उनके कान में चिल्लाएं",
-      "स्पष्ट रूप से, धीरे-धीरे बोलें और सीधे मरीज के सामने खड़े हों",
-      "मरीज से पूरी तरह बात करना बंद कर दें",
-      "बहुत तेजी से जटिल चिकित्सा शब्दावली का प्रयोग करें"
-    ],
-    "correct_answer_english": "Speak clearly, slowly, and face the patient directly",
-    "correct_answer_hindi": "स्पष्ट रूप से, धीरे-धीरे बोलें और सीधे मरीज के सामने खड़े हों"
-  },
-  {
-    "question_number": 23,
-    "question_english": "The term 'Tachycardia' refers to:",
-    "question_hindi": "'टैचीकार्डिया' (Tachycardia) शब्द का तात्पर्य किससे है?",
-    "options_english": [
-      "Abnormally slow heart rate",
-      "Abnormally fast heart rate",
-      "Low blood pressure",
-      "High body temperature"
-    ],
-    "options_hindi": [
-      "असामान्य रूप से धीमी हृदय गति",
-      "असामान्य रूप से तेज हृदय गति",
-      "कम रक्तचाप",
-      "उच्च शरीर का तापमान"
-    ],
-    "correct_answer_english": "Abnormally fast heart rate",
-    "correct_answer_hindi": "असामान्य रूप से तेज हृदय गति"
-  },
-  {
-    "question_number": 24,
-    "question_english": "What does a pulse oximeter measure?",
-    "question_hindi": "पल्स ऑक्सीमीटर (Pulse Oximeter) क्या मापता है?",
-    "options_english": [
-      "Blood pressure and weight",
-      "Oxygen saturation in blood and pulse rate",
-      "Blood sugar level",
-      "Urine volume"
-    ],
-    "options_hindi": [
-      "रक्तचाप और वजन",
-      "रक्त में ऑक्सीजन संतृप्ति (Oxygen Saturation) और पल्स दर",
-      "ब्लड शुगर का स्तर",
-      "मूत्र की मात्रा"
-    ],
-    "correct_answer_english": "Oxygen saturation in blood and pulse rate",
-    "correct_answer_hindi": "रक्त में ऑक्सीजन संतृप्ति (Oxygen Saturation) और पल्स दर"
-  },
-  {
-    "question_number": 25,
-    "question_english": "What should a GDA do immediately if they accidentally stick themselves with a used needle?",
-    "question_hindi": "यदि गलती से किसी GDA को उपयोग की गई सुई चुभ जाए तो उन्हें तुरंत क्या करना चाहिए?",
-    "options_english": [
-      "Wash the area with soap/water and report to the supervisor immediately",
-      "Hide it so they don't get scolded",
-      "Suck the blood out with their mouth",
-      "Apply a simple color sketch pen over it"
-    ],
-    "options_hindi": [
-      "क्षेत्र को साबुन/पानी से धोएं और तुरंत सुपरवाइजर को रिपोर्ट करें",
-      "इसे छुपाएं ताकि उन्हें डांट न पड़े",
-      "मुंह से खून बाहर चूसें",
-      "इसके ऊपर एक साधारण रंगीन स्केच पेन लगाएं"
-    ],
-    "correct_answer_english": "Wash the area with soap/water and report to the supervisor immediately",
-    "correct_answer_hindi": "क्षेत्र को साबुन/पानी से धोएं और तुरंत सुपरवाइजर को रिपोर्ट करें"
-  },
-  {
-    "question_number": 26,
-    "question_english": "What is the main goal of providing 'perineal care' to a patient?",
-    "question_hindi": "मरीज को 'पेरिनियल केयर' (Perineal Care) प्रदान करने का मुख्य लक्ष्य क्या है?",
-    "options_english": [
-      "To improve hair growth",
-      "To maintain cleanliness and prevent infection in genital areas",
-      "To help the patient sleep faster",
-      "To exercise the patient's arm muscles"
-    ],
-    "options_hindi": [
-      "बालों के विकास में सुधार करने के लिए",
-      "जननांग क्षेत्रों में स्वच्छता बनाए रखना और संक्रमण को रोकना",
-      "मरीज को तेजी से सोने में मदद करने के लिए",
-      "मरीज की बांह की मांसपेशियों का व्यायाम कराने के लिए"
-    ],
-    "correct_answer_english": "To maintain cleanliness and prevent infection in genital areas",
-    "correct_answer_hindi": "जननांग क्षेत्रों में स्वच्छता बनाए रखना और संक्रमण को रोकना"
-  },
-  {
-    "question_number": 27,
-    "question_english": "What is an occupied bed making?",
-    "question_hindi": "ऑक्यूपाइड बेड मेकिंग (Occupied Bed Making) क्या है?",
-    "options_english": [
-      "Making a bed while the patient remains inside it",
-      "Making a bed after the patient is discharged",
-      "Making a bed using plastic sheets only",
-      "Making a bed in the operating theater"
-    ],
-    "options_hindi": [
-      "बिस्तर तैयार करना जबकि मरीज उसी के अंदर लेटा हो",
-      "मरीज के डिस्चार्ज होने के बाद बिस्तर बनाना",
-      "केवल प्लास्टिक शीट का उपयोग करके बिस्तर बनाना",
-      "ऑपरेशन थिएटर में बिस्तर बनाना"
-    ],
-    "correct_answer_english": "Making a bed while the patient remains inside it",
-    "correct_answer_hindi": "बिस्तर तैयार करना जबकि मरीज उसी के अंदर लेटा हो"
-  },
-  {
-    "question_number": 28,
-    "question_english": "Which position is ideal for a patient suffering from extreme breathing difficulties?",
-    "question_hindi": "अत्यधिक सांस लेने की कठिनाई से पीड़ित मरीज के लिए कौन सी स्थिति (Position) आदर्श है?",
-    "options_english": [
-      "Prone position (face down)",
-      "Fowler's position (sitting up)",
-      "Supine position (flat on back)",
-      "Trendelenburg position (head down)"
-    ],
-    "options_hindi": [
-      "प्रोन पोजीशन (पेट के बल नीचे की ओर)",
-      "फाउलर्स पोजीशन (बैठी हुई स्थिति)",
-      "सुपाइन पोजीशन (पीठ के बल सीधा)",
-      "ट्रेंडलेनबर्ग पोजीशन (सिर नीचे की ओर)"
-    ],
-    "correct_answer_english": "Fowler's position (sitting up)",
-    "correct_answer_hindi": "फाउलर्स पोजीशन (बैठी हुई स्थिति)"
-  },
-  {
-    "question_number": 29,
-    "question_english": "What is the correct expansion of 'PPE' in infection control protocols?",
-    "question_hindi": "संक्रमण नियंत्रण प्रोटोकॉल में 'PPE' का सही विस्तार क्या है?",
-    "options_english": [
-      "Patient Protection Equipment",
-      "Personal Protective Equipment",
-      "Private Physician Emergency",
-      "Public Primary Evaluation"
-    ],
-    "options_hindi": [
-      "पेशेंट प्रोटेक्शन इक्विपमेंट",
-      "पर्सनल प्रोटेक्टिव इक्विपमेंट",
-      "प्राइवेट फिजिशियन इमरजेंसी",
-      "पब्लिक प्राइमरी इवैल्यूएशन"
-    ],
-    "correct_answer_english": "Personal Protective Equipment",
-    "correct_answer_hindi": "पर्सनल प्रोटेक्टिव इक्विपमेंट"
-  },
-  {
-    "question_number": 30,
-    "question_english": "What does a normal healthy adult's pulse rate per minute typically range between?",
-    "question_hindi": "एक सामान्य स्वस्थ वयस्क की प्रति मिनट पल्स दर आमतौर पर किसके बीच होती है?",
-    "options_english": [
-      "20 - 40 beats per minute",
-      "60 - 100 beats per minute",
-      "120 - 180 beats per minute",
-      "200 - 250 beats per minute"
-    ],
-    "options_hindi": [
-      "20 - 40 बीट्स प्रति मिनट",
-      "60 - 100 बीट्स प्रति मिनट",
-      "120 - 180 बीट्स प्रति मिनट",
-      "200 - 250 बीट्स प्रति मिनट"
-    ],
-    "correct_answer_english": "60 - 100 beats per minute",
-    "correct_answer_hindi": "60 - 100 बीट्स प्रति मिनट"
-  },
-  {
-    "question_number": 31,
-    "question_english": "The method of destroying all microorganisms, including spores, is called:",
-    "question_hindi": "बीजाणुओं (Spores) सहित सभी सूक्ष्मजीवों को नष्ट करने की विधि को क्या कहा जाता है?",
-    "options_english": [
-      "Sanitization",
-      "Sterilization",
-      "Boiling with normal water for 1 minute",
-      "Dusting with a dry cloth"
-    ],
-    "options_hindi": [
-      "सैनिटाइजेशन",
-      "स्टरलाइजेशन (नसबंदी/रोगाणुनाशन)",
-      "1 मिनट के लिए सामान्य पानी के साथ उबालना",
-      "सूखे कपड़े से डस्टिंग करना"
-    ],
-    "correct_answer_english": "Sterilization",
-    "correct_answer_hindi": "स्टरलाइजेशन (नसबंदी/रोगाणुनाशन)"
-  },
-  {
-    "question_number": 32,
-    "question_english": "Which equipment is used to provide pressurized steam for sterilization of medical instruments?",
-    "question_hindi": "चिकित्सा उपकरणों के स्टरलाइजेशन के लिए दबावयुक्त भाप प्रदान करने के लिए किस उपकरण का उपयोग किया जाता है?",
-    "options_english": [
-      "Refrigerator",
-      "Autoclave",
-      "Microwave oven",
-      "Centrifuge machine"
-    ],
-    "options_hindi": [
-      "रेफ्रिजरेटर",
-      "ऑटोक्लेव",
-      "माइक्रोवेव ओवन",
-      "सेंट्रीफ्यूज मशीन"
-    ],
-    "correct_answer_english": "Autoclave",
-    "correct_answer_hindi": "ऑटोक्लेव"
-  },
-  {
-    "question_number": 33,
-    "question_english": "What should a GDA use to safely clean a spill of blood on the hospital floor?",
-    "question_hindi": "अस्पताल के फर्श पर गिरे खून को सुरक्षित रूप से साफ करने के लिए एक GDA को किसका उपयोग करना चाहिए?",
-    "options_english": [
-      "Normal plain tap water",
-      "Sodium Hypochlorite solution",
-      "Dry broom only",
-      "Body lotion"
-    ],
-    "options_hindi": [
-      "सामान्य सादा नल का पानी",
-      "सोडियम हाइपोक्लोराइड समाधान",
-      "केवल सूखी झाड़ू",
-      "बॉडी लोशन"
-    ],
-    "correct_answer_english": "Sodium Hypochlorite solution",
-    "correct_answer_hindi": "सोडियम हाइपोक्लोराइड समाधान"
-  },
-  {
-    "question_number": 34,
-    "question_english": "What is the primary sign of dehydration in a patient?",
-    "question_hindi": "मरीज में निर्जलीकरण (डीहाइड्रेशन) का प्राथमिक संकेत क्या है?",
-    "options_english": [
-      "Extreme thirst and dark colored urine",
-      "Excessive sweating and high energy",
-      "Frequent heavy urination",
-      "Sudden increase in weight"
-    ],
-    "options_hindi": [
-      "अत्यधिक प्यास और गहरे रंग का मूत्र",
-      "अत्यधिक पसीना और उच्च ऊर्जा",
-      "बार-बार भारी पेशाब आना",
-      "वजन में अचानक वृद्धि"
-    ],
-    "correct_answer_english": "Extreme thirst and dark colored urine",
-    "correct_answer_hindi": "अत्यधिक प्यास और गहरे रंग का मूत्र"
-  },
-  {
-    "question_number": 35,
-    "question_english": "How should a GDA record the liquid intake and output of a patient?",
-    "question_hindi": "एक GDA को मरीज के तरल पदार्थ के सेवन (Intake) और आउटपुट को कैसे रिकॉर्ड करना चाहिए?",
-    "options_english": [
-      "Guess roughly at the end of the day",
-      "Accurately measure and note down in the I/O chart immediately",
-      "Ask the patient's relatives to remember it",
-      "Do not record it as it is not important"
-    ],
-    "options_hindi": [
-      "दिन के अंत में मोटे तौर पर अनुमान लगाएं",
-      "सटीक रूप से मापें और तुरंत आई/ओ (I/O) चार्ट में नोट करें",
-      "मरीज के रिश्तेदारों को इसे याद रखने के लिए कहें",
-      "इसे रिकॉर्ड न करें क्योंकि यह महत्वपूर्ण नहीं है"
-    ],
-    "correct_answer_english": "Accurately measure and note down in the I/O chart immediately",
-    "correct_answer_hindi": "सटीक रूप से मापें और तुरंत आई/ओ (I/O) चार्ट में नोट करें"
-  },
-  {
-    "question_number": 36,
-    "question_english": "What is the purpose of a 'draw sheet' placed on a hospital bed?",
-    "question_hindi": "अस्पताल के बिस्तर पर रखे 'ड्रॉ शीट' (Draw Sheet) का उद्देश्य क्या है?",
-    "options_english": [
-      "To help lift and turn the patient easily without dragging them",
-      "To cover the patient's face during sleep",
-      "To keep the pillows clean",
-      "To serve as a decorative item"
-    ],
-    "options_hindi": [
-      "मरीज को बिना घसीटे आसानी से उठाने और मोड़ने में मदद करने के लिए",
-      "नींद के दौरान मरीज का चेहरा ढकने के लिए",
-      "तकियों को साफ रखने के लिए",
-      "एक सजावटी वस्तु के रूप में उपयोग करने के लिए"
-    ],
-    "correct_answer_english": "To help lift and turn the patient easily without dragging them",
-    "correct_answer_hindi": "मरीज को बिना घसीटे आसानी से उठाने और मोड़ने में मदद करने के लिए"
-  },
-  {
-    "question_number": 37,
-    "question_english": "Which of the following is an example of an open ended question to ask a patient?",
-    "question_hindi": "मरीज से पूछने के लिए निम्नलिखित में से कौन सा एक ओपन-एंडेड (खुले छोर वाले) प्रश्न का उदाहरण है?",
-    "options_english": [
-      "Are you feeling pain now?",
-      "How are you feeling today overall?",
-      "Is your name Mr. John?",
-      "Did you eat breakfast?"
-    ],
-    "options_hindi": [
-      "क्या आपको अभी दर्द हो रहा है?",
-      "आज आप कुल मिलाकर कैसा महसूस कर रहे हैं?",
-      "क्या आपका नाम मिस्टर जॉन है?",
-      "क्या आपने नाश्ता किया?"
-    ],
-    "correct_answer_english": "How are you feeling today overall?",
-    "correct_answer_hindi": "आज आप कुल मिलाकर कैसा महसूस कर रहे हैं?"
-  },
-  {
-    "question_number": 38,
-    "question_english": "What should a GDA do if a patient refuses to eat their prescribed hospital food?",
-    "question_hindi": "यदि कोई मरीज अस्पताल का निर्धारित भोजन खाने से मना कर दे तो एक GDA को क्या करना चाहिए?",
-    "options_english": [
-      "Forcefully push the food into their mouth",
-      "Report the refusal to the duty nurse and try to understand the patient's reason",
-      "Shout at the patient and throw the food away",
-      "Leave the patient alone for the next 2 days"
-    ],
-    "options_hindi": [
-      "जबरदस्ती उनके मुंह में खाना ठूंस दें",
-      "ड्यूटी नर्स को इनकार की रिपोर्ट करें और मरीज के कारण को समझने का प्रयास करें",
-      "मरीज पर चिल्लाएं और खाना फेंक दें",
-      "मरीज को अगले 2 दिनों के लिए अकेला छोड़ दें"
-    ],
-    "correct_answer_english": "Report the refusal to the duty nurse and try to understand the patient's reason",
-    "correct_answer_hindi": "ड्यूटी नर्स को इनकार की रिपोर्ट करें और मरीज के कारण को समझने का प्रयास करें"
-  },
-  {
-    "question_number": 39,
-    "question_english": "The medical term 'Hypertension' means:",
-    "question_hindi": "चिकित्सीय शब्द 'हाइपरटेंशन' (Hypertension) का अर्थ है:",
-    "options_english": [
-      "Low blood pressure",
-      "High blood pressure",
-      "Low blood sugar",
-      "Extreme mental fatigue"
-    ],
-    "options_hindi": [
-      "कम रक्तचाप",
-      "उच्च रक्तचाप",
-      "लो ब्लड शुगर",
-      "अत्यधिक मानसिक थकान"
-    ],
-    "correct_answer_english": "High blood pressure",
-    "correct_answer_hindi": "उच्च रक्तचाप"
-  },
-  {
-    "question_number": 40,
-    "question_english": "What is the normal rate of respiration for a healthy adult human at rest?",
-    "question_hindi": "आराम की स्थिति में एक स्वस्थ वयस्क मानव के लिए सामान्य श्वसन दर (Respiration Rate) क्या है?",
-    "options_english": [
-      "5 - 8 breaths per minute",
-      "12 - 20 breaths per minute",
-      "35 - 50 breaths per minute",
-      "60 - 80 breaths per minute"
-    ],
-    "options_hindi": [
-      "5 - 8 सांसें प्रति मिनट",
-      "12 - 20 सांसें प्रति मिनट",
-      "35 - 50 सांसें प्रति मिनट",
-      "60 - 80 सांसें प्रति मिनट"
-    ],
-    "correct_answer_english": "12 - 20 breaths per minute",
-    "correct_answer_hindi": "12 - 20 सांसें प्रति मिनट"
-  },
-  {
-    "question_number": 41,
-    "question_english": "A patient who cannot move or walk on their own is known as:",
-    "question_hindi": "एक मरीज जो अपने आप हिल या चल नहीं सकता, उसे किस रूप में जाना जाता है?",
-    "options_english": [
-      "Ambulatory patient",
-      "Immobile/Bedridden patient",
-      "Outpatient",
-      "Psychiatric patient"
-    ],
-    "options_hindi": [
-      "एम्बुलेटरी मरीज",
-      "स्थिर/बिस्तर पर पड़ा (Immobile) मरीज",
-      "बाह्य रोगी (Outpatient)",
-      "मानसिक रोगी"
-    ],
-    "correct_answer_english": "Immobile/Bedridden patient",
-    "correct_answer_hindi": "स्थिर/बिस्तर पर पड़ा (Immobile) मरीज"
-  },
-  {
-    "question_number": 42,
-    "question_english": "What should a GDA do before leaving a patient's room to ensure safety?",
-    "question_hindi": "सुरक्षा सुनिश्चित करने के लिए एक GDA को मरीज के कमरे से बाहर निकलने से पहले क्या करना चाहिए?",
-    "options_english": [
-      "Ensure the call bell is within the patient's reach and bed rails are up if required",
-      "Turn off all emergency medical equipment alarms",
-      "Lock the room from the outside completely",
-      "Hide the patient's water bottle"
-    ],
-    "options_hindi": [
-      "सुनिश्चित करें कि कॉल बेल मरीज की पहुंच में हो और आवश्यकतानुसार बेड रेल्स ऊपर हों",
-      "सभी आपातकालीन चिकित्सा उपकरण अलार्म बंद कर दें",
-      "कमरे को बाहर से पूरी तरह लॉक कर दें",
-      "मरीज के पानी की बोतल छुपा दें"
-    ],
-    "correct_answer_english": "Ensure the call bell is within the patient's reach and bed rails are up if required",
-    "correct_answer_hindi": "सुनिश्चित करें कि कॉल बेल मरीज की पहुंच में हो और आवश्यकतानुसार बेड रेल्स ऊपर हों"
-  },
-  {
-    "question_number": 43,
-    "question_english": "Which type of infection is acquired by a patient during their stay in a hospital?",
-    "question_hindi": "कौन सा संक्रमण अस्पताल में रहने के दौरान मरीज द्वारा प्राप्त किया जाता है?",
-    "options_english": [
-      "Chronic Infection",
-      "Nosocomial/Hospital-acquired Infection",
-      "Genetic Infection",
-      "Congenital Disease"
-    ],
-    "options_hindi": [
-      "क्रोनिक संक्रमण",
-      "नोसोकोमियल/अस्पताल-अर्जित संक्रमण",
-      "आनुवंशिक संक्रमण",
-      "जन्मजात बीमारी"
-    ],
-    "correct_answer_english": "Nosocomial/Hospital-acquired Infection",
-    "correct_answer_hindi": "नोसोकोमियल/अस्पताल-अर्जित संक्रमण"
-  },
-  {
-    "question_number": 44,
-    "question_english": "When performing mouth care (oral hygiene) for an unconscious patient, the GDA must turn the head to the side to prevent:",
-    "question_hindi": "एक अचेत (बेहोश) मरीज के मुंह की देखभाल (ओरल हाइजीन) करते समय, GDA को रोकने के लिए सिर को एक तरफ मोड़ना चाहिए:",
-    "options_english": [
-      "Aspiration (choking on fluids)",
-      "Tooth decay",
-      "High fever",
-      "Deafness"
-    ],
-    "options_hindi": [
-      "एस्पिरेशन (तरल पदार्थों से दम घुटना)",
-      "दांतों की सड़न",
-      "तेज बुखार",
-      "बहरापन"
-    ],
-    "correct_answer_english": "Aspiration (choking on fluids)",
-    "correct_answer_hindi": "एस्पिरेशन (तरल पदार्थों से दम घुटना)"
-  },
-  {
-    "question_number": 45,
-    "question_english": "The best site to check an adult's pulse during routine checkups is the:",
-    "question_hindi": "नियमित जांच के दौरान किसी वयस्क की नाड़ी (Pulse) की जांच करने के लिए सबसे अच्छा स्थान कौन सा है?",
-    "options_english": [
-      "Carotid artery in the neck",
-      "Radial artery in the wrist",
-      "Femoral artery in the groin",
-      "Popliteal artery behind the knee"
-    ],
-    "options_hindi": [
-      "गर्दन में कैरोटिड धमनी",
-      "कलाई में रेडियल धमनी",
-      "कमर में फीमोरल धमनी",
-      "घुटने के पीछे पॉप्लिटिएल धमनी"
-    ],
-    "correct_answer_english": "Radial artery in the wrist",
-    "correct_answer_hindi": "कलाई में रेडियल धमनी"
-  },
-  {
-    "question_number": 46,
-    "question_english": "What is 'post-mortem care'?",
-    "question_hindi": "'पोस्ट-मॉर्टम केयर' (Post-mortem Care) क्या है?",
-    "options_english": [
-      "Care given to a patient before a major surgery",
-      "Care provided to a deceased patient's body after death",
-      "Care for newborn infants in the nursery",
-      "Care given during accidental emergency fire breakouts"
-    ],
-    "options_hindi": [
-      "बड़ी सर्जरी से पहले मरीज को दी जाने वाली देखभाल",
-      "मृत्यु के बाद मृत मरीज के शरीर को दी जाने वाली देखभाल",
-      "नर्सरी में नवजात शिशुओं की देखभाल",
-      "आकस्मिक आपातकालीन आग लगने के दौरान दी जाने वाली देखभाल"
-    ],
-    "correct_answer_english": "Care provided to a deceased patient's body after death",
-    "correct_answer_hindi": "मृत्यु के बाद मृत मरीज के शरीर को दी जाने वाली देखभाल"
-  },
-  {
-    "question_number": 47,
-    "question_english": "What should a GDA do if they see a fire breaking out in a patient's room?",
-    "question_hindi": "यदि एक GDA मरीज के कमरे में आग लगते हुए देखता है तो उसे क्या करना चाहिए?",
-    "options_english": [
-      "Run away from the hospital without telling anyone",
-      "Rescue the patient safely, raise the alarm, and follow hospital fire protocols",
-      "Wait for the next shift staff to handle it",
-      "Throw a heavy blanket on the electronic ventilator instantly"
-    ],
-    "options_hindi": [
-      "किसी को बताए बिना अस्पताल से भाग जाएं",
-      "मरीज को सुरक्षित बचाएं, अलार्म बजाएं, और अस्पताल के फायर प्रोटोकॉल का पालन करें",
-      "अगली शिफ्ट के कर्मचारियों के इसे संभालने का इंतजार करें",
-      "इलेक्ट्रॉनिक वेंटिलेटर पर तुरंत एक भारी कंबल फेंक दें"
-    ],
-    "correct_answer_english": "Rescue the patient safely, raise the alarm, and follow hospital fire protocols",
-    "correct_answer_hindi": "मरीज को सुरक्षित बचाएं, अलार्म बजाएं, और अस्पताल के फायर प्रोटोकॉल का पालन करें"
-  },
-  {
-    "question_number": 48,
-    "question_english": "In hospital ethics, keeping all patient medical records and status private is known as maintaining:",
-    "question_hindi": "अस्पताल के लोकाचार में, मरीज के सभी मेडिकल रिकॉर्ड और स्थिति को निजी रखना किस रूप में जाना जाता है?",
-    "options_english": [
-      "Confidentiality",
-      "Publicity",
-      "Insubordination",
-      "Negligence"
-    ],
-    "options_hindi": [
-      "गोपनीयता (Confidentiality)",
-      "पब्लिसिटी",
-      "अवज्ञा (Insubordination)",
-      "लापरवाही (Negligence)"
-    ],
-    "correct_answer_english": "Confidentiality",
-    "correct_answer_hindi": "गोपनीयता (Confidentiality)"
-  },
-  {
-    "question_number": 49,
-    "question_english": "Which type of diet is usually prescribed to a patient who has no teeth or has severe jaw pain?",
-    "question_hindi": "किस प्रकार का आहार आमतौर पर उस मरीज को निर्धारित किया जाता है जिसके दांत नहीं हैं या जबड़े में गंभीर दर्द है?",
-    "options_english": [
-      "High-fiber hard food diet",
-      "Soft or Pureed liquid diet",
-      "Spicy heavy fried food diet",
-      "Clear fluids only for lifetime"
-    ],
-    "options_hindi": [
-      "उच्च फाइबर युक्त सख्त भोजन आहार",
-      "नरम या प्यूरीकृत (Pureed) तरल आहार",
-      "मसालेदार भारी तला हुआ भोजन आहार",
-      "आजीवन केवल स्पष्ट तरल पदार्थ"
-    ],
-    "correct_answer_english": "Soft or Pureed liquid diet",
-    "correct_answer_hindi": "नरम या प्यूरीकृत (Pureed) तरल आहार"
-  },
-  {
-    "question_number": 50,
-    "question_english": "What does the medical suffix '-itis' denote in a diagnosis (e.g., Gastritis, Dermatitis)?",
-    "question_hindi": "निदान में मेडिकल प्रत्यय (Suffix) '-itis' क्या दर्शाता है (जैसे, गैस्ट्राइटिस, डर्मेटाइटिस)?",
-    "options_english": [
-      "Surgical removal of an organ",
-      "Inflammation or swelling",
-      "Complete cure of a disease",
-      "Lack of blood supply"
-    ],
-    "options_hindi": [
-      "एक अंग को सर्जिकल रूप से हटाना",
-      "सूजन या जलन (Inflammation)",
-      "एक बीमारी का पूर्ण इलाज",
-      "रक्त आपूर्ति की कमी"
-    ],
-    "correct_answer_english": "Inflammation or swelling",
-    "correct_answer_hindi": "सूजन या जलन (Inflammation)"
-  },
-  {
-    "question_number": 51,
-    "question_english": "What should a GDA do if they notice the patient's intravenous (IV) line fluid is empty or leaking?",
-    "question_hindi": "यदि एक GDA देखता है कि मरीज की अंतःशिरा (IV) लाइन का तरल पदार्थ खाली हो गया है या लीक हो रहा है, तो उसे क्या करना चाहिए?",
-    "options_english": [
-      "Immediately inform the staff nurse on duty",
-      "Remove the IV needle yourself forcefully",
-      "Ignore it as it will stop on its own",
-      "Refill the bottle with tap water"
-    ],
-    "options_hindi": [
-      "तुरंत ड्यूटी पर तैनात स्टाफ नर्स को सूचित करें",
-      "स्वयं IV सुई को जबरदस्ती हटा दें",
-      "इसे अनदेखा करें क्योंकि यह अपने आप बंद हो जाएगा",
-      "बोतल को नल के पानी से दोबारा भरें"
-    ],
-    "correct_answer_english": "Immediately inform the staff nurse on duty",
-    "correct_answer_hindi": "तुरंत ड्यूटी पर तैनात स्टाफ नर्स को सूचित करें"
-  },
-  {
-    "question_number": 52,
-    "question_english": "While transporting a patient on a stretcher down a ramp, the GDA should ensure that:",
-    "question_hindi": "एक स्ट्रेचर पर मरीज को रैंप से नीचे ले जाते समय, GDA को यह सुनिश्चित करना चाहिए कि:",
-    "options_english": [
-      "The patient's head is lower than the feet",
-      "The patient's feet go first down the ramp while the GDA guides from the head end",
-      "The stretcher is pushed as fast as possible to save time",
-      "The patient is kept standing on the stretcher"
-    ],
-    "options_hindi": [
-      "मरीज का सिर पैरों से नीचा हो",
-      "मरीज के पैर रैंप पर पहले नीचे जाएं जबकि GDA सिर के छोर से मार्गदर्शन करे",
-      "समय बचाने के लिए स्ट्रेचर को जितना हो सके उतनी तेजी से धकेला जाए",
-      "मरीज को स्ट्रेचर पर खड़ा रखा जाए"
-    ],
-    "correct_answer_english": "The patient's feet go first down the ramp while the GDA guides from the head end",
-    "correct_answer_hindi": "मरीज के पैर रैंप पर पहले नीचे जाएं जबकि GDA सिर के छोर से मार्गदर्शन करे"
-  },
-  {
-    "question_number": 53,
-    "question_english": "Which instrument is used to check the core body temperature of a patient?",
-    "question_hindi": "मरीज का तापमान जांचने के लिए किस उपकरण का उपयोग किया जाता है?",
-    "options_english": [
-      "Stethoscope",
-      "Thermometer",
-      "Barometer",
-      "Glucometer"
-    ],
-    "options_hindi": [
-      "स्टेथॉसकोप",
-      "थर्मामीटर",
-      "बैरोमीटर",
-      "ग्लूकोमीटर"
-    ],
-    "correct_answer_english": "Thermometer",
-    "correct_answer_hindi": "थर्मामीटर"
-  },
-  {
-    "question_number": 54,
-    "question_english": "What is the primary objective of first aid given to an injured person?",
-    "question_hindi": "घायल व्यक्ति को दी जाने वाली प्राथमिक चिकित्सा (First Aid) का प्राथमिक उद्देश्य क्या है?",
-    "options_english": [
-      "To charge money for emergency treatment",
-      "To preserve life, prevent condition from worsening, and promote recovery",
-      "To perform a quick operation on the road",
-      "To declare the patient fit for work instantly"
-    ],
-    "options_hindi": [
-      "आपातकालीन उपचार के लिए पैसे वसूलना",
-      "जीवन बचाना, स्थिति को बिगड़ने से रोकना और रिकवरी को बढ़ावा देना",
-      "सड़क पर त्वरित ऑपरेशन करना",
-      "मरीज को तुरंत काम के लिए फिट घोषित करना"
-    ],
-    "correct_answer_english": "To preserve life, prevent condition from worsening, and promote recovery",
-    "correct_answer_hindi": "जीवन बचाना, स्थिति को बिगड़ने से रोकना और रिकवरी को बढ़ावा देना"
-  },
-  {
-    "question_number": 55,
-    "question_english": "The term 'Bradypnea' refers to:",
-    "question_hindi": "'ब्रैडीपनिया' (Bradypnea) शब्द का तात्पर्य किससे है?",
-    "options_english": [
-      "Abnormally fast breathing rate",
-      "Abnormally slow breathing rate",
-      "Absence of breathing completely",
-      "Irregular high heart beats"
-    ],
-    "options_hindi": [
-      "अअसामान्य रूप से तेज सांस लेने की दर",
-      "असामान्य रूप से धीमी सांस लेने की दर",
-      "पूरी तरह से सांस न आना",
-      "अनियमित उच्च दिल की धड़कन"
-    ],
-    "correct_answer_english": "Abnormally slow breathing rate",
-    "correct_answer_hindi": "अअसामान्य रूप से धीमी सांस लेने की दर"
-  },
-  {
-    "question_number": 56,
-    "question_english": "What is the ideal way to safely handle soiled linen covered in patient feces?",
-    "question_hindi": "मरीज के मल से सने गंदे लिनेन (चादरों) को सुरक्षित रूप से संभालने का आदर्श तरीका क्या है?",
-    "options_english": [
-      "Shake it forcefully in the corridor to clean it",
-      "Roll it carefully inwards without shaking and place it in a leak-proof laundry bag",
-      "Leave it open on the floor next to the patient's bed",
-      "Wash it with normal drinking water in the patient's bathroom sink"
-    ],
-    "options_hindi": [
-      "इसे साफ करने के लिए कॉरिडोर में जोर से हिलाएं",
-      "बिना हिलाए सावधानी से अंदर की ओर रोल करें और लीक-प्रूफ लॉन्ड्री बैग में रखें",
-      "मरीज के बिस्तर के पास फर्श पर खुला छोड़ दें",
-      "मरीज के बाथरूम सिंक में सामान्य पीने के पानी से धोएं"
-    ],
-    "correct_answer_english": "Roll it carefully inwards without shaking and place it in a leak-proof laundry bag",
-    "correct_answer_hindi": "बिना हिलाए सावधानी से अंदर की ओर रोल करें और लीक-प्रूफ लॉन्ड्री बैग में रखें"
-  },
-  {
-    "question_number": 57,
-    "question_english": "Which hospital zone requires the absolute highest level of sterility and restricted entry?",
-    "question_hindi": "अअस्पताल के किस क्षेत्र में पूर्ण रूप से उच्चतम स्तर की स्टेरिलिटी (बांझपन) और प्रतिबंधित प्रवेश की आवश्यकता होती है?",
-    "options_english": [
-      "Outpatient Waiting Lounge",
-      "Operation Theater (OT)",
-      "Billing Counter office",
-      "Hospital Cafeteria"
-    ],
-    "options_hindi": [
-      "बाह्य रोगी प्रतीक्षा लाउंज",
-      "ऑपरेशन थिएटर (OT)",
-      "बिलिंग काउंटर कार्यालय",
-      "अस्पताल का कैफेटेरिया"
-    ],
-    "correct_answer_english": "Operation Theater (OT)",
-    "correct_answer_hindi": "ऑपरेशन थिएटर (OT)"
-  },
-  {
-    "question_number": 58,
-    "question_english": "What should a GDA do if they find an unconscious patient lying on the floor?",
-    "question_hindi": "यदि एक GDA को फर्श पर एक अचेत (बेहोश) मरीज पड़ा हुआ मिले तो उसे क्या करना चाहिए?",
-    "options_english": [
-      "Check responsiveness, shout for immediate help, and notify the medical team",
-      "Drag the patient into the corridor alone",
-      "Wait for the patient to wake up on their own",
-      "Give them solid food to chew"
-    ],
-    "options_hindi": [
-      "जवाबदेही जांचें, तुरंत मदद के लिए चिल्लाएं, और मेडिकल टीम को सूचित करें",
-      "मरीज को अकेले ही कॉरिडोर में घसीटें",
-      "मरीज के अपने आप होश में आने का इंतजार करें",
-      "उन्हें चबाने के लिए ठोस भोजन दें"
-    ],
-    "correct_answer_english": "Check responsiveness, shout for immediate help, and notify the medical team",
-    "correct_answer_hindi": "जवाबदेही जांचें, तुरंत मदद के लिए चिल्लाएं, और मेडिकल टीम को सूचित करें"
-  },
-  {
-    "question_number": 59,
-    "question_english": "What is the purpose of performing passive range-of-motion (ROM) exercises for a paralyzed patient?",
-    "question_hindi": "एक लकवाग्रस्त (Paralyzed) मरीज के लिए पैसिव रेंज-ऑफ-मोशन (ROM) व्यायाम कराने का उद्देश्य क्या है?",
-    "options_english": [
-      "To increase the patient's mental stress",
-      "To prevent joint stiffness and maintain muscle flexibility",
-      "To help the patient lose weight quickly",
-      "To make the patient sleep for 24 hours"
-    ],
-    "options_hindi": [
-      "मरीज के मानसिक तनाव को बढ़ाने के लिए",
-      "जोड़ों की अकड़न को रोकने और मांसपेशियों के लचीलेपन को बनाए रखने के लिए",
-      "मरीज का वजन तेजी से कम करने में मदद करने के लिए",
-      "मरीज को 24 घंटे सुलाने के लिए"
-    ],
-    "correct_answer_english": "To prevent joint stiffness and maintain muscle flexibility",
-    "correct_answer_hindi": "जोड़ों की अकड़न को रोकने और मांसपेशियों के लचीलेपन को बनाए रखने के लिए"
-  },
-  {
-    "question_number": 60,
-    "question_english": "What is the primary meaning of the abbreviation 'Biw' or 'BIW' sometimes used in hospital schedules?",
-    "question_hindi": "अस्पताल के शेड्यूल में कभी-कभी उपयोग किए जाने वाले संक्षिप्त नाम 'Biw' या 'BIW' का प्राथमिक अर्थ क्या है?",
-    "options_english": [
-      "Twice a week",
-      "Once in two months",
-      "Before sleeping at night",
-      "Immediately in emergency"
-    ],
-    "options_hindi": [
-      "सप्ताह में दो बार (Twice a week)",
-      "दो महीने में एक बार",
-      "रात को सोने से पहले",
-      "आपातकाल में तुरंत"
-    ],
-    "correct_answer_english": "Twice a week",
-    "correct_answer_hindi": "सप्ताह में दो बार (Twice a week)"
-  }
-]
+{
+  "examId": "gdat_nursing_v3",
+  "questions": [
+    {
+      "question_en": "What is the normal respiration rate for a healthy adult at rest?",
+      "question_hi": "आराम की स्थिति में एक स्वस्थ वयस्क की सामान्य श्वसन दर (Respiration rate) क्या होती है?",
+      "options_en": [
+        "12-20 breaths/min",
+        "25-30 breaths/min",
+        "5-10 breaths/min",
+        "35-40 breaths/min"
+      ],
+      "options_hi": [
+        "12-20 सांसें/मिनट",
+        "25-30 सांसें/मिनट",
+        "5-10 सांसें/मिनट",
+        "35-40 सांसें/मिनट"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "Which of the following is the largest organ of the human body?",
+      "question_hi": "निम्नलिखित में से मानव शरीर का सबसे बड़ा अंग कौन सा है?",
+      "options_en": [
+        "Liver",
+        "Brain",
+        "Skin",
+        "Heart"
+      ],
+      "options_hi": [
+        "यकृत (लीवर)",
+        "मस्तिष्क",
+        "त्वचा",
+        "हृदय"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What is the medical term for a lack of oxygen in the body tissues?",
+      "question_hi": "शरीर के ऊतकों में ऑक्सीजन की कमी होने को मेडिकल भाषा में क्या कहते हैं?",
+      "options_en": [
+        "Anemia",
+        "Hypoxia",
+        "Cyanosis",
+        "Apnea"
+      ],
+      "options_hi": [
+        "एनीमिया",
+        "हाइपोक्सिया",
+        "सायनोसिस",
+        "एपनिया"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What does the abbreviation 'PC' mean on a medical prescription?",
+      "question_hi": "मेडिकल पर्चे पर 'PC' का क्या अर्थ होता है?",
+      "options_en": [
+        "Before meals",
+        "After meals",
+        "At bedtime",
+        "Every hour"
+      ],
+      "options_hi": [
+        "भोजन से पहले",
+        "भोजन के बाद",
+        "सोते समय",
+        "हर घंटे"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which position is best suited for a patient experiencing severe breathing difficulty?",
+      "question_hi": "सांस लेने में अत्यधिक कठिनाई महसूस करने वाले मरीज के लिए कौन सी पोजीशन सबसे उपयुक्त है?",
+      "options_en": [
+        "Supine position",
+        "Fowler's position",
+        "Prone position",
+        "Trendelenburg position"
+      ],
+      "options_hi": [
+        "सुपाइन पोजीशन",
+        "फाउलर पोजीशन",
+        "प्रोन पोजीशन",
+        "ट्रेंडेलनबर्ग पोजीशन"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the first step in the handwashing procedure recommended by WHO?",
+      "question_hi": "WHO द्वारा अनुशंसित हाथ धोने की प्रक्रिया में पहला कदम क्या है?",
+      "options_en": [
+        "Apply soap",
+        "Wet hands with water",
+        "Rub palms together",
+        "Dry hands with a towel"
+      ],
+      "options_hi": [
+        "साबुन लगाएं",
+        "हाथों को पानी से गीला करें",
+        "हथेलियों को आपस में रगड़ें",
+        "तौलिये से हाथ सुखाएं"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which of the following is considered a subjective symptom?",
+      "question_hi": "निम्नलिखित में से किसे व्यक्तिपरक (subjective) लक्षण माना जाता है?",
+      "options_en": [
+        "Fever",
+        "Nausea",
+        "Blood pressure",
+        "Pulse rate"
+      ],
+      "options_hi": [
+        "बुखार",
+        "जी मिचलाना (उबकाई)",
+        "रक्तचाप",
+        "नाड़ी दर"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What color bag is used for the disposal of human anatomical waste in BMW management?",
+      "question_hi": "बायोमेडिकल वेस्ट (BMW) प्रबंधन में मानव शरीर के अंगों के कचरे को किस रंग के बैग में डाला जाता है?",
+      "options_en": [
+        "Red bag",
+        "Yellow bag",
+        "Blue container",
+        "Black bag"
+      ],
+      "options_hi": [
+        "लाल बैग",
+        "पीला बैग",
+        "नीला कंटेनर",
+        "काला बैग"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the clinical term for a heart rate below 60 beats per minute in an adult?",
+      "question_hi": "एक वयस्क में हृदय गति 60 धड़कन प्रति मिनट से कम होने को तकनीकी रूप से क्या कहते हैं?",
+      "options_en": [
+        "Tachycardia",
+        "Bradycardia",
+        "Arrhythmia",
+        "Hypertension"
+      ],
+      "options_hi": [
+        "टैकीकार्डिया",
+        "ब्रैडीकार्डिया",
+        "अतालता (Arrhythmia)",
+        "हाइपरटेंशन"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which component of blood is responsible for fighting infections?",
+      "question_hi": "रक्त का कौन सा घटक संक्रमण से लड़ने के लिए जिम्मेदार होता है?",
+      "options_en": [
+        "Red Blood Cells",
+        "Platelets",
+        "White Blood Cells",
+        "Plasma"
+      ],
+      "options_hi": [
+        "लाल रक्त कोशिकाएं (RBC)",
+        "प्लेटलेट्स",
+        "श्वेत रक्त कोशिकाएं (WBC)",
+        "प्लाज्मा"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What is the primary site for checking the pulse in an adult during CPR?",
+      "question_hi": "CPR के दौरान वयस्क में नाड़ी (Pulse) जांचने का प्राथमिक स्थान कौन सा है?",
+      "options_en": [
+        "Radial pulse",
+        "Carotid pulse",
+        "Brachial pulse",
+        "Pedal pulse"
+      ],
+      "options_hi": [
+        "रेडियल पल्स (कलाई)",
+        "कैरोटिड पल्स (गर्दन)",
+        "ब्रेकियल पल्स (बांह)",
+        "पेडल पल्स (पैर)"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which structure prevents food from entering the windpipe during swallowing?",
+      "question_hi": "भोजन निगलते समय कौन सी संरचना उसे श्वास नली में जाने से रोकती है?",
+      "options_en": [
+        "Pharynx",
+        "Epiglottis",
+        "Larynx",
+        "Esophagus"
+      ],
+      "options_hi": [
+        "ग्रसनी (Pharynx)",
+        "एपिग्लोटिस",
+        "कंठ (Larynx)",
+        "ग्रासनली"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the normal pH range of human blood?",
+      "question_hi": "मानव रक्त का सामान्य pH मान कितना होता है?",
+      "options_en": [
+        "6.5 - 7.0",
+        "7.35 - 7.45",
+        "7.5 - 8.0",
+        "6.0 - 6.5"
+      ],
+      "options_hi": [
+        "6.5 - 7.0",
+        "7.35 - 7.45",
+        "7.5 - 8.0",
+        "6.0 - 6.5"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the term for an infection acquired during a hospital stay?",
+      "question_hi": "अस्पताल में भर्ती रहने के दौरान होने वाले संक्रमण को क्या कहा जाता है?",
+      "options_en": [
+        "Chronic infection",
+        "Nosocomial infection",
+        "Primary infection",
+        "Secondary infection"
+      ],
+      "options_hi": [
+        "क्रोनिक संक्रमण",
+        "नोसोकोमियल संक्रमण (हॉस्पिटल एक्वायर्ड)",
+        "प्राथमिक संक्रमण",
+        "द्वितीयक संक्रमण"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which instrument is used to examine the inside of a patient's ears?",
+      "question_hi": "मरीज के कान के अंदरूनी हिस्से की जांच करने के लिए किस उपकरण का उपयोग किया जाता है?",
+      "options_en": [
+        "Ophthalmoscope",
+        "Otoscope",
+        "Stethoscope",
+        "Endoscope"
+      ],
+      "options_hi": [
+        "ऑफ्थैल्मोस्कोप",
+        "ऑटोस्कोप",
+        "स्टेथोस्कोप",
+        "एंडोस्कोप"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the compression depth for adult chest compressions during CPR?",
+      "question_hi": "CPR के दौरान वयस्क मरीज की छाती दबाने (compressions) की गहराई कितनी होनी चाहिए?",
+      "options_en": [
+        "At least 2 inches (5 cm)",
+        "Around 1 inch (2.5 cm)",
+        "At least 4 inches (10 cm)",
+        "Less than 1 inch"
+      ],
+      "options_hi": [
+        "कम से कम 2 इंच (5 सेमी)",
+        "लगभग 1 इंच (2.5 सेमी)",
+        "कम से कम 4 इंच (10 सेमी)",
+        "1 इंच से कम"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "What does the medical abbreviation 'OD' stand for?",
+      "question_hi": "मेडिकल भाषा में 'OD' का क्या अर्थ होता है?",
+      "options_en": [
+        "Once a day",
+        "Twice a day",
+        "Every other day",
+        "At night"
+      ],
+      "options_hi": [
+        "दिन में एक बार",
+        "दिन में दो बार",
+        "एक दिन छोड़कर",
+        "रात में"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "Which organ is primary responsible for the detoxification of drugs in the human body?",
+      "question_hi": "मानव शरीर में दवाओं और विषाक्त पदार्थों को बेअसर (Detoxify) करने के लिए मुख्य रूप से कौन सा अंग जिम्मेदार है?",
+      "options_en": [
+        "Kidneys",
+        "Liver",
+        "Lungs",
+        "Stomach"
+      ],
+      "options_hi": [
+        "गुर्दे",
+        "यकृत (लीवर)",
+        "फेफड़े",
+        "पेट"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the condition of having a high level of potassium in the blood called?",
+      "question_hi": "रक्त में पोटेशियम का स्तर सामान्य से अधिक होने की स्थिति को क्या कहते हैं?",
+      "options_en": [
+        "Hypernatremia",
+        "Hyperkalemia",
+        "Hypokalemia",
+        "Hypocalcemia"
+      ],
+      "options_hi": [
+        "हाइपरनेट्रेमिया",
+        "हाइपरकेलेमिया",
+        "हाइपोकेलेमिया",
+        "हाइपोकैल्सीमिया"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Where should the sharp needles and blades be disposed of?",
+      "question_hi": "नुकीली सुइयों और ब्लेडों को कहाँ डिस्पोज़ किया जाना चाहिए?",
+      "options_en": [
+        "Yellow bag",
+        "Red bag",
+        "White translucent puncture-proof container",
+        "Green dustbin"
+      ],
+      "options_hi": [
+        "पीला बैग",
+        "लाल बैग",
+        "सफेद पारभासी पंचर-प्रूफ कंटेनर (PPC)",
+        "हरा डस्टबिन"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What is the term used for a complete absence of breathing?",
+      "question_hi": "सांस पूरी तरह से रुक जाने की स्थिति को किस नाम से जाना जाता है?",
+      "options_en": [
+        "Dyspnea",
+        "Apnea",
+        "Orthopnea",
+        "Tachypnea"
+      ],
+      "options_hi": [
+        "डिस्प्रिया",
+        "एपनिया",
+        "ऑर्थोपनिया",
+        "टैकीपनिया"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which bone is commonly known as the kneecap?",
+      "question_hi": "किस हड्डी को आमतौर पर नीकैप (घुटने की हड्डी) कहा जाता है?",
+      "options_en": [
+        "Femur",
+        "Tibia",
+        "Patella",
+        "Fibula"
+      ],
+      "options_hi": [
+        "फीमर",
+        "टिबिया",
+        "पटेला",
+        "फाइबुला"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What does 'TID' mean on a patient's treatment chart?",
+      "question_hi": "मरीज के ट्रीटमेंट चार्ट पर 'TID' का क्या अर्थ होता है?",
+      "options_en": [
+        "Twice a day",
+        "Three times a day",
+        "Four times a day",
+        "Every three hours"
+      ],
+      "options_hi": [
+        "दिन में दो बार",
+        "दिन में तीन बार",
+        "दिन में चार बार",
+        "हर तीन घंटे में"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which condition is characterized by a decrease in bone density making them fragile?",
+      "question_hi": "हड्डियों का घनत्व कम होने और उनके कमजोर होने की स्थिति को क्या कहा जाता है?",
+      "options_en": [
+        "Osteoporosis",
+        "Arthritis",
+        "Scoliosis",
+        "Rickets"
+      ],
+      "options_hi": [
+        "ऑस्टियोपोरोसिस",
+        "गठिया (Arthritis)",
+        "स्कोलिओसिस",
+        "सूखा रोग (Rickets)"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "What is the function of platelets in the human body?",
+      "question_hi": "मानव शरीर में प्लेटलेट्स का मुख्य कार्य क्या होता है?",
+      "options_en": [
+        "Carry oxygen",
+        "Help in blood clotting",
+        "Fight bacterial infections",
+        "Maintain body temperature"
+      ],
+      "options_hi": [
+        "ऑक्सीजन ले जाना",
+        "रक्त का थक्का जमाने में मदद करना",
+        "बैक्टीरिया के संक्रमण से लड़ना",
+        "शरीर का तापमान बनाए रखना"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the clinical term for high blood sugar levels?",
+      "question_hi": "ब्लड शुगर (रक्त शर्करा) का स्तर बढ़ने को मेडिकल भाषा में क्या कहते हैं?",
+      "options_en": [
+        "Hypoglycemia",
+        "Hyperglycemia",
+        "Hypertension",
+        "Hyperkalemia"
+      ],
+      "options_hi": [
+        "हाइपोग्लाइसीमिया",
+        "हाइपरग्लाइसीमिया",
+        "हाइपरटेंशन",
+        "हाइपरकेलेमिया"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which valve prevents the backflow of blood from the left ventricle to the left atrium?",
+      "question_hi": "कौन सा वाल्व रक्त को बाएं वेंट्रिकल से बाएं एट्रियम में वापस जाने से रोकता है?",
+      "options_en": [
+        "Tricuspid valve",
+        "Mitral (Bicuspid) valve",
+        "Aortic valve",
+        "Pulmonary valve"
+      ],
+      "options_hi": [
+        "ट्राइकसपिड वाल्व",
+        "मिट्रल (बाइकसपिड) वाल्व",
+        "एओर्टिक वाल्व",
+        "पल्मोनरी वाल्व"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the best method to sterilize surgical instruments to ensure all spores are killed?",
+      "question_hi": "सर्जिकल उपकरणों को पूरी तरह कीटाणुरहित (Sterilize) करने के लिए सबसे अच्छी विधि कौन सी है?",
+      "options_en": [
+        "Boiling in water for 10 minutes",
+        "Autoclaving (Steam under pressure)",
+        "Wiping with alcohol rubbing",
+        "Keeping under UV light"
+      ],
+      "options_hi": [
+        "10 मिनट के लिए पानी में उबालना",
+        "ऑटोक्लेविंग (दबाव में भाप देना)",
+        "अल्कोहल से पोंछना",
+        "यूवी लाइट के नीचे रखना"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the legal and clinical purpose of keeping an accurate patient care report?",
+      "question_hi": "मरीज की देखभाल की सटीक रिपोर्ट (Patient report) रखने का कानूनी और क्लिनिकल उद्देश्य क्या है?",
+      "options_en": [
+        "To show to the patient's family only",
+        "To ensure continuity of care and legal documentation",
+        "To calculate hospital bill price",
+        "To submit to the police department"
+      ],
+      "options_hi": [
+        "केवल मरीज के परिवार को दिखाने के लिए",
+        "देखभाल की निरंतरता और कानूनी दस्तावेज सुनिश्चित करने के लिए",
+        "अस्पताल के बिल की गणना करने के लिए",
+        "पुलिस विभाग को सौंपने के लिए"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which basic unit of the nervous system transmits electrical signals?",
+      "question_hi": "तंत्रिका तंत्र (Nervous system) की कौन सी बुनियादी इकाई विद्युत संकेतों को प्रसारित करती है?",
+      "options_en": [
+        "Nephron",
+        "Neuron",
+        "Alveoli",
+        "Myocyte"
+      ],
+      "options_hi": [
+        "नेफ्रॉन",
+        "न्यूरॉन",
+        "एल्विओली",
+        "मायोसाइट"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the safe maximum duration for suctioning a patient's airway to avoid hypoxia?",
+      "question_hi": "हाइपोक्सिया से बचाने के लिए मरीज के वायुमार्ग की सक्शनिंग (suctioning) करने की अधिकतम सुरक्षित अवधि कितनी है?",
+      "options_en": [
+        "5 - 10 seconds",
+        "20 - 30 seconds",
+        "1 minute",
+        "2 minutes"
+      ],
+      "options_hi": [
+        "5 - 10 सेकंड",
+        "20 - 30 सेकंड",
+        "1 मिनट",
+        "2 मिनट"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "What is the clinical definition of 'Anuria'?",
+      "question_hi": "'एनुरिया' (Anuria) की क्लिनिकल परिभाषा क्या है?",
+      "options_en": [
+        "Painful urination",
+        "Failure of the kidneys to produce urine (less than 100ml/day)",
+        "Excessive urination at night",
+        "Blood in urine"
+      ],
+      "options_hi": [
+        "पेशाब के दौरान दर्द होना",
+        "गुर्दों द्वारा पेशाब का निर्माण न होना (100 मिली/दिन से कम)",
+        "रात में अत्यधिक पेशाब आना",
+        "पेशाब में खून आना"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which artery is commonly used to measure blood pressure in the upper arm?",
+      "question_hi": "ऊपरी बांह में रक्तचाप मापने के लिए आमतौर पर किस धमनी का उपयोग किया जाता है?",
+      "options_en": [
+        "Radial artery",
+        "Brachial artery",
+        "Femoral artery",
+        "Carotid artery"
+      ],
+      "options_hi": [
+        "रेडियल धमनी",
+        "ब्रेकियल धमनी",
+        "फिमोरल धमनी",
+        "कैरोटिड धमनी"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What does the abbreviation 'BID' mean on a prescription?",
+      "question_hi": "पर्चे पर लिखे संक्षिप्त रूप 'BID' का क्या मतलब होता है?",
+      "options_en": [
+        "Once a day",
+        "Twice a day",
+        "Three times a day",
+        "Before bedtime"
+      ],
+      "options_hi": [
+        "दिन में एक बार",
+        "दिन में दो बार",
+        "दिन में तीन बार",
+        "सोने से पहले"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which stage of pressure ulcer involves full-thickness skin loss with exposed bone or muscle?",
+      "question_hi": "प्रेशर अल्सर (बेडसोर) के किस चरण में त्वचा पूरी तरह नष्ट हो जाती है और हड्डी या मांसपेशी दिखाई देने लगती है?",
+      "options_en": [
+        "Stage I",
+        "Stage II",
+        "Stage III",
+        "Stage IV"
+      ],
+      "options_hi": [
+        "चरण I",
+        "चरण II",
+        "चरण III",
+        "चरण IV"
+      ],
+      "answer": 3
+    },
+    {
+      "question_en": "Which hormone regulates the sleep-wake cycle in humans?",
+      "question_hi": "मानव शरीर में कौन सा हार्मोन सोने और जागने के चक्र (sleep-wake cycle) को नियंत्रित करता है?",
+      "options_en": [
+        "Insulin",
+        "Melatonin",
+        "Cortisol",
+        "Thyroxine"
+      ],
+      "options_hi": [
+        "इंसुलिन",
+        "मेलाटोनिन",
+        "कोर्टिसोल",
+        "थायरोक्सिन"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the term for a slow heart rate, usually below 60 bpm?",
+      "question_hi": "धीमी हृदय गति (आमतौर पर 60 धड़कन प्रति मिनट से कम) के लिए इस्तेमाल होने वाला शब्द क्या है?",
+      "options_en": [
+        "Tachycardia",
+        "Bradycardia",
+        "Arrhythmia",
+        "Cyanosis"
+      ],
+      "options_hi": [
+        "टैकीकार्डिया",
+        "ब्रैडीकार्डिया",
+        "अतालता (Arrhythmia)",
+        "सायनोसिस"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the primary function of the large intestine?",
+      "question_hi": "बड़ी आंत का मुख्य कार्य क्या होता है?",
+      "options_en": [
+        "Digestion of proteins",
+        "Absorption of water and electrolytes",
+        "Secretion of bile juice",
+        "Absorption of amino acids"
+      ],
+      "options_hi": [
+        "प्रोटीन का पाचन",
+        "पानी और इलेक्ट्रोलाइट्स का अवशोषण",
+        "पित्त रस का स्राव",
+        "अमीनो एसिड का अवशोषण"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What type of isolation precaution is required for a patient with active Tuberculosis (TB)?",
+      "question_hi": "सक्रिय तपेदिक (TB) वाले मरीज के लिए किस प्रकार की आइसोलेशन सावधानी की आवश्यकता होती है?",
+      "options_en": [
+        "Contact precautions",
+        "Droplet precautions",
+        "Airborne precautions",
+        "Standard precautions only"
+      ],
+      "options_hi": [
+        "संपर्क सावधानियां (Contact)",
+        "ड्रॉपलेट सावधानियां (Droplet)",
+        "हवाई सावधानियां (Airborne)",
+        "केवल मानक सावधानियां"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "Which vitamin deficiency causes the disease Scurvy?",
+      "question_hi": "किस विटामिन की कमी के कारण स्कर्वी (Scurvy) रोग होता है?",
+      "options_en": [
+        "Vitamin A",
+        "Vitamin B1",
+        "Vitamin C",
+        "Vitamin D"
+      ],
+      "options_hi": [
+        "विटामिन A",
+        "विटामिन B1",
+        "विटामिन C",
+        "विटामिन D"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What is the name of the fluid that surrounds and protects the brain and spinal cord?",
+      "question_hi": "मस्तिष्क और रीढ़ की हड्डी को घेरने और सुरक्षित रखने वाले द्रव का नाम क्या है?",
+      "options_en": [
+        "Synovial fluid",
+        "Pleural fluid",
+        "Cerebrospinal fluid (CSF)",
+        "Peritoneal fluid"
+      ],
+      "options_hi": [
+        "सिनोवियल द्रव",
+        "प्लुरल द्रव",
+        "सेरेब्रोस्पाइनल द्रव (CSF)",
+        "पेरिटोनियल द्रव"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What should a nurse do immediately after a needlestick injury?",
+      "question_hi": "सुई चुभने की चोट (Needlestick injury) के तुरंत बाद एक नर्स को क्या करना चाहिए?",
+      "options_en": [
+        "Squeeze the wound to stop bleeding",
+        "Wash the area thoroughly with soap and running water",
+        "Apply a tight bandage",
+        "Ignore if the patient looks clean"
+      ],
+      "options_hi": [
+        "रक्तस्राव रोकने के लिए घाव को दबाएं",
+        "क्षेत्र को साबुन और बहते पानी से अच्छी तरह धोएं",
+        "एक तंग पट्टी बांधें",
+        "यदि मरीज स्वस्थ दिखता है तो अनदेखा करें"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which blood group is known as the universal donor?",
+      "question_hi": "किस रक्त समूह (Blood group) को सार्वभौमिक दाता (Universal Donor) कहा जाता है?",
+      "options_en": [
+        "AB positive",
+        "O negative",
+        "A positive",
+        "B negative"
+      ],
+      "options_hi": [
+        "AB पॉजिटिव",
+        "O नेगेटिव",
+        "A पॉजिटिव",
+        "B नेगेटिव"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the medical term for vomiting blood?",
+      "question_hi": "खून की उल्टी होने को मेडिकल भाषा में क्या कहा जाता है?",
+      "options_en": [
+        "Hemoptysis",
+        "Hematemesis",
+        "Hematuria",
+        "Epistaxis"
+      ],
+      "options_hi": [
+        "हेमोप्टाइसिस",
+        "हेमेटेमेसिस",
+        "हेमटुरिया",
+        "एपिस्टेक्सिस"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which of the following is the primary muscle used for breathing?",
+      "question_hi": "निम्नलिखित में से सांस लेने के लिए उपयोग की जाने वाली प्राथमिक मांसपेशी कौन सी है?",
+      "options_en": [
+        "Intercostal muscle",
+        "Diaphragm",
+        "Biceps",
+        "Deltoid"
+      ],
+      "options_hi": [
+        "इंटरकोस्टल मांसपेशी",
+        "डायफ्राम",
+        "बायसेप्स",
+        "डेल्टॉइड"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the normal fasting blood glucose level for a healthy adult?",
+      "question_hi": "एक स्वस्थ वयस्क के लिए सामान्य फास्टिंग (खाली पेट) ब्लड ग्लूकोज स्तर कितना होता है?",
+      "options_en": [
+        "70-100 mg/dL",
+        "140-180 mg/dL",
+        "200-250 mg/dL",
+        "50-60 mg/dL"
+      ],
+      "options_hi": [
+        "70-100 mg/dL",
+        "140-180 mg/dL",
+        "200-250 mg/dL",
+        "50-60 mg/dL"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "What does 'Hs' mean on a drug prescription card?",
+      "question_hi": "दवा के पर्चे पर लिखे 'Hs' का क्या अर्थ होता है?",
+      "options_en": [
+        "In the morning",
+        "Before meals",
+        "At bedtime",
+        "As needed"
+      ],
+      "options_hi": [
+        "सुबह में",
+        "भोजन से पहले",
+        "सोते समय (रात में)",
+        "आवश्यकता होने पर"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "Which structure in the lungs is the actual site for gas exchange?",
+      "question_hi": "फेफड़ों में कौन सी संरचना गैसों के आदान-प्रदान (Gas exchange) का वास्तविक स्थान है?",
+      "options_en": [
+        "Bronchi",
+        "Trachea",
+        "Alveoli",
+        "Bronchioles"
+      ],
+      "options_hi": [
+        "ब्रोंकाई",
+        "ट्रैकिया (श्वास नली)",
+        "एल्विओली (वायु कोष्ठक)",
+        "ब्रोंकियोल्स"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What is the clinical term for a temporary loss of consciousness due to a drop in blood pressure?",
+      "question_hi": "रक्तचाप अचानक गिरने के कारण अस्थायी रूप से बेहोश होने की स्थिति को क्या कहते हैं?",
+      "options_en": [
+        "Coma",
+        "Syncope (Fainting)",
+        "Seizure",
+        "Shock"
+      ],
+      "options_hi": [
+        "कोमा",
+        "सिनकोप (बेहोश होना)",
+        "सीज़र (दौरा)",
+        "शॉक"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which organ secretes bile juice which helps in fat digestion?",
+      "question_hi": "वसा के पाचन में मदद करने वाले पित्त रस (Bile juice) का स्राव कौन सा अंग करता है?",
+      "options_en": [
+        "Gallbladder",
+        "Liver",
+        "Pancreas",
+        "Stomach"
+      ],
+      "options_hi": [
+        "पिताशय (Gallbladder)",
+        "यकृत (लीवर)",
+        "अग्न्याशय",
+        "पेट"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the full form of 'CPR' in first aid?",
+      "question_hi": "प्राथमिक चिकित्सा में 'CPR' का पूरा नाम क्या होता है?",
+      "options_en": [
+        "Cardiopulmonary Resuscitation",
+        "Cardio Pulse Rate",
+        "Cardiac Pulmonary Report",
+        "Central Pulmonary Recovery"
+      ],
+      "options_hi": [
+        "कार्डियोपल्मोनरी रिससिटेशन",
+        "कार्डियो पल्स रेट",
+        "कार्डिएक पल्मोनरी रिपोर्ट",
+        "सेंट्रल पल्मोनरी रिकवरी"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "Which position is recommended for a patient in hypovolemic shock to improve blood flow to the brain?",
+      "question_hi": "हाइपोवोलेमिक शॉक वाले मरीज के मस्तिष्क में रक्त प्रवाह सुधारने के लिए कौन सी पोजीशन अनुशंसित है?",
+      "options_en": [
+        "Fowler's position",
+        "Trendelenburg position (legs elevated)",
+        "Prone position",
+        "Lateral position"
+      ],
+      "options_hi": [
+        "फाउलर पोजीशन",
+        "ट्रेंडेलनबर्ग पोजीशन (पैर ऊपर उठाना)",
+        "प्रोन पोजीशन",
+        "लेटरल (करवट) पोजीशन"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the clinical term for painful or difficult urination?",
+      "question_hi": "दर्दनाक या कठिन पेशाब की स्थिति को चिकित्सा की भाषा में क्या कहा जाता है?",
+      "options_en": [
+        "Polyuria",
+        "Dysuria",
+        "Oliguria",
+        "Hematuria"
+      ],
+      "options_hi": [
+        "पॉल्यूरिया",
+        "डिसुरिया",
+        "ओलिगुरिया",
+        "हेमटुरिया"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which functional unit of the kidney filters blood and forms urine?",
+      "question_hi": "गुर्दे (Kidney) की कौन सी कार्यात्मक इकाई रक्त को छानती है और मूत्र बनाती है?",
+      "options_en": [
+        "Neuron",
+        "Nephron",
+        "Ureter",
+        "Alveoli"
+      ],
+      "options_hi": [
+        "न्यूरॉन",
+        "नेफ्रॉन",
+        "मूत्रवाहिनी (Ureter)",
+        "एल्विओली"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What color bin is used for cytostatic and chemotherapy waste drugs?",
+      "question_hi": "साइटोस्टैटिक और कीमोथेरेपी कचरे/दवाओं के लिए किस रंग के बिन का उपयोग किया जाता है?",
+      "options_en": [
+        "Yellow bag",
+        "Red bag",
+        "Blue box",
+        "Black container"
+      ],
+      "options_hi": [
+        "पीला बैग",
+        "लाल बैग",
+        "नीला बॉक्स",
+        "काला कंटेनर"
+      ],
+      "answer": 0
+    },
+    {
+      "question_en": "What is the average gestation period for humans in weeks?",
+      "question_hi": "सप्ताहों में मनुष्यों की औसत गर्भधारण अवधि (Gestation period) कितनी होती है?",
+      "options_en": [
+        "32 weeks",
+        "36 weeks",
+        "40 weeks",
+        "45 weeks"
+      ],
+      "options_hi": [
+        "32 सप्ताह",
+        "36 सप्ताह",
+        "40 सप्ताह",
+        "45 सप्ताह"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "Which instrument is used to check the structural health of eyes?",
+      "question_hi": "आंखों के स्वास्थ्य और आंतरिक संरचना की जांच के लिए किस उपकरण का उपयोग किया जाता है?",
+      "options_en": [
+        "Otoscope",
+        "Ophthalmoscope",
+        "Stethoscope",
+        "Tonometer"
+      ],
+      "options_hi": [
+        "ऑटोस्कोप",
+        "ऑफ्थैल्मोस्कोप",
+        "स्टेथोस्कोप",
+        "टोनोमीटर"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "What is the clinical term for a nosebleed?",
+      "question_hi": "नाक से खून आने (नकसीर) को मेडिकल भाषा में क्या कहते हैं?",
+      "options_en": [
+        "Hemoptysis",
+        "Epistaxis",
+        "Hematemesis",
+        "Dyspnea"
+      ],
+      "options_hi": [
+        "हेमोप्टाइसिस",
+        "एपिस्टेक्सिस",
+        "हेमेटेमेसिस",
+        "डिस्प्रिया"
+      ],
+      "answer": 1
+    },
+    {
+      "question_en": "Which artery is primary checked to assess circulation in an infant?",
+      "question_hi": "एक शिशु (Infant) में रक्त परिसंचरण जांचने के लिए मुख्य रूप से किस धमनी की जांच की जाती है?",
+      "options_en": [
+        "Radial artery",
+        "Carotid artery",
+        "Brachial artery",
+        "Femoral artery"
+      ],
+      "options_hi": [
+        "रेडियल धमनी",
+        "कैरोटिड धमनी",
+        "ब्रेकियल धमनी",
+        "फिमोरल धमनी"
+      ],
+      "answer": 2
+    },
+    {
+      "question_en": "What is the normal pulse oximetry (SpO2) range for a healthy adult?",
+      "question_hi": "एक स्वस्थ वयस्क के लिए सामान्य पल्स ऑक्सीमेट्री (SpO2) रेंज कितनी होनी चाहिए?",
+      "options_en": [
+        "85% - 90%",
+        "95% - 100%",
+        "70% - 80%",
+        "60% - 70%"
+      ],
+      "options_hi": [
+        "85% - 90%",
+        "95% - 100%",
+        "70% - 80%",
+        "60% - 70%"
+      ],
+      "answer": 1
+    }
+  ]
+}
