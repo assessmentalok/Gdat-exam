@@ -37,7 +37,8 @@ body {
 #loginBox {
     background: white;
     max-width: 400px;
-    margin: 120px auto padding: 40px 30px;
+    margin: 120px auto; /* यहाँ सेमीकोलन ठीक किया गया */
+    padding: 40px 30px;
     border-radius: 16px;
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
@@ -305,7 +306,7 @@ body {
 </div>
 
 <script>
-// --- FIREBASE ASSIGNED CLOUD URL ROUTING SYSTEM ---
+// --- FIREBASE URL ROUTING SYSTEM ---
 const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/"; 
 
 window.onload = function() {
@@ -336,7 +337,10 @@ function logout() {
 /* REALTIME SYNC ENGINE: ACTIVE LIVE WORKFLOWS */
 function loadLive(){
     fetch(`${FIREBASE_URL}/liveUsers.json`)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error("Network response error");
+        return response.json();
+    })
     .then(data => {
         let html = "";
         if(!data || Object.keys(data).length === 0){
@@ -347,9 +351,10 @@ function loadLive(){
 
         Object.keys(data).forEach(key => {
             let u = data[key];
+            if (!u) return; // सुरक्षा जांच
             html += `
             <div class="card">
-                <div><span class="field-title">👤 Name:</span> <span class="field-data">${u.name}</span></div>
+                <div><span class="field-title">👤 Name:</span> <span class="field-data">${u.name || "Unknown"}</span></div>
                 <div><span class="field-title">🆔 ID:</span> <span class="field-data">${u.id || "N/A"}</span></div>
                 <div style="margin-top:6px;">
                     <span class="field-title">📊 Status:</span> <span class="status">${u.status || "Examining"}</span>
@@ -359,13 +364,19 @@ function loadLive(){
         });
         document.getElementById("liveBox").innerHTML = html;
     })
-    .catch(error => console.error("Live Stream Request Fail:", error));
+    .catch(error => {
+        console.error("Live Stream Request Fail:", error);
+        document.getElementById("liveBox").innerHTML = `<div class="empty-state-fallback" style="color:var(--danger); border-color:var(--danger);">⚠️ Database Error or Permission Denied!</div>`;
+    });
 }
 
 /* DATA PIPELINE PARSER: RESULTS ARRAY MANAGEMENT */
 function loadResults(){
     fetch(`${FIREBASE_URL}/results.json`)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error("Network response error");
+        return response.json();
+    })
     .then(data => {
         let html = "";
         if(!data || Object.keys(data).length === 0){
@@ -374,44 +385,49 @@ function loadResults(){
             return;
         }
 
-        // Object format mapping structure parsing into an iterable array element
         let resultsArray = [];
         Object.keys(data).forEach(key => {
             let record = data[key];
-            record.firebaseKeyId = key; // Keep record key tracking for single node target deletions
-            resultsArray.push(record);
+            if (record) {
+                record.firebaseKeyId = key;
+                resultsArray.push(record);
+            }
         });
 
-        // Compute localized attempt tracking iterations maps
+        // Localized attempt tracking logic
         let attemptTracker = {};
+        // फ़ॉरवर्ड लूप चलाकर पहले अटेम्प्ट्स की गणना करें
         resultsArray.forEach(r => {
-            let key = r.id || r.name;
-            attemptTracker[key] = (attemptTracker[key] || 0) + 1;
-            r.currentAttempt = attemptTracker[key];
+            let trackerKey = r.id || r.name;
+            attemptTracker[trackerKey] = (attemptTracker[trackerKey] || 0) + 1;
+            r.currentAttempt = attemptTracker[trackerKey];
         });
 
-        // Inverse rendering layout loop arrays for tracking fresh metrics at index zero 
+        // उल्टे क्रम (Latest First) में दिखाने के लिए रिवर्स करें
         resultsArray.reverse().forEach(r => {
             html += `
             <div class="card">
                 <button class="delete-btn" onclick="deleteResult('${r.firebaseKeyId}')">🗑️ Delete</button>
-                <div><span class="field-title">👤 Name:</span> <span class="field-data">${r.name}</span></div>
+                <div><span class="field-title">👤 Name:</span> <span class="field-data">${r.name || "Unknown"}</span></div>
                 <div><span class="field-title">🆔 ID:</span> <span class="field-data">${r.id || "N/A"}</span></div>
                 <div>
                     <span class="field-title">🔄 Attempt Counter:</span> 
-                    <span style="color:var(--accent-orange); font-weight:700;">#${r.currentAttempt}</span>
+                    <span style="color:var(--accent-orange); font-weight:700;">#${r.currentAttempt || 1}</span>
                 </div>
                 <div style="margin-top:8px; background:#f1f5f9; padding:8px 14px; border-radius:8px;">
                     <span class="field-title">🏆 Verified Score:</span> 
-                    <span style="color:var(--accent-blue); font-weight:700;">${r.score} Marks</span> 
-                    <span style="font-size:12px; color:#64748b; margin-left:6px;">(Correct Answers: ${r.correct}/${r.total})</span>
+                    <span style="color:var(--accent-blue); font-weight:700;">${r.score !== undefined ? r.score : 0} Marks</span> 
+                    <span style="font-size:12px; color:#64748b; margin-left:6px;">(Correct Answers: ${r.correct !== undefined ? r.correct : 0}/${r.total || 0})</span>
                 </div>
                 <div style="font-size:11px; color:#94a3b8; margin-top:8px;">📅 Entry Date-Timestamp: ${r.timestamp || "N/A"}</div>
             </div>`;
         });
         document.getElementById("resultBox").innerHTML = html;
     })
-    .catch(error => console.error("Result Feed Synchronization Interrupted:", error));
+    .catch(error => {
+        console.error("Result Feed Synchronization Interrupted:", error);
+        document.getElementById("resultBox").innerHTML = `<div class="empty-state-fallback" style="color:var(--danger); border-color:var(--danger);">⚠️ Database Error or Permission Denied!</div>`;
+    });
 }
 
 /* DATA MUTATION: SHUT DOWN SINGLE RECORD NODE */
