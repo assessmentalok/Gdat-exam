@@ -260,15 +260,7 @@
       "options_hi": ["बिना किसी से पूछे फाइलें सीधे सौंप देना", "विनम्रतापूर्वक नर्स या सुपरवाइजर को सूचित करना ताकि आधिकारिक प्रोटोकॉल का पालन किया जा सके", "फाइलों को तुरंत नष्ट कर देना", "मरीज को बताना कि उन्हें देखना गैरकानूनी है"],
       "answer": 1
     },
-    {
-      "question_en": "What is the primary function of a non-adherent gauze dressing pad?",
-      "question_hi": "नॉन-अड्हेरेंट गॉज ड्रेसिंग पैड (Non-adherent gauze) का मुख्य कार्य क्या है?",
-      "options_en": ["To stick tightly to the open tissue",      "question_en": "Where should a urinary drainage bag be placed when a patient is lying in bed?",
-      "question_hi": "जब मरीज बिस्तर पर लेटा हो, तो यूरिनरी ड्रेनेज बैग को कहां रखा जाना चाहिए?",
-      "options_en": ["On the patient's abdomen", "Hung on the bedframe below the level of the bladder", "Placed on the floor directly", "Tied to the side rails above the head"],
-      "options_hi": ["मरीज के पेट पर", "ब्लाडर (मूत्राशय) के स्तर से नीचे बेडफ्रेम पर लटका हुआ", "सीधे फर्श पर रखा हुआ", "सिर के ऊपर साइड रेल्स से बंधा हुआ"],
-      "answer": 1
-    },
+    
     {
       "question_en": "What is a Fracture Bedpan specifically designed for?",
       "question_hi": "फ्रैक्चर बेडपैन (Fracture Bedpan) को विशेष रूप से किसके लिए डिज़ाइन किया गया है?",
