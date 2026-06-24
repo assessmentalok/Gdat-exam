@@ -440,8 +440,8 @@
       "options_en": ["18G", "20G", "22G", "24G"],
       "question_hi": ["किस साइज का IV कैनुला नीले (Blue) रंग का होता है?",
       "options_hi": ["18G", "20G", "22G", "24G"],
-      "answer": 2
-    },
+      "answer": 2},
+    
     {
       "question_en": "To prevent friction injuries to a patient's skin while moving them up in bed, a GDA should:",
       "question_hi": "मरीज को बिस्तर पर ऊपर खिसकाते समय त्वचा पर घर्षण की चोटों (Friction injuries) को रोकने के लिए, GDA को क्या करना चाहिए?",
