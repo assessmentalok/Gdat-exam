@@ -605,7 +605,7 @@ let candidateId = localStorage.getItem("candidateId") || "GDAT-" + Math.floor(10
 document.getElementById("candidate").innerText = "👤 " + candidateName + " (" + candidateId + ")";
 
 /* LOAD QUESTIONS FROM NEW OBJECT LAYER */
-fetch("data/questions.json")
+fetch("questions.json")
 .then(res => res.json())
 .then(data => {
     if (data.questions && Array.isArray(data.questions)) {
