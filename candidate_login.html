@@ -458,7 +458,7 @@ let activeStream = null;
 let sigCanvas, sigCtx, isDrawing = false;
 
 // Async User Matrix Pull
-fetch("data/Users.json")
+fetch("users.json")
 .then(res => res.json())
 .then(data => { users = data; })
 .catch(err => { document.getElementById("error").innerText = "Database configuration setup missing."; });
