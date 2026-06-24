@@ -439,7 +439,8 @@ header h2 {
 </div>
 
 <script>
-// --- CLEANED & FIX FUNCTIONAL LOGIC ---
+// --- FIREBASE CONFIGURATION LAYER ---
+const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/";
 
 let questions = [];
 let answers = [];
@@ -447,8 +448,11 @@ let visited = [];
 let current = 0;
 let lang = "en";
 
-/* CANDIDATE Name Load */
-document.getElementById("candidate").innerText = "👤 " + (localStorage.getItem("candidateName") || "Candidate");
+/* CANDIDATE Info Fetching & Validation */
+let candidateName = localStorage.getItem("candidateName") || "Candidate";
+let candidateId = localStorage.getItem("candidateId") || "GDAT-" + Math.floor(1000 + Math.random() * 9000);
+
+document.getElementById("candidate").innerText = "👤 " + candidateName + " (" + candidateId + ")";
 
 /* LOAD QUESTIONS FROM NEW OBJECT LAYER */
 fetch("data/questions.json")
@@ -464,6 +468,9 @@ fetch("data/questions.json")
     renderPalette();
     show();
     initCameraPlacement();
+    
+    // लाइव पिंग डेमों शुरू करें (हर 2.5 सेकंड में रिफ्रेश होगा)
+    setInterval(updateLiveStatus, 2500);
 })
 .catch(err => {
     console.error("JSON Error:", err);
@@ -531,6 +538,12 @@ function renderPalette(){
     updatePalette();
 }
 
+// कीबोर्ड सपोर्ट भी जोड़ दिया गया है (Arrow Keys से आगे-पीछे कर सकते हैं)
+document.addEventListener("keydown", (e) => {
+    if(e.key === "ArrowRight") next();
+    if(e.key === "ArrowLeft") prev();
+});
+
 function go(i){save();current=i;show();}
 
 /* PALETTE COLOR & LIVE COUNT IN LEGENDS */
@@ -564,7 +577,6 @@ function updatePalette(){
         }
     }
 
-    // तीनों मौजूदा लीजेंड्स के अंदर लाइव काउंट अपडेट करना
     if(document.getElementById('countNotVisited')) {
         document.getElementById('countNotVisited').innerText = notVisited;
     }
@@ -576,7 +588,26 @@ function updatePalette(){
     }
 }
 
-/* SUBMIT */
+/* REALTIME LIVE MONITORING PING AGENT */
+function updateLiveStatus() {
+    let now = new Date();
+    let timeStr = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'});
+    
+    let liveData = {
+        name: candidateName,
+        id: candidateId,
+        status: "Giving Exam",
+        time: timeStr
+    };
+
+    // Firebase API PUT Request Call
+    fetch(`${FIREBASE_URL}/liveUsers/${candidateId}.json`, {
+        method: "PUT",
+        body: JSON.stringify(liveData)
+    }).catch(e => console.error("Cloud Live Synchronization Offline", e));
+}
+
+/* CLOUD SUBMIT ROUTE WITH CLEANUP */
 function submitExam(){
     save();
     let correct=0;
@@ -589,28 +620,50 @@ function submitExam(){
     }
 
     let score = correct * 2;
+    let timeStamp = new Date().toLocaleString();
 
-    let results = JSON.parse(localStorage.getItem("results")||"[]");
-    results.push({
-        name: localStorage.getItem("candidateName"),
-        id: localStorage.getItem("candidateId"),
+    let resultData = {
+        name: candidateName,
+        id: candidateId,
         score: score,
         correct: correct,
-        total: questions.length
-    });
+        total: questions.length,
+        timestamp: timeStamp
+    };
 
-    localStorage.setItem("results", JSON.stringify(results));
-    window.location.href="result.html";
+    // 1. लाइव नोड से छात्र को डिलीट करो -> 2. रिजल्ट नोड में नया डेटा पोस्ट करो
+    fetch(`${FIREBASE_URL}/liveUsers/${candidateId}.json`, { method: "DELETE" })
+    .then(() => {
+        return fetch(`${FIREBASE_URL}/results.json`, {
+            method: "POST",
+            body: JSON.stringify(resultData)
+        });
+    })
+    .then(() => {
+        // लोकल बैकअप सिंक
+        let results = JSON.parse(localStorage.getItem("results")||"[]");
+        results.push(resultData);
+        localStorage.setItem("results", JSON.stringify(results));
+        
+        window.location.href="result.html";
+    })
+    .catch(e => {
+        console.error("Submission Error: ", e);
+        alert("Exam submit karne mein dikkat aayi: " + e.message);
+    });
 }
 
 /* TIMER */
 let t=7200;
-setInterval(()=>{
+let timerInterval = setInterval(()=>{
     let m=Math.floor(t/60);
     let s=t%60;
     document.getElementById("timer").innerText = m+":"+ (s<10?"0":"")+s;
     t--;
-    if(t<0) submitExam();
+    if(t<0) {
+        clearInterval(timerInterval);
+        submitExam();
+    }
 },1000);
 
 /* CAMERA START */
