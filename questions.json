@@ -592,10 +592,11 @@
     },
     {
       "question_en": "Which size of IV Cannula is color-coded blue?",
+      "question_hi":"किस साइज का IV कैनुला नीले (Blue) रंग का होता है?",
       "options_en": ["18G", "20G", "22G", "24G"],
-      "question_hi": ["किस साइज का IV कैनुला नीले (Blue) रंग का होता है?",
       "options_hi": ["18G", "20G", "22G", "24G"],
-      "answer": 2},
+      "answer": 2
+    },
     
     {
       "question_en": "To prevent friction injuries to a patient's skin while moving them up in bed, a GDA should:",
