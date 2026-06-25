@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidate Verification & Assessment Portal</title>
+
+<style>
+/* Professional UI Reset & Color Theme */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background: #f0f4f8;
+    color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* Master Layout Container */
+.portal-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Global Fixed Professional Header (3 Logos Space) */
+.portal-header {
+    background: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #0d47a1;
+}
+
+.portal-header .logo-slot {
+    width: 85px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portal-header .logo-slot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.portal-header .header-center-title {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.portal-header .header-center-title h1 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0d47a1;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.portal-header .header-center-title p {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+    margin-top: 3px;
+    letter-spacing: 0.5px;
+}
+
+/* Dynamic Step Content Wrapper */
+.portal-body {
+    padding: 25px;
+    min-height: 350px;
+    background: #ffffff;
+}
+
+/* Step Title Styling */
+.step-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f1f5f9;
+    letter-spacing: 0.5px;
+}
+
+/* Global Fixed Footer */
+.portal-footer {
+    background: #f8fafc;
+    padding: 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    font-weight: 500;
+}
+
+/* Panels Visibility Engine */
+.step-panel {
+    display: none;
+}
+
+.step-panel.active {
+    display: block;
+}
+
+/* Instructions Box */
+.instructions-wrapper {
+    background: #f8fafc;
+    border-left: 4px solid #0d47a1;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.instructions-wrapper ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.instructions-wrapper li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Form & Inputs Layout */
+.input-row {
+    margin-bottom: 16px;
+}
+
+.input-row label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #344054;
+    margin-bottom: 6px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"], select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #ffffff;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    border-color: #0d47a1;
+    box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.12);
+}
+
+input[readonly] {
+    background: #f1f5f9 !important;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+.form-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .form-grid-2x2 { grid-template-columns: 1fr; }
+}
+
+/* Buttons Mechanics */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #0d47a1;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover { background: #0a3980; }
+
+.btn-secondary {
+    padding: 8px 14px;
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 12.5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-toggle {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+/* Media Capture & Canvas Framework */
+.camera-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+video, canvas {
+    border-radius: 6px;
+    background: #000;
+    max-width: 100%;
+}
+
+.canvas-capture-preview {
+    border: 2px solid #10b981;
+    display: none;
+    margin-top: 10px;
+}
+
+#sig-canvas {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    cursor: crosshair;
+    touch-action: none; /* Prevents mobile scrolling while signing */
+}
+
+.action-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#error {
+    color: #df1c1c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="portal-card">
+    
+    <header class="portal-header">
+        <div class="logo-slot">
+            <img src="skill.png" alt="Skill India">
+        </div>
+        <div class="header-center-title">
+            <h1>Chaudhary Pawan Singh Educational Welfare Cultural & Charitable Society</h1>
+            <p>Alok's Assessment Portal</p>
+        </div>
+        <div class="logo-slot">
+            <img src="CPSEWCCS.png" alt="PIA Logo">
+        </div>
+    </header>
+
+    <main class="portal-body">
+        
+        <div id="step-login" class="step-panel active">
+            <div class="instructions-wrapper">
+                <h4 style="font-size:14px; margin-bottom:8px; color:#0d47a1;">Exam Instructions:</h4>
+                <ul>
+                    <li>Welcome to the Alok's assessment portal. Please read all guidelines carefully.</li>
+                    <li><strong>Exam Format:</strong> The exam consists of MCQ questions.</li>
+                    <li><strong>Timing:</strong> Track remaining time and submit before data auto-expires.</li>
+                    <li><strong>Technical Issues / Emergencies:</strong> Report immediately to your room invigilator.</li>
+                </ul>
+            </div>
+            
+            <h2 class="step-title">Candidate Secure Login</h2>
+            <div class="input-row">
+                <label for="cid">Candidate ID</label>
+                <input type="text" id="cid" placeholder="Enter registration ID">
+            </div>
+            <div class="input-row">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" placeholder="Enter secure password">
+            </div>
+            <button class="btn-primary" onclick="login()">Authenticate Candidate</button>
+            <p id="error"></p>
+        </div>
+
+        <div id="step-selfie" class="step-panel">
+            <h2 class="step-title">Step 1: Face Identity Verification</h2>
+            <div class="camera-box-wrapper">
+                <video id="selfie-video" width="320" height="240" autoplay playsinline></video>
+                <canvas id="selfie-canvas" width="320" height="240" class="canvas-capture-preview"></canvas>
+                
+                <div class="action-row">
+                    <button class="btn-secondary" id="btn-selfie-capture" onclick="capturePhoto('selfie-video','selfie-canvas','selfie-status','btn-selfie-capture','btn-selfie-recapture')">Capture Snapshot</button>
+                    <button class="btn-secondary btn-toggle" id="btn-selfie-toggle" onclick="toggleCamera('selfie-video')">🔄 Switch Camera</button>
+                    <button class="btn-secondary" id="btn-selfie-recapture" style="display:none; background:#fff1f2; color:#e11d48;" onclick="recaptureMedia('selfie-video','selfie-canvas','btn-selfie-capture','btn-selfie-recapture','selfie-status')">Recapture Photo</button>
+                </div>
+                <div id="selfie-status" style="font-size:12px; margin-top:8px; font-weight:600;"></div>
+            </div>
+            
+            <button class="btn-primary" style="margin-top:10px;" onclick="goToDocumentsStep()">Proceed to Upload Documents</button>
+        </div>
+
+        <div id="step-docs" class="step-panel">
+            <h2 class="step-title">Step 2: KYC Document Submission</h2>
+            
+            <div class="input-row">
+                <label for="doc-type">Select KYC Document Type</label>
+                <select id="doc-type">
+                    <option value="Aadhaar Card">Aadhaar Card</option>
+                    <option value="Voter ID">Voter ID Card</option>
+                    <option value="PAN Card">PAN Card</option>
+                </select>
+            </div>
+
+            <div class="camera-box-wrapper">
+                <p style="font-size:12px; font-weight:600; margin-bottom:8px; color:#475569;">Hold document in front of camera:</p>
+                <video id="doc-video" width="320" height="240" autoplay playsinline></video>
+                <canvas id="doc-canvas" width="320" height="240" class="canvas-capture-preview"></canvas>
+                
+                <div class="action-row">
+                    <button class="btn-secondary" id="btn-doc-capture" onclick="capturePhoto('doc-video','doc-canvas','doc-status','btn-doc-capture','btn-doc-recapture')">Capture Document</button>
+                    <button class="btn-secondary btn-toggle" id="btn-doc-toggle" onclick="toggleCamera('doc-video')">🔄 Switch Camera</button>
+                    <button class="btn-secondary" id="btn-doc-recapture" style="display:none; background:#fff1f2; color:#e11d48;" onclick="recaptureMedia('doc-video','doc-canvas','btn-doc-capture','btn-doc-recapture','doc-status')">Recapture Document</button>
+                </div>
+                <div id="doc-status" style="font-size:12px; margin-top:8px; font-weight:600;"></div>
+            </div>
+
+            <button class="btn-primary" style="margin-top:10px;" onclick="goToSignatureStep()">Proceed to Signature Pad</button>
+        </div>
+
+        <div id="step-signature" class="step-panel">
+            <h2 class="step-title">Step 3: Digital Signature Autograph</h2>
+            <div class="camera-box-wrapper">
+                <canvas id="sig-canvas" width="450" height="150"></canvas>
+                <div class="action-row">
+                    <button type="button" class="btn-secondary" onclick="clearSignature()">Clear Canvas Pad</button>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="goToFormStep()">Proceed to Profile Review</button>
+        </div>
+
+        <div id="step-form" class="step-panel">
+            <h2 class="step-title">Step 4: Verify & Complete Profile Metadata</h2>
+            <form id="profileForm" onsubmit="finalSubmit(event)">
+                <div class="form-grid-2x2">
+                    <div class="input-row">
+                        <label>Candidate Registration ID</label>
+                        <input type="text" id="form-cid" readonly>
+                    </div>
+                    <div class="input-row">
+                        <label>Candidate Full Name</label>
+                        <input type="text" id="form-cname" readonly>
+                    </div>
+                    <div class="input-row">
+                        <label for="form-father">Father's Name</label>
+                        <input type="text" id="form-father" required placeholder="As per matriculation sheet">
+                    </div>
+                    <div class="input-row">
+                        <label for="form-mother">Mother's Name</label>
+                        <input type="text" id="form-mother" required placeholder="Enter mother's name">
+                    </div>
+                    <div class="input-row">
+                        <label for="form-gender">Gender</label>
+                        <select id="form-gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="form-dob">Date of Birth</label>
+                        <input type="date" id="form-dob" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="form-email">Primary Email Address</label>
+                        <input type="email" id="form-email" required placeholder="example@domain.com">
+                    </div>
+                    <div class="input-row">
+                        <label for="form-mobile">Active Mobile Number</label>
+                        <input type="tel" id="form-mobile" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+                    </div>
+                    <div class="input-row">
+                        <label for="form-religion">Religion / Faith community</label>
+                        <select id="form-religion" required>
+                            <option value="">Select Religion</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Muslim">Muslim</option>
+                            <option value="Sikh">Sikh</option>
+                            <option value="Christian">Christian</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="form-category">Social Category Class</label>
+                        <select id="form-category" required>
+                            <option value="">Select Category</option>
+                            <option value="General">General (UR)</option>
+                            <option value="OBC">OBC</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-row">
+                    <label for="form-disability">Disability (Divyangjan Status)</label>
+                    <select id="form-disability" required>
+                        <option value="No">No (Not Applicable)</option>
+                        <option value="Yes">Yes (PwD Category)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary" style="margin-top:15px; background:#10b981;">Lock Information & Launch Exam Paper</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="portal-footer">
+        &copy; 2026 CPSEWCCS. All Rights Reserved. Fully Encrypted Examination Framework Environment.
+    </footer>
+</div>
+
+<script>
+const FIREBASE_URL = "https://gdat-exam-default-rtdb.firebaseio.com/";
+let users = [];
+let activeStream = null;
+let currentFacingMode = "user"; // Default to front camera
+let activeVideoElementId = null;
+let sigCanvas, sigCtx, isDrawing = false;
+
+// Async User Matrix Pull
+fetch("data/Users.json")
+.then(res => res.json())
+.then(data => { users = data; })
+.catch(err => { document.getElementById("error").innerText = "Database configuration setup missing."; });
+
+async function login(){
+    let id = document.getElementById("cid").value.trim();
+    let pass = document.getElementById("pass").value.trim();
+    let errorBox = document.getElementById("error");
+
+    if(!id || !pass) { errorBox.innerText = "Please fill in all coordinates."; return; }
+
+    let user = users.find(u => String(u.candidateId).trim() === String(id) && String(u.password).trim() === String(pass));
+    if(!user){ errorBox.innerText = "Invalid Registration Coordinates."; return; }
+
+    try {
+        const qRes = await fetch("data/questions.json");
+        const config = await qRes.json();
+        const activeExamId = config.examId || "default_exam";
+
+        const resRes = await fetch(`${FIREBASE_URL}/results.json`);
+        const results = await resRes.json();
+        
+        let alreadySubmitted = false;
+        if(results) {
+            Object.keys(results).forEach(key => {
+                if(String(results[key].id).trim() === String(id) && results[key].examId === activeExamId) alreadySubmitted = true;
+            });
+        }
+
+        if(alreadySubmitted) {
+            errorBox.innerText = "❌ Session Blocked: Assessment data matrix already compiled for this ID.";
+        } else {
+            localStorage.setItem("candidateId", user.candidateId);
+            localStorage.setItem("candidateName", user.name);
+            localStorage.setItem("currentActiveExamId", activeExamId);
+            
+            switchPanel('step-login', 'step-selfie');
+            startCamera('selfie-video');
+        }
+    } catch(e) { 
+        switchPanel('step-login', 'step-selfie');
+        startCamera('selfie-video');
+    }
+}
+
+// Camera Controller Engine with Mode Switch
+function startCamera(videoElementId) {
+    stopActiveCamera();
+    activeVideoElementId = videoElementId;
+    const video = document.getElementById(videoElementId);
+    if (!video) return;
+
+    const constraints = {
+        video: { 
+            facingMode: currentFacingMode,
+            width: { ideal: 640 },
+            height: { ideal: 480 }
+        },
+        audio: false
+    };
+
+    navigator.mediaDevices.getUserMedia(constraints)
+    .then(stream => { 
+        activeStream = stream; 
+        video.srcObject = stream; 
+        video.play().catch(e => console.log("Video playback delayed:", e));
+    })
+    .catch((err) => { 
+        console.error("Webcam dynamic hardware initiation error:", err); 
+    });
+}
+
+function stopActiveCamera() {
+    if (activeStream) { 
+        activeStream.getTracks().forEach(track => track.stop()); 
+        activeStream = null; 
+    }
+}
+
+function toggleCamera(videoElementId) {
+    // Front se Back ya Back se Front toggle karein
+    currentFacingMode = (currentFacingMode === "user") ? "environment" : "user";
+    startCamera(videoElementId);
+}
+
+// Universal Media Photo Snap & Recapture Logic
+function capturePhoto(videoId, canvasId, statusId, capBtnId, recapiBtnId) {
+    const video = document.getElementById(videoId);
+    const canvas = document.getElementById(canvasId);
+    const toggleBtnId = videoId === 'selfie-video' ? 'btn-selfie-toggle' : 'btn-doc-toggle';
+    if(!video || !canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    try {
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    } catch(e) {
+        console.log("Canvas rendering dynamic bypass");
+    }
+    
+    stopActiveCamera();
+    video.style.display = "none";
+    canvas.style.display = "block";
+    document.getElementById(capBtnId).style.display = "none";
+    if(document.getElementById(toggleBtnId)) document.getElementById(toggleBtnId).style.display = "none";
+    document.getElementById(recapiBtnId).style.display = "inline-block";
+    
+    const stat = document.getElementById(statusId);
+    stat.innerText = "✅ Capture locked successfully.";
+    stat.style.color = "#10b981";
+}
+
+function recaptureMedia(videoId, canvasId, capBtnId, recapiBtnId, statusId) {
+    const toggleBtnId = videoId === 'selfie-video' ? 'btn-selfie-toggle' : 'btn-doc-toggle';
+    document.getElementById(canvasId).style.display = "none";
+    const video = document.getElementById(videoId);
+    if(video) video.style.display = "block";
+    
+    document.getElementById(capBtnId).style.display = "inline-block";
+    if(document.getElementById(toggleBtnId)) document.getElementById(toggleBtnId).style.display = "inline-block";
+    document.getElementById(recapiBtnId).style.display = "none";
+    document.getElementById(statusId).innerText = "";
+    
+    startCamera(videoId);
+}
+
+// Step Routing Framework 
+function switchPanel(hideId, showId) {
+    document.getElementById(hideId).classList.remove("active");
+    document.getElementById(showId).classList.add("active");
+    window.scrollTo(0,0);
+}
+
+function goToDocumentsStep() {
+    stopActiveCamera();
+    switchPanel('step-selfie', 'step-docs');
+    currentFacingMode = "environment"; // KYC ke liye back camera auto-select karein
+    startCamera('doc-video');
+}
+
+function goToSignatureStep() {
+    stopActiveCamera();
+    switchPanel('step-docs', 'step-signature');
+    initSignaturePad();
+}
+
+function goToFormStep() {
+    switchPanel('step-signature', 'step-form');
+    loadProfileData();
+}
+
+// Super Smooth Anti-Aliased Signature Core Pad
+function initSignaturePad() {
+    sigCanvas = document.getElementById("sig-canvas");
+    if(!sigCanvas) return;
+    sigCtx = sigCanvas.getContext("2d");
+    
+    // Smooth Canvas configuration filters
+    sigCtx.strokeStyle = "#1e3a8a"; 
+    sigCtx.lineWidth = 3;
+    sigCtx.lineCap = "round";
+    sigCtx.lineJoin = "round";
+
+    // Track real coordinates across desktop & mobile viewport grids
+    function getCanvasCoords(e) {
+        const rect = sigCanvas.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+        return {
+            x: clientX - rect.left,
+            y: clientY - rect.top
+        };
+    }
+
+    function startDraw(e) {
+        isDrawing = true;
+        const coords = getCanvasCoords(e);
+        sigCtx.beginPath();
+        sigCtx.moveTo(coords.x, coords.y);
+    }
+
+    function drawMove(e) {
+        if (!isDrawing) return;
+        const coords = getCanvasCoords(e);
+        sigCtx.lineTo(coords.x, coords.y);
+        sigCtx.stroke();
+    }
+
+    function endDraw() { isDrawing = false; }
+
+    // Desktop Events
+    sigCanvas.addEventListener("mousedown", startDraw);
+    sigCanvas.addEventListener("mousemove", drawMove);
+    sigCanvas.addEventListener("mouseup", endDraw);
+    sigCanvas.addEventListener("mouseleave", endDraw);
+
+    // Mobile/Tablet Touch Events
+    sigCanvas.addEventListener("touchstart", (e) => { startDraw(e); });
+    sigCanvas.addEventListener("touchmove", (e) => { drawMove(e); });
+    sigCanvas.addEventListener("touchend", endDraw);
+}
+
+function clearSignature() { if(sigCtx) sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height); }
+
+function loadProfileData() {
+    document.getElementById("form-cid").value = localStorage.getItem("candidateId") || "N/A";
+    document.getElementById("form-cname").value = localStorage.getItem("candidateName") || "N/A";
+}
+
+// LIVE FIREBASE REAL-TIME SYNC DATA SAVING PIPELINE
+function finalSubmit(e) {
+    e.preventDefault();
+    
+    let id = localStorage.getItem("candidateId");
+    if(!id || id === "N/A") { alert("Session expired or missing Candidate ID. Please login again."); return; }
+
+    // Read Raw Canvas Buffers to Base64 String Arrays
+    let selfieCanvas = document.getElementById("selfie-canvas");
+    let docCanvas = document.getElementById("doc-canvas");
+    
+    let selfieData = (selfieCanvas.style.display === "block") ? selfieCanvas.toDataURL("image/jpeg") : "";
+    let docData = (docCanvas.style.display === "block") ? docCanvas.toDataURL("image/jpeg") : "";
+    let sigData = sigCanvas ? sigCanvas.toDataURL("image/png") : "";
+
+    // Structural JSON payload map matched to Admin Dashboard properties
+    let payload = {
+        name: localStorage.getItem("candidateName"),
+        fatherName: document.getElementById("form-father").value.trim(),
+        motherName: document.getElementById("form-mother").value.trim(),
+        gender: document.getElementById("form-gender").value,
+        dob: document.getElementById("form-dob").value,
+        email: document.getElementById("form-email").value.trim(),
+        phone: document.getElementById("form-mobile").value.trim(),
+        religion: document.getElementById("form-religion").value,
+        category: document.getElementById("form-category").value,
+        disability: document.getElementById("form-disability").value,
+        selfie: selfieData,
+        signature: sigData,
+        documentFile: docData,
+        docType: document.getElementById("doc-type").value
+    };
+
+    // Firebase REST Client Request via PUT
+    fetch(`${FIREBASE_URL}/users/${id}.json`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+    })
+    .then(res => {
+        if(!res.ok) throw new Error("Database validation handshaking failed.");
+        return res.json();
+    })
+    .then(data => {
+        alert("✅ Profile details and biometrics saved successfully! Launching assessment...");
+        window.location.href = "exam.html";
+    })
+    .catch(err => {
+        console.error("Firebase Sync Critical Failure:", err);
+        alert("❌ Failed to push dataset to cloud server. Check internet or console.");
+    });
+}
+</script>
+</body>
+</html>
