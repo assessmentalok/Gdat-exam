@@ -477,7 +477,7 @@ async function login(){
     if(!user){ errorBox.innerText = "Invalid Registration Coordinates."; return; }
 
     try {
-        const qRes = await fetch("data/questions.json");
+        const qRes = await fetch("questions.json");
         const config = await qRes.json();
         const activeExamId = config.examId || "default_exam";
 
