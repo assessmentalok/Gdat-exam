@@ -560,7 +560,7 @@ function initCameraPlacement() {
 window.addEventListener('resize', initCameraPlacement);
 
 // Load Questions
-fetch("data/questions.json")
+fetch("questions.json")
 .then(res => res.json())
 .then(data => {
     questions = data.questions && Array.isArray(data.questions) ? data.questions : data;
